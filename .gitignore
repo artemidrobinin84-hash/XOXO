@@ -1,2 +1,15 @@
+<<<<<<< HEAD
 .godot/
 *.import/
+=======
+# Godot-specific ignores
+.godot/
+*.tmp
+*.import/
+export_presets.cfg
+
+# Mono-specific ignores
+.mono/
+bin/
+obj/
+>>>>>>> 39e41b473e896ec0acfb09357f9c5a00b7d8bc48
