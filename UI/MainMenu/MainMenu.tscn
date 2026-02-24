@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://uwhlsr6yw318"]
 
 [ext_resource type="Texture2D" uid="uid://cr7ysnc65qua" path="res://UI/MainMenu/MenuDate11.png" id="1_8fkdr"]
+[ext_resource type="Texture2D" uid="uid://b7u68mta64il3" path="res://UI/MainMenu/Play.png" id="2_fw0vt"]
 
 [node name="MainMenu" type="Control" unique_id=1689316066]
 layout_mode = 3
@@ -12,6 +13,32 @@ grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2047166545]
 layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_left = -1.0
+offset_top = -12.0
+offset_right = 1919.0
+offset_bottom = 1068.0
 texture = ExtResource("1_8fkdr")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1731833590]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 810.0
+offset_right = 814.0
+offset_bottom = 930.0
+texture_normal = ExtResource("2_fw0vt")
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=2090190272]
+layout_mode = 0
+offset_left = 1247.0
+offset_top = 477.0
+offset_right = 1597.0
+offset_bottom = 597.0
+texture_normal = ExtResource("2_fw0vt")
+
+[node name="TextureButton3" type="TextureButton" parent="." unique_id=1563982766]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 608.0
+offset_right = 1144.0
+offset_bottom = 728.0
+texture_normal = ExtResource("2_fw0vt")
