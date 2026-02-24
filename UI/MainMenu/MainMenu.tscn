@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://uwhlsr6yw318"]
 
-[ext_resource type="Texture2D" uid="uid://cr7ysnc65qua" path="res://lvl/MenuDate11.png" id="1_8fkdr"]
+[ext_resource type="Texture2D" uid="uid://cr7ysnc65qua" path="res://UI/MainMenu/MenuDate11.png" id="1_8fkdr"]
 
 [node name="MainMenu" type="Control" unique_id=1689316066]
 layout_mode = 3
