@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bjluehuo4jmet"]
+
+[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_ksfcy"]
+[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_x4rv5"]
+
+[resource]
+script = ExtResource("1_x4rv5")
+title = "Deep Breath"
+description = "Keep your cool. You've got this"
+icon = ExtResource("1_ksfcy")
+cost = 0
+heal = 5
+metadata/_custom_type_script = "uid://caihvaeaot5l6"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cdmoghn1dsrgb"]
+
+[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_5rh1c"]
+[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_20ci5"]
+
+[resource]
+script = ExtResource("1_20ci5")
+title = "Sincere Compliment"
+description = "Words from the heart are the most effective weapon."
+icon = ExtResource("1_5rh1c")
+cost = 5
+damage = 25
+metadata/_custom_type_script = "uid://caihvaeaot5l6"

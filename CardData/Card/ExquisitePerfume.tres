@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://v1ka3qga5v8k"]
+
+[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_4ojda"]
+[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_pifjv"]
+
+[resource]
+script = ExtResource("1_pifjv")
+title = "Exquisite Perfume"
+description = "A scent that lingers long after you're gone."
+icon = ExtResource("1_4ojda")
+cost = 3
+shield = 20
+metadata/_custom_type_script = "uid://caihvaeaot5l6"

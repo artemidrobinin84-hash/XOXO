@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://d2wrss2tovd6k"]
+
+[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_h4ets"]
+[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_lviy6"]
+
+[resource]
+script = ExtResource("1_lviy6")
+title = "Serenade"
+description = "Singing your soul out, even if you’re a bit off-key."
+icon = ExtResource("1_h4ets")
+cost = 6
+damage = 35
+shield = 10
+metadata/_custom_type_script = "uid://caihvaeaot5l6"

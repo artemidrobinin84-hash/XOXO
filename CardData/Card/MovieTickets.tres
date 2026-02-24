@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://10xmhyb3x5kn"]
+
+[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_687a0"]
+[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_hq5mb"]
+
+[resource]
+script = ExtResource("1_687a0")
+title = "Movie Tickets"
+description = "A dark theater and a romantic plot. The perfect setup"
+icon = ExtResource("1_hq5mb")
+cost = 5
+damage = 30
+heal = 15
+metadata/_custom_type_script = "uid://caihvaeaot5l6"

@@ -3,6 +3,9 @@ extends Node
 @export var card_scene: PackedScene
 @export var all_cards: Array[CardData]
 
+@export var max_energy: int = 3
+var current_energy: int = 0
+
 var deck: Array[CardData] = []
 var hand: Array[CardData] = []
 
@@ -12,6 +15,7 @@ func _ready():
 	deck = all_cards.duplicate()
 	deck.shuffle()
 	draw_cards(5)
+	current_energy = max_energy
 
 func draw_cards(amount: int):
 	for i in range(amount):

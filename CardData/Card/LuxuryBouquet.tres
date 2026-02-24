@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c8uwf5kjgu4s8"]
+
+[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_cmpnv"]
+[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_p6gpn"]
+
+[resource]
+script = ExtResource("1_p6gpn")
+title = "Luxury Bouquet"
+description = "Flowers are the universal language of affection"
+icon = ExtResource("1_cmpnv")
+cost = 6
+damage = 60
+metadata/_custom_type_script = "uid://caihvaeaot5l6"

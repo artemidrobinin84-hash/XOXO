@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bto6fphgj4us6"]
+
+[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_5fa8t"]
+[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_acs8h"]
+
+[resource]
+script = ExtResource("1_acs8h")
+title = "Intellectual Debate"
+description = "Proving that beauty and brains go hand in hand."
+icon = ExtResource("1_5fa8t")
+cost = 3
+damage = 15
+shield = 15
+metadata/_custom_type_script = "uid://caihvaeaot5l6"

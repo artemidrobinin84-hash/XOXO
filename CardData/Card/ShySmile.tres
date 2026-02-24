@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c6u8yxuxeetyt"]
+
+[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_kt3wc"]
+[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_x5a7l"]
+
+[resource]
+script = ExtResource("1_kt3wc")
+title = "Shy Smile"
+description = "A modest way to show you're interested."
+icon = ExtResource("1_x5a7l")
+cost = 2
+heal = 5
+shield = 5
+metadata/_custom_type_script = "uid://caihvaeaot5l6"

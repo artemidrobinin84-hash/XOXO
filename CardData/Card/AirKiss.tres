@@ -1,10 +1,13 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bixhgdmnaefrh"]
 
 [ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_pvghx"]
+[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_w017r"]
 
 [resource]
 script = ExtResource("1_pvghx")
-title = "Привет"
-description = "Как дела?"
-damage = 2
+title = "Air Kiss"
+description = "A classic gesture that never goes out of style"
+icon = ExtResource("1_w017r")
+cost = 2
+damage = 10
 metadata/_custom_type_script = "uid://caihvaeaot5l6"

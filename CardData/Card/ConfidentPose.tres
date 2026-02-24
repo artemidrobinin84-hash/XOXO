@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bgtdhkbjsk8r6"]
+
+[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_1kyld"]
+[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_ormlf"]
+
+[resource]
+script = ExtResource("1_ormlf")
+title = "Confident Pose"
+description = "Looking good is half the battle won."
+icon = ExtResource("1_1kyld")
+cost = 3
+shield = 10
+metadata/_custom_type_script = "uid://caihvaeaot5l6"

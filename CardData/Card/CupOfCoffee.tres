@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dg4fl1cffoad1"]
+
+[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_boo4k"]
+[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_k3db0"]
+
+[resource]
+script = ExtResource("1_k3db0")
+title = "Cup of Coffee"
+description = "A little caffeine to keep the conversation flowing."
+icon = ExtResource("1_boo4k")
+cost = 4
+heal = 15
+metadata/_custom_type_script = "uid://caihvaeaot5l6"

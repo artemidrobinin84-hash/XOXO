@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://b0ggm4v5b20ka"]
+
+[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_nmluh"]
+[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_r223n"]
+
+[resource]
+script = ExtResource("1_r223n")
+title = "Intense Stare"
+description = "Silence can be much more provocative than words."
+icon = ExtResource("1_nmluh")
+cost = 8
+damage = 45
+metadata/_custom_type_script = "uid://caihvaeaot5l6"

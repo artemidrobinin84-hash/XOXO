@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cdyy854m5kojp"]
+
+[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_4humu"]
+[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_s5a5j"]
+
+[resource]
+script = ExtResource("1_4humu")
+title = "Accidental Touch"
+description = "Was it an accident? She'll be wondering all night."
+icon = ExtResource("1_s5a5j")
+cost = 5
+damage = 40
+metadata/_custom_type_script = "uid://caihvaeaot5l6"
