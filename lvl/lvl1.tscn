@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bd411x7plp5qo"]
+
+[ext_resource type="Texture2D" uid="uid://dgjutv2m53v38" path="res://lvl/back.jpg" id="1_8uc06"]
+
+[node name="lvl1" type="Node2D" unique_id=55323218]
+
+[node name="Back" type="Sprite2D" parent="." unique_id=313086565]
+position = Vector2(960, 539.99994)
+scale = Vector2(0.99999994, 1)
+texture = ExtResource("1_8uc06")

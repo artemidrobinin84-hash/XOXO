@@ -3,7 +3,7 @@ class_name CardData
 
 @export_group("Visuals")
 @export var title: String = "Название"
-@export_multiline var description: String = "Описание карты..."
+@export_multiline var description: String = "Описание"
 @export var icon: Texture2D
 
 @export_group("Stats")

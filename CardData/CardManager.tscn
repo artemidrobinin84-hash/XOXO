@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://f0b03p5ljpjf"]
+
+[ext_resource type="Script" uid="uid://tx0eclnhc6wr" path="res://CardData/CardManager.gd" id="1_mlvd5"]
+
+[node name="CardManager" type="Node" unique_id=102078610]
+script = ExtResource("1_mlvd5")
+
+[node name="Hand" type="HBoxContainer" parent="." unique_id=642137060]
+offset_right = 40.0
+offset_bottom = 40.0
