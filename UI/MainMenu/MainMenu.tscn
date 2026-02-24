@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://uwhlsr6yw318"]
 
 [ext_resource type="Texture2D" uid="uid://cr7ysnc65qua" path="res://UI/MainMenu/MenuDate11.png" id="1_8fkdr"]
-[ext_resource type="Texture2D" uid="uid://b7u68mta64il3" path="res://UI/MainMenu/Play.png" id="2_fw0vt"]
+[ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="2_fw0vt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8x0bb"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
 [node name="MainMenu" type="Control" unique_id=1689316066]
 layout_mode = 3
@@ -19,26 +26,38 @@ offset_right = 1919.0
 offset_bottom = 1068.0
 texture = ExtResource("1_8fkdr")
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1731833590]
+[node name="Button2" type="Button" parent="TextureRect" unique_id=1889701716]
 layout_mode = 0
-offset_left = 464.0
-offset_top = 810.0
-offset_right = 814.0
-offset_bottom = 930.0
-texture_normal = ExtResource("2_fw0vt")
+offset_left = 400.0
+offset_top = 485.0
+offset_right = 649.0
+offset_bottom = 620.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
+text = "Play"
 
-[node name="TextureButton2" type="TextureButton" parent="." unique_id=2090190272]
+[node name="Button3" type="Button" parent="TextureRect" unique_id=1660319400]
 layout_mode = 0
-offset_left = 1247.0
-offset_top = 477.0
-offset_right = 1597.0
-offset_bottom = 597.0
-texture_normal = ExtResource("2_fw0vt")
+offset_left = 1139.0
+offset_top = 839.0
+offset_right = 1545.0
+offset_bottom = 974.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
+text = "Controls"
 
-[node name="TextureButton3" type="TextureButton" parent="." unique_id=1563982766]
+[node name="Button4" type="Button" parent="TextureRect" unique_id=1702423009]
 layout_mode = 0
-offset_left = 794.0
-offset_top = 608.0
-offset_right = 1144.0
-offset_bottom = 728.0
-texture_normal = ExtResource("2_fw0vt")
+offset_left = 712.0
+offset_top = 655.0
+offset_right = 1075.0
+offset_bottom = 790.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
+text = "Tutorial"
