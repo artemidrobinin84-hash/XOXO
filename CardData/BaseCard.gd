@@ -7,7 +7,7 @@ class_name BaseCard
 @onready var desc_label = $Background/Content/Description
 @onready var icon_texture = $Background/Content/CardIcon
 @onready var cost_label = $Background/Content/CostBadge/CostLabel
-@onready var damage_label = $Background/Content/StatsContainer/DamageLabel
+@onready var damage_label = $Background/Content/DamageIcon/DamageLabel
 
 func _ready():
 	if card_resource:

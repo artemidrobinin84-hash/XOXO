@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://rt65j2rlfel" path="res://CardData/BaseCard.gd" id="1_ethmh"]
 [ext_resource type="Resource" uid="uid://bixhgdmnaefrh" path="res://CardData/Card/AirKiss.tres" id="2_qs5sx"]
 [ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="3_garpv"]
+[ext_resource type="Texture2D" uid="uid://clv7w0j6wgusu" path="res://CardData/Sprite-0001.png" id="3_iuxus"]
+[ext_resource type="FontFile" uid="uid://bl7rtvojhxbru" path="res://Core/HaipapikuseruHypereffort-Regular.otf" id="4_xpef3"]
+[ext_resource type="FontFile" uid="uid://s7q3ny1v3uw1" path="res://Core/Ephesis-Regular.ttf" id="6_o3k1l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_garpv"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_o3k1l"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_a54xw"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="CardUI" type="PanelContainer" unique_id=1256596981]
 custom_minimum_size = Vector2(250, 350)
@@ -13,6 +27,7 @@ card_resource = ExtResource("2_qs5sx")
 
 [node name="Background" type="NinePatchRect" parent="." unique_id=1391423642]
 layout_mode = 2
+texture = ExtResource("3_iuxus")
 
 [node name="Content" type="Control" parent="Background" unique_id=1018016430]
 layout_mode = 1
@@ -27,13 +42,14 @@ texture_filter = 1
 custom_minimum_size = Vector2(86, 86)
 layout_mode = 0
 offset_left = 82.0
-offset_top = 100.0
+offset_top = 52.0
 offset_right = 168.0
-offset_bottom = 186.0
+offset_bottom = 138.0
 texture = ExtResource("3_garpv")
 stretch_mode = 5
 
 [node name="CostBadge" type="TextureRect" parent="Background/Content" unique_id=2056221552]
+texture_filter = 1
 layout_mode = 1
 offset_left = 206.0
 offset_top = 3.0
@@ -44,38 +60,56 @@ texture = ExtResource("3_garpv")
 [node name="CostLabel" type="Label" parent="Background/Content/CostBadge" unique_id=201976120]
 layout_mode = 0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("4_xpef3")
 text = "3"
+label_settings = SubResource("LabelSettings_garpv")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TitleLabel" type="Label" parent="Background/Content" unique_id=265638132]
 layout_mode = 0
-offset_left = 98.0
-offset_top = 20.0
-offset_right = 155.0
-offset_bottom = 43.0
-text = "Air Kiss"
+offset_left = 6.0
+offset_right = 210.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("6_o3k1l")
+text = "Sincere Compliment"
+label_settings = SubResource("LabelSettings_o3k1l")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Description" type="RichTextLabel" parent="Background/Content" unique_id=41447238]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 221.0
-offset_right = 251.0
-offset_bottom = 270.0
+offset_top = 153.0
+offset_right = 250.0
+offset_bottom = 307.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_o3k1l")
+theme_override_font_sizes/normal_font_size = 35
 text = "A classic gesture that never goes out of style"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="StatsContainer" type="HBoxContainer" parent="Background/Content" unique_id=1951459239]
+[node name="DamageIcon" type="TextureRect" parent="Background/Content" unique_id=1081201214]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 0
-offset_left = 7.0
-offset_top = 304.0
-offset_right = 47.0
+offset_left = 5.0
+offset_top = 296.0
+offset_right = 53.0
 offset_bottom = 344.0
-
-[node name="DamageIcon" type="TextureRect" parent="Background/Content/StatsContainer" unique_id=1081201214]
-layout_mode = 2
 texture = ExtResource("3_garpv")
+stretch_mode = 5
 
-[node name="DamageLabel" type="Label" parent="Background/Content/StatsContainer" unique_id=1014359516]
-layout_mode = 2
+[node name="DamageLabel" type="Label" parent="Background/Content/DamageIcon" unique_id=1014359516]
+layout_mode = 0
+offset_top = 17.0
+offset_right = 50.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("4_xpef3")
+theme_override_font_sizes/font_size = 15
 text = "2"
+label_settings = SubResource("LabelSettings_a54xw")
+horizontal_alignment = 1
+vertical_alignment = 1
