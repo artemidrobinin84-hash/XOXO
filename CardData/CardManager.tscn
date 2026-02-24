@@ -6,5 +6,8 @@
 script = ExtResource("1_mlvd5")
 
 [node name="Hand" type="HBoxContainer" parent="." unique_id=642137060]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 2.0
+offset_top = 681.0
+offset_right = 1921.0
+offset_bottom = 1031.0
+alignment = 1
