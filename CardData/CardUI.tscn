@@ -94,7 +94,7 @@ clip_children = 2
 custom_minimum_size = Vector2(250, 350)
 offset_left = 790.0
 offset_top = 330.0
-offset_right = 1050.0
+offset_right = 1040.0
 offset_bottom = 680.0
 pivot_offset = Vector2(130, 350)
 theme_override_styles/panel = SubResource("StyleBoxFlat_bl1hs")
@@ -191,17 +191,17 @@ vertical_alignment = 1
 [node name="PanelContainer" type="PanelContainer" parent="Background/Content" unique_id=961986344]
 layout_mode = 0
 offset_left = 15.0
-offset_top = 290.0
+offset_top = 289.0
 offset_right = 235.0
-offset_bottom = 335.0
+offset_bottom = 334.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_hj4yk")
 
 [node name="Cost" type="PanelContainer" parent="Background/Content" unique_id=210028327]
 layout_mode = 0
-offset_left = 197.99998
+offset_left = 189.99998
 offset_top = 14.999999
-offset_right = 260.0
+offset_right = 252.0
 offset_bottom = 74.0
 scale = Vector2(0.76, 0.76)
 mouse_filter = 2
@@ -215,7 +215,7 @@ texture = ExtResource("4_bl1hs")
 
 [node name="CostLabel" type="Label" parent="Background/Content/Cost" unique_id=201976120]
 layout_mode = 2
-theme_override_constants/outline_size = 7
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("6_u5ql7")
 theme_override_font_sizes/font_size = 50
 text = "6"
@@ -224,10 +224,10 @@ vertical_alignment = 1
 
 [node name="Damage" type="PanelContainer" parent="Background/Content" unique_id=755405829]
 layout_mode = 0
-offset_left = 29.0
-offset_top = 290.0
-offset_right = 90.0
-offset_bottom = 345.0
+offset_left = 21.0
+offset_top = 289.0
+offset_right = 82.0
+offset_bottom = 344.0
 scale = Vector2(0.82, 0.82)
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5gout")
@@ -282,10 +282,10 @@ vertical_alignment = 1
 
 [node name="Heal" type="PanelContainer" parent="Background/Content" unique_id=1978010799]
 layout_mode = 0
-offset_left = 174.0
-offset_top = 290.0
-offset_right = 235.0
-offset_bottom = 345.0
+offset_left = 179.0
+offset_top = 289.0
+offset_right = 240.0
+offset_bottom = 344.0
 scale = Vector2(0.82, 0.82)
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nvniq")

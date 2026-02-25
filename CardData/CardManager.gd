@@ -3,6 +3,12 @@ extends Node
 @export var card_scene: PackedScene
 @export var all_cards: Array[CardData]
 
+@export_group("Hand Settings")
+@export var max_spread: float = 1250.0
+@export var max_spacing: float = 550.0
+@export var angle_step: float = 2.0
+@export var arc_height: float = 25.0
+
 @export var max_energy: int = 3
 var current_energy: int = 0
 
@@ -40,17 +46,14 @@ func deselect_all_cards(except_card: BaseCard):
 	for card in hand_container.get_children():
 		if card is BaseCard and card != except_card:
 			if card.is_selected:
-				card.toggle_select()
+				card.return_to_rest() 
 
 func update_hand_fan():
 	var cards = hand_container.get_children()
 	var count = cards.size()
 	if count == 0: return
 
-	var max_spread = 550.0 
-	var spacing = min(max_spread / count, 95.0) 
-	var angle_step = 3.0        # тут дрочить наклон
-	var arc_height = 25.0
+	var spacing = min(max_spread / count, max_spacing)
 	
 	for i in range(count):
 		var card = cards[i]
@@ -59,7 +62,6 @@ func update_hand_fan():
 		var center_offset = (float_idx - (count - 1) / 2.0)
 		
 		card.position.x = -center_offset * spacing
-
 		card.rotation_degrees = -center_offset * angle_step
 		
 		var arc_factor = (center_offset * center_offset) / 25.0

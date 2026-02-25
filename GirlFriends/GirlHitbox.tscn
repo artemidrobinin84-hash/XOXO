@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d3yec0rny5dax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnn1p"]
+size = Vector2(637, 636)
+
+[sub_resource type="Gradient" id="Gradient_u7yqw"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u0jhh"]
+gradient = SubResource("Gradient_u7yqw")
+
+[node name="GirlHitbox" type="Area2D" unique_id=2028270037 groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=877260902]
+position = Vector2(949.5, 318)
+shape = SubResource("RectangleShape2D_wnn1p")
+debug_color = Color(0.92941177, 0, 0.6666667, 0.25882354)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=290822388]
+visible = false
+offset_right = 1920.0
+offset_bottom = 636.0
+texture = SubResource("GradientTexture2D_u0jhh")

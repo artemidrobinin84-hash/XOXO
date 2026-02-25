@@ -10,38 +10,48 @@ card_scene = ExtResource("2_o3abh")
 [node name="Hand" type="Control" parent="." unique_id=950334911]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 555.0
-offset_top = 699.0
-offset_right = 555.0
-offset_bottom = 699.0
-rotation = 0.05235988
+offset_left = 1170.9999
+offset_top = 712.99994
+offset_right = 1170.9999
+offset_bottom = 712.99994
+rotation = 0.10471976
 
 [node name="CardUI" parent="Hand" unique_id=1256596981 instance=ExtResource("2_o3abh")]
 visible = false
 layout_mode = 0
 offset_left = 102.0
+offset_top = 0.0
 offset_right = 352.0
+offset_bottom = 350.0
 
 [node name="CardUI2" parent="Hand" unique_id=1915948351 instance=ExtResource("2_o3abh")]
 visible = false
 layout_mode = 0
 offset_left = 356.0
+offset_top = 0.0
 offset_right = 606.0
+offset_bottom = 350.0
 
 [node name="CardUI3" parent="Hand" unique_id=400861382 instance=ExtResource("2_o3abh")]
 visible = false
 layout_mode = 0
 offset_left = 610.0
+offset_top = 0.0
 offset_right = 860.0
+offset_bottom = 350.0
 
 [node name="CardUI4" parent="Hand" unique_id=748141107 instance=ExtResource("2_o3abh")]
 visible = false
 layout_mode = 0
 offset_left = 864.0
+offset_top = 0.0
 offset_right = 1114.0
+offset_bottom = 350.0
 
 [node name="CardUI5" parent="Hand" unique_id=207714185 instance=ExtResource("2_o3abh")]
 visible = false
 layout_mode = 0
 offset_left = 1118.0
+offset_top = 0.0
 offset_right = 1368.0
+offset_bottom = 350.0
