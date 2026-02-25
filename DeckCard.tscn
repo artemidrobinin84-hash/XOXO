@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://lwgx8dujkp4"]
+
+[ext_resource type="Texture2D" uid="uid://ctq1pntfqf2lr" path="res://CardData/ImgCard/сердечко.png" id="1_37105"]
+[ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="2_ymkee"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ymkee"]
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbgsu"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0, 0, 0, 0)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qd0c8"]
+bg_color = Color(0.7735551, 0.642445, 0.9934911, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37105"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 999
+corner_radius_top_right = 999
+corner_radius_bottom_right = 999
+corner_radius_bottom_left = 999
+shadow_color = Color(0, 0, 0, 0.18039216)
+shadow_size = 7
+
+[node name="DeckCard" type="PanelContainer" unique_id=1688954903]
+offset_right = 250.0
+offset_bottom = 350.0
+scale = Vector2(0.9, 0.9)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ymkee")
+
+[node name="Background" type="PanelContainer" parent="." unique_id=1469252269]
+texture_filter = 1
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jbgsu")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background" unique_id=1807553500]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="Background/MarginContainer" unique_id=721001085]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qd0c8")
+
+[node name="Content" type="Control" parent="Background" unique_id=1344709874]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="IconContainer" type="PanelContainer" parent="Background/Content" unique_id=220552617]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 54.0
+offset_right = 185.0
+offset_bottom = 174.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_37105")
+
+[node name="CardIcon" type="TextureRect" parent="Background/Content" unique_id=896435653]
+texture_filter = 1
+custom_minimum_size = Vector2(86, 86)
+layout_mode = 0
+offset_left = 65.0
+offset_top = 69.0
+offset_right = 365.0
+offset_bottom = 319.0
+scale = Vector2(0.4, 0.4)
+mouse_filter = 2
+texture = ExtResource("1_37105")
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="Background" unique_id=255250718]
+layout_mode = 2
+
+[node name="Description" type="RichTextLabel" parent="Background/Control" unique_id=1599209521]
+texture_filter = 1
+layout_mode = 0
+offset_top = 83.0
+offset_right = 250.0
+offset_bottom = 433.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.70980394, 0.05882353, 0.7490196, 0.6117647)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.34509805)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("2_ymkee")
+theme_override_font_sizes/normal_font_size = 43
+text = "Date
+With
+Destiny"
+horizontal_alignment = 1
+vertical_alignment = 1

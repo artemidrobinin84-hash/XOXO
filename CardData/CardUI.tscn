@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://bixhgdmnaefrh" path="res://CardData/Card/AirKiss.tres" id="2_qs5sx"]
 [ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="3_u5ql7"]
 [ext_resource type="Texture2D" uid="uid://brcicnbd3cqlk" path="res://CardData/ImgCard/CostCard.png" id="4_bl1hs"]
-[ext_resource type="Texture2D" uid="uid://d3jix7vwe2i3s" path="res://CardData/ImgCard/1.png" id="4_u5ql7"]
+[ext_resource type="Texture2D" uid="uid://b2cieu41iguh3" path="res://CardData/ImgCard/кас.png" id="4_u5ql7"]
 [ext_resource type="FontFile" uid="uid://syp2xi1ddrch" path="res://Core/Eitai.otf" id="6_u5ql7"]
 [ext_resource type="Texture2D" uid="uid://c3athe8dh5w1h" path="res://CardData/ImgCard/ShildCard.png" id="7_a54xw"]
 [ext_resource type="Texture2D" uid="uid://rdjkmxl5t5gl" path="res://CardData/ImgCard/HearthCard.png" id="8_g8j4h"]
@@ -29,7 +29,7 @@ shadow_color = Color(0, 0, 0, 1)
 shadow_size = 50
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8j4h"]
-bg_color = Color(0.8403707, 0.6211789, 0.9431444, 1)
+bg_color = Color(0.7735551, 0.642445, 0.9934911, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
@@ -162,8 +162,8 @@ custom_minimum_size = Vector2(86, 86)
 layout_mode = 0
 offset_left = 72.00001
 offset_top = 72.0
-offset_right = 380.5714
-offset_bottom = 323.42856
+offset_right = 377.71436
+offset_bottom = 337.71423
 scale = Vector2(0.35, 0.35)
 mouse_filter = 2
 texture = ExtResource("4_u5ql7")
@@ -173,9 +173,9 @@ stretch_mode = 5
 texture_filter = 1
 layout_mode = 0
 offset_left = 11.0
-offset_top = 178.0
-offset_right = 250.0
-offset_bottom = 280.0
+offset_top = 188.0
+offset_right = 240.0
+offset_bottom = 288.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
