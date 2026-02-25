@@ -10,13 +10,14 @@ card_scene = ExtResource("2_o3abh")
 [node name="Hand" type="Control" parent="." unique_id=950334911]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 647.0
-offset_top = 626.00006
-offset_right = 2117.0
-offset_bottom = 976.00006
-rotation = 0.15707964
+offset_left = 555.0
+offset_top = 699.0
+offset_right = 555.0
+offset_bottom = 699.0
+rotation = 0.05235988
 
 [node name="CardUI" parent="Hand" unique_id=1256596981 instance=ExtResource("2_o3abh")]
+visible = false
 layout_mode = 0
 offset_left = 102.0
 offset_right = 352.0

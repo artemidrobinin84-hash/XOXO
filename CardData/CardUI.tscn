@@ -16,32 +16,24 @@ corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
-shadow_color = Color(0, 0, 0, 0.7176471)
-shadow_size = 10
+shadow_size = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5ql7"]
 bg_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 0.737)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
-shadow_color = Color(0, 0, 0, 0.7647059)
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 50
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8j4h"]
-bg_color = Color(1, 0.7607843, 0.81960785, 1)
+bg_color = Color(0.8403707, 0.6211789, 0.9431444, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fuahd"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0, 0, 0, 0.18039216)
-shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxiln"]
 bg_color = Color(1, 1, 1, 1)
@@ -51,6 +43,15 @@ corner_radius_bottom_right = 999
 corner_radius_bottom_left = 999
 shadow_color = Color(0, 0, 0, 0.18039216)
 shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fuahd"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.18039216)
+shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hj4yk"]
 bg_color = Color(1, 1, 1, 1)
@@ -91,9 +92,11 @@ shadow_size = 5
 [node name="CardUI" type="PanelContainer" unique_id=1256596981]
 clip_children = 2
 custom_minimum_size = Vector2(250, 350)
-offset_right = 260.0
-offset_bottom = 350.0
-pivot_offset = Vector2(125, 350)
+offset_left = 790.0
+offset_top = 330.0
+offset_right = 1050.0
+offset_bottom = 680.0
+pivot_offset = Vector2(130, 350)
 theme_override_styles/panel = SubResource("StyleBoxFlat_bl1hs")
 script = ExtResource("1_ethmh")
 card_resource = ExtResource("2_qs5sx")
@@ -114,27 +117,30 @@ theme_override_constants/margin_bottom = 10
 
 [node name="Panel" type="Panel" parent="Background/MarginContainer" unique_id=840550615]
 layout_mode = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_g8j4h")
 
 [node name="Content" type="Control" parent="Background" unique_id=1018016430]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="PanelContainer2" type="PanelContainer" parent="Background/Content" unique_id=2052192513]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 15.0
-offset_right = 235.0
-offset_bottom = 60.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_fuahd")
-
-[node name="PanelContainer4" type="PanelContainer" parent="Background/Content" unique_id=841625905]
+[node name="IconContainer" type="PanelContainer" parent="Background/Content" unique_id=841625905]
 layout_mode = 0
 offset_left = 65.0
 offset_top = 64.0
 offset_right = 185.0
 offset_bottom = 184.0
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qxiln")
+
+[node name="LabelContainer" type="PanelContainer" parent="Background/Content" unique_id=2052192513]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 15.0
+offset_right = 235.0
+offset_bottom = 60.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fuahd")
 
 [node name="TitleLabel" type="Label" parent="Background/Content" unique_id=265638132]
 texture_filter = 1
@@ -150,13 +156,6 @@ text = "Sincere Compliment"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BoxContainer" type="BoxContainer" parent="Background/Content" unique_id=2137482765]
-layout_mode = 0
-offset_left = 73.0
-offset_top = 73.0
-offset_right = 113.0
-offset_bottom = 113.0
-
 [node name="CardIcon" type="TextureRect" parent="Background/Content" unique_id=995905185]
 texture_filter = 1
 custom_minimum_size = Vector2(86, 86)
@@ -166,6 +165,7 @@ offset_top = 72.0
 offset_right = 380.5714
 offset_bottom = 323.42856
 scale = Vector2(0.35, 0.35)
+mouse_filter = 2
 texture = ExtResource("4_u5ql7")
 stretch_mode = 5
 
@@ -176,7 +176,12 @@ offset_left = 11.0
 offset_top = 178.0
 offset_right = 250.0
 offset_bottom = 280.0
+mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5803922)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/outline_size = 6
 theme_override_fonts/normal_font = ExtResource("3_u5ql7")
 theme_override_font_sizes/normal_font_size = 20
 text = "A little caffeine to keep the conversation flowing"
@@ -189,6 +194,7 @@ offset_left = 15.0
 offset_top = 290.0
 offset_right = 235.0
 offset_bottom = 335.0
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_hj4yk")
 
 [node name="Cost" type="PanelContainer" parent="Background/Content" unique_id=210028327]
@@ -198,19 +204,21 @@ offset_top = 14.999999
 offset_right = 260.0
 offset_bottom = 74.0
 scale = Vector2(0.76, 0.76)
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_51m2f")
 
 [node name="CostBadge" type="TextureRect" parent="Background/Content/Cost" unique_id=2056221552]
 texture_filter = 1
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("4_bl1hs")
 
 [node name="CostLabel" type="Label" parent="Background/Content/Cost" unique_id=201976120]
 layout_mode = 2
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("6_u5ql7")
 theme_override_font_sizes/font_size = 50
-text = "8"
+text = "6"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -221,18 +229,22 @@ offset_top = 290.0
 offset_right = 90.0
 offset_bottom = 345.0
 scale = Vector2(0.82, 0.82)
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5gout")
 
 [node name="DamageIcon" type="TextureRect" parent="Background/Content/Damage" unique_id=1803696039]
 texture_filter = 1
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("8_g8j4h")
 stretch_mode = 2
 
 [node name="DamageLabel" type="Label" parent="Background/Content/Damage" unique_id=756875919]
 layout_mode = 2
-theme_override_constants/outline_size = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5411765)
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("9_hj4yk")
 theme_override_font_sizes/font_size = 35
 text = "22"
@@ -246,18 +258,22 @@ offset_top = 290.0
 offset_right = 156.0
 offset_bottom = 346.0
 scale = Vector2(0.8, 0.8)
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5gout")
 
 [node name="ShieldIcon" type="TextureRect" parent="Background/Content/Shield" unique_id=1734306506]
 texture_filter = 1
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("7_a54xw")
 stretch_mode = 6
 
 [node name="ShieldLabel" type="Label" parent="Background/Content/Shield" unique_id=1259252586]
 layout_mode = 2
-theme_override_constants/outline_size = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5411765)
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("9_hj4yk")
 theme_override_font_sizes/font_size = 35
 text = "10"
@@ -271,17 +287,21 @@ offset_top = 290.0
 offset_right = 235.0
 offset_bottom = 345.0
 scale = Vector2(0.82, 0.82)
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nvniq")
 
 [node name="HealIcon" type="TextureRect" parent="Background/Content/Heal" unique_id=343913861]
 texture_filter = 1
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("8_hj4yk")
 
 [node name="HealLabel" type="Label" parent="Background/Content/Heal" unique_id=1468586723]
 layout_mode = 2
-theme_override_constants/outline_size = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5411765)
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("9_hj4yk")
 theme_override_font_sizes/font_size = 35
 text = "12"
