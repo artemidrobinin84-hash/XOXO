@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cr7ysnc65qua" path="res://UI/MainMenu/MenuDate11.png" id="1_8fkdr"]
 [ext_resource type="Script" uid="uid://dyca21nvba40o" path="res://UI/MainMenu/main_menu.gd" id="1_8x0bb"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="2_fw0vt"]
+[ext_resource type="PackedScene" uid="uid://m6x6jga2c67k" path="res://UI/PauseMenu/PauseMenu.tscn" id="2_nahvw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8x0bb"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
@@ -20,10 +21,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8x0bb")
 
+[node name="CanvasLayer" parent="." unique_id=1970886768 instance=ExtResource("2_nahvw")]
+
 [node name="Background" type="TextureRect" parent="." unique_id=2047166545]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
+mouse_filter = 2
 texture = ExtResource("1_8fkdr")
 
 [node name="Play" type="Button" parent="Background" unique_id=1889701716]
