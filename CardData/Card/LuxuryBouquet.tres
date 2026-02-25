@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c8uwf5kjgu4s8"]
 
-[ext_resource type="Texture2D" uid="uid://dt45nha4fvk8y" path="res://CardData/ZAGLUSHKA.png" id="1_cmpnv"]
+[ext_resource type="Texture2D" uid="uid://by3ogkbwmixha" path="res://CardData/ImgCard/цвне.png" id="1_cmpnv"]
 [ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_p6gpn"]
 
 [resource]

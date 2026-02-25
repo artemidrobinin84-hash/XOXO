@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://dgjutv2m53v38" path="res://lvl/back.jpg" id="1_8uc06"]
 [ext_resource type="PackedScene" uid="uid://f0b03p5ljpjf" path="res://CardData/CardManager.tscn" id="2_r30gq"]
-[ext_resource type="PackedScene" uid="uid://d062lpdfnjdc7" path="res://CardData/CardUI.tscn" id="3_ck4d2"]
 [ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="4_8f7ds"]
 [ext_resource type="Resource" uid="uid://cdyy854m5kojp" path="res://CardData/Card/AccidentalTouch.tres" id="5_0qm8x"]
 [ext_resource type="Resource" uid="uid://bixhgdmnaefrh" path="res://CardData/Card/AirKiss.tres" id="6_0vy4a"]
@@ -30,6 +29,7 @@ position = Vector2(960, 539.99994)
 scale = Vector2(0.99999994, 1)
 texture = ExtResource("1_8uc06")
 
-[node name="CardManager" parent="." unique_id=102078610 instance=ExtResource("2_r30gq")]
-card_scene = ExtResource("3_ck4d2")
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1980883696]
+
+[node name="CardManager" parent="CanvasLayer" unique_id=102078610 instance=ExtResource("2_r30gq")]
 all_cards = Array[ExtResource("4_8f7ds")]([ExtResource("5_0qm8x"), ExtResource("6_0vy4a"), ExtResource("7_gx4g3"), ExtResource("8_wl4wg"), ExtResource("9_qdijn"), ExtResource("10_35ihi"), ExtResource("11_n0t34"), ExtResource("12_rln3k"), ExtResource("13_p5swj"), ExtResource("14_qdh2e"), ExtResource("15_wtgly"), ExtResource("16_4s4w3"), ExtResource("17_jaxl7"), ExtResource("18_ia7vv"), ExtResource("19_kivuo"), ExtResource("20_mevg1"), ExtResource("21_w80k4"), ExtResource("22_bcdq1")])

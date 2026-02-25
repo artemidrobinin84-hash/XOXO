@@ -14,9 +14,12 @@ class_name BaseCard
 @onready var shield_label = $Background/Content/Shield/ShieldLabel
 @onready var heal_label = $Background/Content/Heal/HealLabel
 
+# Переменные для хранения места в веере
+var home_position: Vector2
+var home_rotation: float
+
 func _ready():
-	# Устанавливаем центр вращения/масштаба в середину карты
-	pivot_offset = size / 2
+	# Pivot Offset должен быть настроен в редакторе (X: центр, Y: низ)
 	if card_resource:
 		render_card()
 
@@ -24,7 +27,7 @@ func render_card():
 	if not card_resource:
 		return
 	
-	# Используем .title, так как на скриншоте ошибки видно, что card_name не найден
+	# Используем .title, так как в ресурсе поле называется именно так
 	title_label.text = card_resource.title 
 	desc_label.text = card_resource.description
 	icon_texture.texture = card_resource.icon
@@ -45,12 +48,25 @@ func render_card():
 # --- Визуальные эффекты при наведении ---
 
 func _on_mouse_entered():
-	var tween = create_tween()
-	# Используем set_trans для более мягкой анимации
-	tween.tween_property(self, "scale", Vector2(1.1, 1.1), 0.1).set_trans(Tween.TRANS_QUAD)
-	z_index = 10
+	# Выводим карту на передний план
+	z_index = 100 
+	
+	var tween = create_tween().set_parallel(true)
+	# Увеличиваем масштаб для читаемости
+	tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.15).set_trans(Tween.TRANS_QUAD)
+	# Сбрасываем наклон в 0, чтобы текст был горизонтальным
+	tween.tween_property(self, "rotation_degrees", 0, 0.15)
+	# Приподнимаем карту вверх над веером
+	tween.tween_property(self, "position", home_position + Vector2(0, -60), 0.15)
 
 func _on_mouse_exited():
-	var tween = create_tween()
-	tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.1).set_trans(Tween.TRANS_QUAD)
-	z_index = 0
+	# Возвращаем слой согласно порядку в руке
+	z_index = get_index() 
+	
+	var tween = create_tween().set_parallel(true)
+	# Возвращаем масштаб к исходному
+	tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.15)
+	# Возвращаем наклон веера
+	tween.tween_property(self, "rotation_degrees", home_rotation, 0.15)
+	# Возвращаем на "домашнюю" позицию в дуге
+	tween.tween_property(self, "position", home_position, 0.15)

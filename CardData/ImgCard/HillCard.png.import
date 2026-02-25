@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rdjkmxl5t5gl"
-path="res://.godot/imported/HearthCard.png-d899f2519b3981192cce948cbd4eddf0.ctex"
+uid="uid://kvk1bhxfllbu"
+path="res://.godot/imported/HillCard.png-3d4defda25b98046f15c35d1819cdc0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CardData/HearthCard.png"
-dest_files=["res://.godot/imported/HearthCard.png-d899f2519b3981192cce948cbd4eddf0.ctex"]
+source_file="res://CardData/ImgCard/HillCard.png"
+dest_files=["res://.godot/imported/HillCard.png-3d4defda25b98046f15c35d1819cdc0a.ctex"]
 
 [params]
 

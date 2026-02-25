@@ -1,13 +1,46 @@
 [gd_scene format=3 uid="uid://f0b03p5ljpjf"]
 
 [ext_resource type="Script" uid="uid://tx0eclnhc6wr" path="res://CardData/CardManager.gd" id="1_mlvd5"]
+[ext_resource type="PackedScene" uid="uid://d062lpdfnjdc7" path="res://CardData/CardUI.tscn" id="2_o3abh"]
 
 [node name="CardManager" type="Node" unique_id=102078610]
 script = ExtResource("1_mlvd5")
+card_scene = ExtResource("2_o3abh")
 
-[node name="Hand" type="HBoxContainer" parent="." unique_id=642137060]
-offset_left = 2.0
-offset_top = 681.0
-offset_right = 1921.0
-offset_bottom = 1031.0
-alignment = 1
+[node name="Hand" type="Control" parent="." unique_id=950334911]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 647.0
+offset_top = 626.00006
+offset_right = 2117.0
+offset_bottom = 976.00006
+rotation = 0.15707964
+
+[node name="CardUI" parent="Hand" unique_id=1256596981 instance=ExtResource("2_o3abh")]
+layout_mode = 0
+offset_left = 102.0
+offset_right = 352.0
+
+[node name="CardUI2" parent="Hand" unique_id=1915948351 instance=ExtResource("2_o3abh")]
+visible = false
+layout_mode = 0
+offset_left = 356.0
+offset_right = 606.0
+
+[node name="CardUI3" parent="Hand" unique_id=400861382 instance=ExtResource("2_o3abh")]
+visible = false
+layout_mode = 0
+offset_left = 610.0
+offset_right = 860.0
+
+[node name="CardUI4" parent="Hand" unique_id=748141107 instance=ExtResource("2_o3abh")]
+visible = false
+layout_mode = 0
+offset_left = 864.0
+offset_right = 1114.0
+
+[node name="CardUI5" parent="Hand" unique_id=207714185 instance=ExtResource("2_o3abh")]
+visible = false
+layout_mode = 0
+offset_left = 1118.0
+offset_right = 1368.0
