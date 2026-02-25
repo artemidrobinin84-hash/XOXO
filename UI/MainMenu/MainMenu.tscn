@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://uwhlsr6yw318"]
 
 [ext_resource type="Texture2D" uid="uid://cr7ysnc65qua" path="res://UI/MainMenu/MenuDate11.png" id="1_8fkdr"]
+[ext_resource type="Script" uid="uid://dyca21nvba40o" path="res://UI/MainMenu/main_menu.gd" id="1_8x0bb"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="2_fw0vt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8x0bb"]
@@ -17,43 +18,32 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8x0bb")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2047166545]
+[node name="Background" type="TextureRect" parent="." unique_id=2047166545]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_8fkdr")
 
-[node name="Button2" type="Button" parent="TextureRect" unique_id=1889701716]
+[node name="Play" type="Button" parent="Background" unique_id=1889701716]
 layout_mode = 0
-offset_left = 400.0
-offset_top = 485.0
-offset_right = 649.0
-offset_bottom = 620.0
+offset_left = 868.0
+offset_top = 517.0
+offset_right = 1117.0
+offset_bottom = 652.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_fw0vt")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
 text = "Play"
 
-[node name="Button3" type="Button" parent="TextureRect" unique_id=1660319400]
+[node name="Button4" type="Button" parent="Background" unique_id=1702423009]
 layout_mode = 0
-offset_left = 1139.0
-offset_top = 839.0
-offset_right = 1545.0
-offset_bottom = 974.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_fw0vt")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
-text = "Controls"
-
-[node name="Button4" type="Button" parent="TextureRect" unique_id=1702423009]
-layout_mode = 0
-offset_left = 712.0
-offset_top = 655.0
-offset_right = 1075.0
-offset_bottom = 790.0
+offset_left = 797.0
+offset_top = 717.0
+offset_right = 1186.0
+offset_bottom = 852.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_fw0vt")
 theme_override_font_sizes/font_size = 100
