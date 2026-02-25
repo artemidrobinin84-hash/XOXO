@@ -28,10 +28,10 @@ texture = ExtResource("1_8fkdr")
 
 [node name="Play" type="Button" parent="Background" unique_id=1889701716]
 layout_mode = 0
-offset_left = 868.0
-offset_top = 517.0
-offset_right = 1117.0
-offset_bottom = 652.0
+offset_left = 367.0
+offset_top = 457.0
+offset_right = 616.0
+offset_bottom = 579.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_fw0vt")
 theme_override_font_sizes/font_size = 100
@@ -40,12 +40,36 @@ text = "Play"
 
 [node name="Button4" type="Button" parent="Background" unique_id=1702423009]
 layout_mode = 0
-offset_left = 797.0
-offset_top = 717.0
-offset_right = 1186.0
-offset_bottom = 852.0
+offset_left = 1276.0
+offset_top = 465.0
+offset_right = 1665.0
+offset_bottom = 600.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_fw0vt")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
 text = "Tutorial"
+
+[node name="Button5" type="Button" parent="Background" unique_id=359606614]
+layout_mode = 0
+offset_left = 1023.0
+offset_top = 718.0
+offset_right = 1283.0
+offset_bottom = 853.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
+text = "Credit"
+
+[node name="Play2" type="Button" parent="Background" unique_id=1325743923]
+layout_mode = 0
+offset_left = 557.0
+offset_top = 696.0
+offset_right = 806.0
+offset_bottom = 831.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
+text = "Sound"

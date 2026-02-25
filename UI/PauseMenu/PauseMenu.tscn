@@ -1,3 +1,44 @@
 [gd_scene format=3 uid="uid://m6x6jga2c67k"]
 
+[ext_resource type="Texture2D" uid="uid://dt5rh02iwnteo" path="res://UI/PauseMenu/PauseMenuPng.png" id="1_3oydc"]
+[ext_resource type="Script" uid="uid://35ee0sl54hh1" path="res://UI/PauseMenu/pause_menu.gd" id="1_s70p5"]
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1970886768]
+
+[node name="PauseMenu" type="Control" parent="." unique_id=2008217076]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_s70p5")
+
+[node name="TextureRect" type="TextureRect" parent="PauseMenu" unique_id=1437564269]
+layout_mode = 0
+offset_right = 1934.0
+offset_bottom = 1099.0
+texture = ExtResource("1_3oydc")
+
+[node name="Button" type="Button" parent="PauseMenu/TextureRect" unique_id=1420359700]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 510.0
+offset_right = 1275.0
+offset_bottom = 648.0
+text = "Continue"
+
+[node name="Button2" type="Button" parent="PauseMenu/TextureRect" unique_id=1745484205]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 693.0
+offset_right = 1285.0
+offset_bottom = 813.0
+text = "Restart"
+
+[node name="Button3" type="Button" parent="PauseMenu/TextureRect" unique_id=2076544611]
+layout_mode = 0
+offset_left = 620.0
+offset_top = 860.0
+offset_right = 1281.0
+offset_bottom = 991.0
+text = "Back to menu"
