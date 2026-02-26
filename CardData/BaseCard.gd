@@ -1,6 +1,7 @@
 extends PanelContainer
 class_name BaseCard
 
+# ... (все ваши @export и @onready переменные остаются без изменений) ...
 @export var card_resource: CardData 
 
 @onready var title_label = $Background/Content/TitleLabel
@@ -23,6 +24,15 @@ func _ready():
 	if card_resource:
 		render_card()
 
+# --- НОВЫЙ МЕТОД ДЛЯ КЛИКА ПО ЭКРАНУ ---
+func _input(event):
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if is_selected and not is_dragging:
+			# Проверяем, попал ли клик мимо этой карты
+			var mouse_pos = get_global_mouse_position()
+			if not get_global_rect().has_point(mouse_pos):
+				return_to_rest()
+
 func _gui_input(event):
 	if not can_interact(): return 
 
@@ -34,6 +44,7 @@ func _gui_input(event):
 				deselect_others()
 				toggle_select()
 			else:
+				# Если уже выбрана, разрешаем начать драг
 				start_drag()
 		elif is_dragging:
 			stop_drag()

@@ -28,7 +28,7 @@ func _ready():
 	
 	current_energy = max_energy
 	update_energy_ui()
-	update_deck_label() # Добавили вызов
+	update_deck_label() 
 	replenish_hand()
 	
 	if turn_manager:
@@ -37,6 +37,16 @@ func _ready():
 func update_deck_label():
 	if deck_label:
 		deck_label.text = "X" + str(deck.size())
+	var deck_node = get_node_or_null("../../Deck")
+	if deck_node:
+		if deck_node.has_node("DeckCard"):
+			deck_node.get_node("DeckCard").visible = deck.size() >= 4
+		if deck_node.has_node("DeckCard2"):
+			deck_node.get_node("DeckCard2").visible = deck.size() >= 3
+		if deck_node.has_node("DeckCard3"):
+			deck_node.get_node("DeckCard3").visible = deck.size() >= 2
+		if deck_node.has_node("DeckCard4"):
+			deck_node.get_node("DeckCard4").visible = deck.size() >= 1
 
 func _on_player_turn_started():
 	current_energy = max_energy
@@ -55,10 +65,16 @@ func replenish_hand():
 	var current_count = hand_container.get_child_count()
 	var need = max_hand_size - current_count
 	
+	var cards_drawn = false
 	for i in range(need):
 		if deck.size() > 0:
 			var data = deck.pop_front()
 			spawn_card_in_ui(data)
+			cards_drawn = true
+	
+	if cards_drawn:
+		update_deck_label()
+		
 	update_hand_fan()
 
 func spawn_card_in_ui(data: CardData):
@@ -88,7 +104,7 @@ func update_hand_fan():
 	
 	for i in range(total_cards):
 		var card = cards[i]
-		if not card is BaseCard: continue
+		if not card.has_method("set"): continue 
 		
 		var raw_offset = (float(i) - (total_cards - 1) / 2.0)
 		var offset = -raw_offset
@@ -96,13 +112,16 @@ func update_hand_fan():
 		var target_pos = Vector2(offset * spacing, (offset * offset / 10.0) * arc_height)
 		var target_rot = offset * angle_step
 		
-		card.home_position = target_pos
-		card.home_rotation = target_rot
+		if "home_position" in card:
+			card.home_position = target_pos
+		if "home_rotation" in card:
+			card.home_rotation = target_rot
 		
 		card.z_index = 0
-		card.home_z_index = 0 
+		if "home_z_index" in card:
+			card.home_z_index = 0 
 
-		if not card.is_dragging and not card.is_selected:
+		if ("is_dragging" in card and not card.is_dragging) and ("is_selected" in card and not card.is_selected):
 			var tween = create_tween().set_parallel(true).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 			tween.tween_property(card, "position", target_pos, 0.4)
 			tween.tween_property(card, "rotation_degrees", target_rot, 0.4)
