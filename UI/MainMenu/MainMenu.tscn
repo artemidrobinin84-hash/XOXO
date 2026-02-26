@@ -56,10 +56,10 @@ text = "Tutorial"
 
 [node name="Credit" type="Button" parent="Background" unique_id=359606614]
 layout_mode = 0
-offset_left = 1023.0
-offset_top = 718.0
-offset_right = 1283.0
-offset_bottom = 853.0
+offset_left = 1058.0
+offset_top = 711.0
+offset_right = 1318.0
+offset_bottom = 846.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_fw0vt")
 theme_override_font_sizes/font_size = 100
@@ -68,10 +68,10 @@ text = "Credit"
 
 [node name="Sound" type="Button" parent="Background" unique_id=1325743923]
 layout_mode = 0
-offset_left = 557.0
-offset_top = 696.0
-offset_right = 806.0
-offset_bottom = 831.0
+offset_left = 629.0
+offset_top = 713.0
+offset_right = 878.0
+offset_bottom = 848.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_fw0vt")
@@ -103,6 +103,7 @@ offset_bottom = 143.0
 mouse_default_cursor_shape = 2
 
 [node name="Master" type="HSlider" parent="Background/Sound_Settings/TextureRect" unique_id=947008071]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
 offset_right = 668.0
 offset_bottom = 246.0
@@ -111,27 +112,60 @@ max_value = 1.0
 step = 0.001
 value = 0.8
 
+[node name="General" type="Label" parent="Background/Sound_Settings/TextureRect/Master" unique_id=677920994]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 19.0
+offset_right = 709.0
+offset_bottom = 165.91666
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_font_sizes/font_size = 80
+text = "General"
+
 [node name="Music" type="HSlider" parent="Background/Sound_Settings/TextureRect" unique_id=1674973721]
 layout_mode = 0
-offset_left = -21.0
-offset_top = 266.0
-offset_right = 654.0
-offset_bottom = 412.0
+offset_left = 6.0
+offset_top = 206.0
+offset_right = 681.0
+offset_bottom = 352.0
 mouse_default_cursor_shape = 2
 max_value = 1.0
 step = 0.001
 value = 0.8
 
+[node name="General" type="Label" parent="Background/Sound_Settings/TextureRect/Music" unique_id=638077295]
+layout_mode = 0
+offset_left = 20.0
+offset_top = -43.0
+offset_right = 701.0
+offset_bottom = 103.91666
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_font_sizes/font_size = 80
+text = "Music"
+
 [node name="SFX" type="HSlider" parent="Background/Sound_Settings/TextureRect" unique_id=74928867]
 layout_mode = 0
-offset_left = -7.0
-offset_top = 464.0
-offset_right = 698.0
-offset_bottom = 649.0
+offset_left = -1.0
+offset_top = 318.0
+offset_right = 704.0
+offset_bottom = 503.0
 mouse_default_cursor_shape = 2
 max_value = 1.0
 step = 0.001
 value = 0.8
+
+[node name="General" type="Label" parent="Background/Sound_Settings/TextureRect/SFX" unique_id=1729131687]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -11.0
+offset_right = 712.0
+offset_bottom = 135.91666
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_font_sizes/font_size = 80
+text = "SFX"
 
 [node name="CreditMenu" type="Control" parent="Background" unique_id=489859479]
 visible = false
