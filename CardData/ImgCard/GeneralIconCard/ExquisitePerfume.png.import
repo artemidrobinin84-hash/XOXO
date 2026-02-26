@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2cieu41iguh3"
-path="res://.godot/imported/кас.png-5ed3f284e612abd91b723f9b378d65c4.ctex"
+uid="uid://bps8ydg23fvem"
+path="res://.godot/imported/ExquisitePerfume.png-fc4e0ef7b7ec73a8639a096e48dc76cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CardData/ImgCard/кас.png"
-dest_files=["res://.godot/imported/кас.png-5ed3f284e612abd91b723f9b378d65c4.ctex"]
+source_file="res://CardData/ImgCard/GeneralIconCard/ExquisitePerfume.png"
+dest_files=["res://.godot/imported/ExquisitePerfume.png-fc4e0ef7b7ec73a8639a096e48dc76cd.ctex"]
 
 [params]
 

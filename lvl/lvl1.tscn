@@ -2,28 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://dgjutv2m53v38" path="res://lvl/back.jpg" id="1_8uc06"]
 [ext_resource type="PackedScene" uid="uid://f0b03p5ljpjf" path="res://CardData/CardManager.tscn" id="2_r30gq"]
-[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="4_8f7ds"]
-[ext_resource type="Resource" uid="uid://cdyy854m5kojp" path="res://CardData/Card/AccidentalTouch.tres" id="5_0qm8x"]
-[ext_resource type="Resource" uid="uid://bixhgdmnaefrh" path="res://CardData/Card/AirKiss.tres" id="6_0vy4a"]
-[ext_resource type="Resource" uid="uid://bgtdhkbjsk8r6" path="res://CardData/Card/ConfidentPose.tres" id="7_gx4g3"]
-[ext_resource type="Resource" uid="uid://dg4fl1cffoad1" path="res://CardData/Card/CupOfCoffee.tres" id="8_wl4wg"]
-[ext_resource type="Resource" uid="uid://c1fhggumo352p" path="res://CardData/Card/DanceInvitation.tres" id="9_qdijn"]
-[ext_resource type="Resource" uid="uid://bjluehuo4jmet" path="res://CardData/Card/DeepBreath.tres" id="10_35ihi"]
-[ext_resource type="Resource" uid="uid://v1ka3qga5v8k" path="res://CardData/Card/ExquisitePerfume.tres" id="11_n0t34"]
-[ext_resource type="Resource" uid="uid://bto6fphgj4us6" path="res://CardData/Card/IntellectualDebate.tres" id="12_rln3k"]
-[ext_resource type="Resource" uid="uid://b0ggm4v5b20ka" path="res://CardData/Card/IntenseStare.tres" id="13_p5swj"]
-[ext_resource type="Resource" uid="uid://c8uwf5kjgu4s8" path="res://CardData/Card/LuxuryBouquet.tres" id="14_qdh2e"]
-[ext_resource type="Resource" uid="uid://10xmhyb3x5kn" path="res://CardData/Card/MovieTickets.tres" id="15_wtgly"]
-[ext_resource type="Resource" uid="uid://40mtjnjpibq" path="res://CardData/Card/PickUpLine.tres" id="16_4s4w3"]
-[ext_resource type="Resource" uid="uid://cssjxh1gyxxhm" path="res://CardData/Card/PromiseToCall.tres" id="17_jaxl7"]
-[ext_resource type="Resource" uid="uid://d2wrss2tovd6k" path="res://CardData/Card/Serenade.tres" id="18_ia7vv"]
-[ext_resource type="Resource" uid="uid://c6u8yxuxeetyt" path="res://CardData/Card/ShySmile.tres" id="19_kivuo"]
-[ext_resource type="Resource" uid="uid://cdmoghn1dsrgb" path="res://CardData/Card/SincereCompliment.tres" id="20_mevg1"]
-[ext_resource type="Resource" uid="uid://bbtcxoaqur1ds" path="res://CardData/Card/Wink.tres" id="21_w80k4"]
-[ext_resource type="Resource" uid="uid://5y5uxuaidl4b" path="res://CardData/Card/WittyJoke.tres" id="22_bcdq1"]
+[ext_resource type="Script" uid="uid://dade0acwfe8qv" path="res://lvl/ProgressBar.gd" id="7_d4vtd"]
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="22_ck4d2"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
 [ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://DeckCard.tscn" id="24_0qm8x"]
+[ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8f7ds"]
 bg_color = Color(0.09255666, 0.20777234, 0.14807534, 1)
@@ -54,6 +37,9 @@ shadow_size = 10
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vy4a"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4vtd"]
+bg_color = Color(1, 0, 0, 1)
+
 [node name="lvl1" type="Node2D" unique_id=55323218]
 
 [node name="Back" type="Sprite2D" parent="." unique_id=313086565]
@@ -61,14 +47,9 @@ position = Vector2(960, 539.99994)
 scale = Vector2(0.99999994, 1)
 texture = ExtResource("1_8uc06")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1980883696]
-
-[node name="CardManager" parent="CanvasLayer" unique_id=102078610 instance=ExtResource("2_r30gq")]
-all_cards = Array[ExtResource("4_8f7ds")]([ExtResource("5_0qm8x"), ExtResource("6_0vy4a"), ExtResource("7_gx4g3"), ExtResource("8_wl4wg"), ExtResource("9_qdijn"), ExtResource("10_35ihi"), ExtResource("11_n0t34"), ExtResource("12_rln3k"), ExtResource("13_p5swj"), ExtResource("14_qdh2e"), ExtResource("15_wtgly"), ExtResource("16_4s4w3"), ExtResource("17_jaxl7"), ExtResource("18_ia7vv"), ExtResource("19_kivuo"), ExtResource("20_mevg1"), ExtResource("21_w80k4"), ExtResource("22_bcdq1")])
-
 [node name="GirlHitbox" parent="." unique_id=2028270037 instance=ExtResource("22_ck4d2")]
 
-[node name="Button" type="Button" parent="." unique_id=1915894897]
+[node name="TurnButton" type="Button" parent="." unique_id=1915894897]
 offset_left = 1597.0
 offset_top = 332.0
 offset_right = 1913.0
@@ -80,25 +61,28 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_0qm8x")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0qm8x")
 text = "Skip to turn"
 
+[node name="TurnManager" type="Node" parent="." unique_id=1999896431]
+script = ExtResource("25_0vy4a")
+
 [node name="Deck" type="Node" parent="." unique_id=1656373539]
 
 [node name="DeckCard" parent="Deck" unique_id=1688954903 instance=ExtResource("24_0qm8x")]
-offset_left = 1604.0
-offset_top = 661.0
-offset_right = 1854.0
-offset_bottom = 1011.0
+offset_left = 1623.0
+offset_top = 644.0
+offset_right = 1873.0
+offset_bottom = 994.0
 
 [node name="DeckCard2" parent="Deck" unique_id=841038188 instance=ExtResource("24_0qm8x")]
-offset_left = 1593.9999
-offset_top = 669.0
-offset_right = 1843.9999
-offset_bottom = 1019.0
+offset_left = 1609.0
+offset_top = 659.0
+offset_right = 1859.0
+offset_bottom = 1009.0
 
 [node name="DeckCard3" parent="Deck" unique_id=1887402244 instance=ExtResource("24_0qm8x")]
-offset_left = 1589.0
-offset_top = 679.0
-offset_right = 1839.0
-offset_bottom = 1028.9999
+offset_left = 1594.0
+offset_top = 675.00006
+offset_right = 1844.0
+offset_bottom = 1025.0
 
 [node name="DeckCard4" parent="Deck" unique_id=1436201745 instance=ExtResource("24_0qm8x")]
 offset_left = 1579.0
@@ -106,7 +90,7 @@ offset_top = 690.0
 offset_right = 1829.0
 offset_bottom = 1040.0
 
-[node name="Label" type="Label" parent="Deck" unique_id=1952802472]
+[node name="DeckLabel" type="Label" parent="Deck" unique_id=1952802472]
 offset_left = 1584.0
 offset_top = 762.0
 offset_right = 1824.0
@@ -118,3 +102,29 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_0vy4a")
 text = "x15"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1980883696]
+
+[node name="CardManager" parent="CanvasLayer" unique_id=102078610 instance=ExtResource("2_r30gq")]
+
+[node name="CostLabel" type="Label" parent="." unique_id=456625922]
+offset_left = 1409.0
+offset_top = 496.0
+offset_right = 2320.0
+offset_bottom = 838.0
+theme_override_font_sizes/font_size = 90
+text = "Energy: 8/8"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=778174845]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer2" unique_id=1325065460]
+offset_left = 446.0
+offset_top = 26.0
+offset_right = 1406.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_d4vtd")
+value = 100.0
+script = ExtResource("7_d4vtd")
+
+[connection signal="pressed" from="TurnButton" to="TurnManager" method="_on_turn_button_pressed"]

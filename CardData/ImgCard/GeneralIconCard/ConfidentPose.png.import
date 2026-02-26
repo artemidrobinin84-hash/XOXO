@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3jix7vwe2i3s"
-path="res://.godot/imported/1.png-b559a822ce5de67c35ad067abb4dbeae.ctex"
+uid="uid://d4bqrsllamesj"
+path="res://.godot/imported/ConfidentPose.png-6ae4e04c725bd50d37b74aa287a75f0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CardData/ImgCard/1.png"
-dest_files=["res://.godot/imported/1.png-b559a822ce5de67c35ad067abb4dbeae.ctex"]
+source_file="res://CardData/ImgCard/GeneralIconCard/ConfidentPose.png"
+dest_files=["res://.godot/imported/ConfidentPose.png-6ae4e04c725bd50d37b74aa287a75f0d.ctex"]
 
 [params]
 

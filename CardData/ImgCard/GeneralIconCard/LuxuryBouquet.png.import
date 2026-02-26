@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4bqrsllamesj"
-path="res://.godot/imported/аура.png-cc6e727878f9ed32a426749fe050029f.ctex"
+uid="uid://by3ogkbwmixha"
+path="res://.godot/imported/LuxuryBouquet.png-28e0cccec6067482e5431e7489356e59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CardData/ImgCard/аура.png"
-dest_files=["res://.godot/imported/аура.png-cc6e727878f9ed32a426749fe050029f.ctex"]
+source_file="res://CardData/ImgCard/GeneralIconCard/LuxuryBouquet.png"
+dest_files=["res://.godot/imported/LuxuryBouquet.png-28e0cccec6067482e5431e7489356e59.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bjluehuo4jmet"]
 
-[ext_resource type="Texture2D" uid="uid://d3jix7vwe2i3s" path="res://CardData/ImgCard/1.png" id="1_ksfcy"]
+[ext_resource type="Texture2D" uid="uid://d3jix7vwe2i3s" path="res://CardData/ImgCard/GeneralIconCard/DeepBreath.png" id="1_ksfcy"]
 [ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="1_x4rv5"]
 
 [resource]

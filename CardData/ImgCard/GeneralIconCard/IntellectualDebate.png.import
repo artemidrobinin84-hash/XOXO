@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by3ogkbwmixha"
-path="res://.godot/imported/цвне.png-737aa95187dcab148244a1b275b5d0fb.ctex"
+uid="uid://boa5e1hesvvoo"
+path="res://.godot/imported/IntellectualDebate.png-ba6440b854f29cfc96a901083937d010.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CardData/ImgCard/цвне.png"
-dest_files=["res://.godot/imported/цвне.png-737aa95187dcab148244a1b275b5d0fb.ctex"]
+source_file="res://CardData/ImgCard/GeneralIconCard/IntellectualDebate.png"
+dest_files=["res://.godot/imported/IntellectualDebate.png-ba6440b854f29cfc96a901083937d010.ctex"]
 
 [params]
 

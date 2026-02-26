@@ -23,7 +23,7 @@ func _on_play_pressed() -> void:
 #
 #func _Settings() -> void:
 	#$menu/MenuUi/Settings.pressed.connect(_on_settings_pressed)
-#
+	
 #func _SupportExit() -> void:
 	#$menu/MenuUi/Control2/SupportUi/Button.pressed.connect(_on_exit_support_pressed)
 #

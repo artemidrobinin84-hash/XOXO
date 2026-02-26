@@ -4,71 +4,107 @@ extends Node
 @export var all_cards: Array[CardData]
 
 @export_group("Hand Settings")
-@export var max_spread: float = 1250.0
-@export var max_spacing: float = 550.0
-@export var angle_step: float = 2.0
+@export var max_spread: float = 550.0
+@export var max_spacing: float = 95.0
+@export var angle_step: float = 3.0
 @export var arc_height: float = 25.0
 
-@export var max_energy: int = 3
+@export_group("Gameplay Settings")
+@export var max_energy: int = 80
 var current_energy: int = 0
+var max_hand_size: int = 5
 
 var deck: Array[CardData] = []
-var hand: Array[CardData] = []
 
+@onready var deck_label = get_node_or_null("../../Deck/DeckLabel")
+@onready var energy_label = get_node_or_null("../../CostLabel") 
+@onready var turn_manager = get_node_or_null("/root/lvl1/TurnManager")
 @onready var hand_container = $Hand
 
 func _ready():
 	add_to_group("card_manager")
 	deck = all_cards.duplicate()
 	deck.shuffle()
-	draw_cards(5)
+	
 	current_energy = max_energy
+	update_energy_ui()
+	update_deck_label() # Добавили вызов
+	replenish_hand()
+	
+	if turn_manager:
+		turn_manager.player_turn_started.connect(_on_player_turn_started)
 
-func draw_cards(amount: int):
-	for i in range(amount):
+func update_deck_label():
+	if deck_label:
+		deck_label.text = "X" + str(deck.size())
+
+func _on_player_turn_started():
+	current_energy = max_energy
+	update_energy_ui()
+	replenish_hand()
+
+func update_energy_ui():
+	if energy_label:
+		energy_label.text = "Energy: " + str(current_energy) + " / " + str(max_energy)
+
+func use_energy(amount: int):
+	current_energy -= amount
+	update_energy_ui()
+
+func replenish_hand():
+	var current_count = hand_container.get_child_count()
+	var need = max_hand_size - current_count
+	
+	for i in range(need):
 		if deck.size() > 0:
-			var card_data = deck.pop_front()
-			hand.append(card_data)
-			spawn_card_in_ui(card_data)
+			var data = deck.pop_front()
+			spawn_card_in_ui(data)
+	update_hand_fan()
 
 func spawn_card_in_ui(data: CardData):
 	if not card_scene: return
 	var card_instance = card_scene.instantiate()
+	
 	hand_container.add_child(card_instance)
+	hand_container.move_child(card_instance, 0)
 	
+	card_instance.card_resource = data
 	if card_instance.has_method("render_card"):
-		card_instance.card_resource = data
 		card_instance.render_card()
-	
-	update_hand_fan()
 
-func deselect_all_cards(except_card: BaseCard):
-	for card in hand_container.get_children():
-		if card is BaseCard and card != except_card:
-			if card.is_selected:
-				card.return_to_rest() 
+func can_interact_with_cards() -> bool:
+	if not turn_manager: return true 
+	return turn_manager.current_turn == turn_manager.Turn.PLAYER
+
+func can_afford_card(cost: int) -> bool:
+	return can_interact_with_cards() and current_energy >= cost
 
 func update_hand_fan():
 	var cards = hand_container.get_children()
-	var count = cards.size()
-	if count == 0: return
-
-	var spacing = min(max_spread / count, max_spacing)
+	var total_cards = cards.size()
+	if total_cards == 0: return
 	
-	for i in range(count):
+	var spacing = min(max_spread / total_cards, max_spacing)
+	
+	for i in range(total_cards):
 		var card = cards[i]
+		if not card is BaseCard: continue
 		
-		var float_idx = float(i)
-		var center_offset = (float_idx - (count - 1) / 2.0)
+		var raw_offset = (float(i) - (total_cards - 1) / 2.0)
+		var offset = -raw_offset
 		
-		card.position.x = -center_offset * spacing
-		card.rotation_degrees = -center_offset * angle_step
+		var target_pos = Vector2(offset * spacing, (offset * offset / 10.0) * arc_height)
+		var target_rot = offset * angle_step
 		
-		var arc_factor = (center_offset * center_offset) / 25.0
-		card.position.y = arc_factor * arc_height
+		card.home_position = target_pos
+		card.home_rotation = target_rot
 		
 		card.z_index = 0
-		
-		if card is BaseCard:
-			card.home_position = card.position
-			card.home_rotation = card.rotation_degrees
+		card.home_z_index = 0 
+
+		if not card.is_dragging and not card.is_selected:
+			var tween = create_tween().set_parallel(true).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+			tween.tween_property(card, "position", target_pos, 0.4)
+			tween.tween_property(card, "rotation_degrees", target_rot, 0.4)
+			tween.tween_property(card, "scale", Vector2(1, 1), 0.4)
+			tween.tween_property(card, "modulate:a", 1.0, 0.2)

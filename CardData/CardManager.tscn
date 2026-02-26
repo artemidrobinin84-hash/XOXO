@@ -2,56 +2,36 @@
 
 [ext_resource type="Script" uid="uid://tx0eclnhc6wr" path="res://CardData/CardManager.gd" id="1_mlvd5"]
 [ext_resource type="PackedScene" uid="uid://d062lpdfnjdc7" path="res://CardData/CardUI.tscn" id="2_o3abh"]
+[ext_resource type="Script" uid="uid://caihvaeaot5l6" path="res://CardData/CardData.gd" id="3_xmoxc"]
+[ext_resource type="Resource" uid="uid://cdyy854m5kojp" path="res://CardData/Card/AccidentalTouch.tres" id="4_tsixq"]
+[ext_resource type="Resource" uid="uid://bixhgdmnaefrh" path="res://CardData/Card/AirKiss.tres" id="5_nvnig"]
+[ext_resource type="Resource" uid="uid://bgtdhkbjsk8r6" path="res://CardData/Card/ConfidentPose.tres" id="6_jwpnh"]
+[ext_resource type="Resource" uid="uid://dg4fl1cffoad1" path="res://CardData/Card/CupOfCoffee.tres" id="7_t8f1s"]
+[ext_resource type="Resource" uid="uid://c1fhggumo352p" path="res://CardData/Card/DanceInvitation.tres" id="8_jskxm"]
+[ext_resource type="Resource" uid="uid://bjluehuo4jmet" path="res://CardData/Card/DeepBreath.tres" id="9_4it3j"]
+[ext_resource type="Resource" uid="uid://v1ka3qga5v8k" path="res://CardData/Card/ExquisitePerfume.tres" id="10_bpamm"]
+[ext_resource type="Resource" uid="uid://bto6fphgj4us6" path="res://CardData/Card/IntellectualDebate.tres" id="11_ra73y"]
+[ext_resource type="Resource" uid="uid://b0ggm4v5b20ka" path="res://CardData/Card/IntenseStare.tres" id="12_u5klp"]
+[ext_resource type="Resource" uid="uid://c8uwf5kjgu4s8" path="res://CardData/Card/LuxuryBouquet.tres" id="13_kiw5w"]
+[ext_resource type="Resource" uid="uid://10xmhyb3x5kn" path="res://CardData/Card/MovieTickets.tres" id="14_kpb1w"]
+[ext_resource type="Resource" uid="uid://40mtjnjpibq" path="res://CardData/Card/PickUpLine.tres" id="15_ok12r"]
+[ext_resource type="Resource" uid="uid://cssjxh1gyxxhm" path="res://CardData/Card/PromiseToCall.tres" id="16_6fg66"]
+[ext_resource type="Resource" uid="uid://d2wrss2tovd6k" path="res://CardData/Card/Serenade.tres" id="17_a2buv"]
+[ext_resource type="Resource" uid="uid://c6u8yxuxeetyt" path="res://CardData/Card/ShySmile.tres" id="18_cp0w5"]
+[ext_resource type="Resource" uid="uid://cdmoghn1dsrgb" path="res://CardData/Card/SincereCompliment.tres" id="19_bgaxx"]
+[ext_resource type="Resource" uid="uid://bbtcxoaqur1ds" path="res://CardData/Card/Wink.tres" id="20_sduu4"]
+[ext_resource type="Resource" uid="uid://5y5uxuaidl4b" path="res://CardData/Card/WittyJoke.tres" id="21_1ipre"]
 
 [node name="CardManager" type="Node" unique_id=102078610]
 script = ExtResource("1_mlvd5")
 card_scene = ExtResource("2_o3abh")
+all_cards = Array[ExtResource("3_xmoxc")]([ExtResource("4_tsixq"), ExtResource("5_nvnig"), ExtResource("6_jwpnh"), ExtResource("7_t8f1s"), ExtResource("8_jskxm"), ExtResource("9_4it3j"), ExtResource("10_bpamm"), ExtResource("11_ra73y"), ExtResource("12_u5klp"), ExtResource("13_kiw5w"), ExtResource("14_kpb1w"), ExtResource("15_ok12r"), ExtResource("16_6fg66"), ExtResource("17_a2buv"), ExtResource("18_cp0w5"), ExtResource("19_bgaxx"), ExtResource("20_sduu4"), ExtResource("21_1ipre")])
 
 [node name="Hand" type="Control" parent="." unique_id=950334911]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 969.00006
-offset_top = 708.0
-offset_right = 969.00006
-offset_bottom = 708.0
+offset_left = 712.0
+offset_top = 667.0
+offset_right = 712.0
+offset_bottom = 667.0
 rotation = 0.05235988
-
-[node name="CardUI" parent="Hand" unique_id=1256596981 instance=ExtResource("2_o3abh")]
-visible = false
-layout_mode = 0
-offset_left = 102.0
-offset_top = 0.0
-offset_right = 352.0
-offset_bottom = 350.0
-
-[node name="CardUI2" parent="Hand" unique_id=1915948351 instance=ExtResource("2_o3abh")]
-visible = false
-layout_mode = 0
-offset_left = 356.0
-offset_top = 0.0
-offset_right = 606.0
-offset_bottom = 350.0
-
-[node name="CardUI3" parent="Hand" unique_id=400861382 instance=ExtResource("2_o3abh")]
-visible = false
-layout_mode = 0
-offset_left = 610.0
-offset_top = 0.0
-offset_right = 860.0
-offset_bottom = 350.0
-
-[node name="CardUI4" parent="Hand" unique_id=748141107 instance=ExtResource("2_o3abh")]
-visible = false
-layout_mode = 0
-offset_left = 864.0
-offset_top = 0.0
-offset_right = 1114.0
-offset_bottom = 350.0
-
-[node name="CardUI5" parent="Hand" unique_id=207714185 instance=ExtResource("2_o3abh")]
-visible = false
-layout_mode = 0
-offset_left = 1118.0
-offset_top = 0.0
-offset_right = 1368.0
-offset_bottom = 350.0

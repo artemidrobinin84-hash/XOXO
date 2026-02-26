@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d062lpdfnjdc7"]
 
 [ext_resource type="Script" uid="uid://rt65j2rlfel" path="res://CardData/BaseCard.gd" id="1_ethmh"]
-[ext_resource type="Resource" uid="uid://bixhgdmnaefrh" path="res://CardData/Card/AirKiss.tres" id="2_qs5sx"]
+[ext_resource type="Resource" uid="uid://bto6fphgj4us6" path="res://CardData/Card/IntellectualDebate.tres" id="2_u5ql7"]
 [ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="3_u5ql7"]
 [ext_resource type="Texture2D" uid="uid://brcicnbd3cqlk" path="res://CardData/ImgCard/CostCard.png" id="4_bl1hs"]
-[ext_resource type="Texture2D" uid="uid://b2cieu41iguh3" path="res://CardData/ImgCard/кас.png" id="4_u5ql7"]
+[ext_resource type="Texture2D" uid="uid://boa5e1hesvvoo" path="res://CardData/ImgCard/GeneralIconCard/IntellectualDebate.png" id="4_u5ql7"]
 [ext_resource type="FontFile" uid="uid://syp2xi1ddrch" path="res://Core/Eitai.otf" id="6_u5ql7"]
 [ext_resource type="Texture2D" uid="uid://c3athe8dh5w1h" path="res://CardData/ImgCard/ShildCard.png" id="7_a54xw"]
 [ext_resource type="Texture2D" uid="uid://rdjkmxl5t5gl" path="res://CardData/ImgCard/HearthCard.png" id="8_g8j4h"]
@@ -99,7 +99,7 @@ offset_bottom = 680.0
 pivot_offset = Vector2(130, 350)
 theme_override_styles/panel = SubResource("StyleBoxFlat_bl1hs")
 script = ExtResource("1_ethmh")
-card_resource = ExtResource("2_qs5sx")
+card_resource = ExtResource("2_u5ql7")
 
 [node name="Background" type="PanelContainer" parent="." unique_id=2077233278]
 texture_filter = 1
@@ -160,10 +160,10 @@ vertical_alignment = 1
 texture_filter = 1
 custom_minimum_size = Vector2(86, 86)
 layout_mode = 0
-offset_left = 72.00001
-offset_top = 72.0
-offset_right = 377.71436
-offset_bottom = 337.71423
+offset_left = 76.999985
+offset_top = 71.00002
+offset_right = 377.0
+offset_bottom = 321.00003
 scale = Vector2(0.35, 0.35)
 mouse_filter = 2
 texture = ExtResource("4_u5ql7")

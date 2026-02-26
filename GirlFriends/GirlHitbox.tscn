@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://d3yec0rny5dax"]
 
+[ext_resource type="Script" uid="uid://dakl0ttjj2b2i" path="res://GirlFriends/GirlHitbox.gd" id="1_u0jhh"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wnn1p"]
-size = Vector2(637, 636)
+size = Vector2(1186, 466)
 
 [sub_resource type="Gradient" id="Gradient_u7yqw"]
 
@@ -9,9 +11,10 @@ size = Vector2(637, 636)
 gradient = SubResource("Gradient_u7yqw")
 
 [node name="GirlHitbox" type="Area2D" unique_id=2028270037 groups=["enemy"]]
+script = ExtResource("1_u0jhh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=877260902]
-position = Vector2(949.5, 318)
+position = Vector2(1001, 233)
 shape = SubResource("RectangleShape2D_wnn1p")
 debug_color = Color(0.92941177, 0, 0.6666667, 0.25882354)
 
