@@ -2,8 +2,8 @@ extends Control
 
 func _ready() -> void:
 	#_Exit()
-	#_Settings()
-	#_SettingsExit()
+	_Sound()
+	_SoundExit()
 	#_Support()
 	#_SupportExit()
 	_Play()
@@ -21,14 +21,14 @@ func _on_play_pressed() -> void:
 	#$menu/MenuUi/Support.pressed.connect(_on_support_pressed)
 	#
 #
-#func _Settings() -> void:
-	#$menu/MenuUi/Settings.pressed.connect(_on_settings_pressed)
+func _Sound() -> void:
+	$Background/Sound.pressed.connect(_on_settings_pressed)
 	
 #func _SupportExit() -> void:
 	#$menu/MenuUi/Control2/SupportUi/Button.pressed.connect(_on_exit_support_pressed)
 #
 #
-#func _SettingsExit() -> void:
+#func _SoundExit() -> void:
 	#$menu/MenuUi/Control/SettingsUi/Button.pressed.connect(_on_exit_settings_pressed)
 #
 #
@@ -44,10 +44,10 @@ func _on_play_pressed() -> void:
 	#$menu/MenuUi/Control2.mouse_filter = Control.MOUSE_FILTER_STOP
 	#$menu/MenuUi/Control2/SupportUi.show()
 #
-#func _on_settings_pressed() -> void:
-	#print("nasal")
-	#$menu/MenuUi/Control.mouse_filter = Control.MOUSE_FILTER_STOP
-	#$menu/MenuUi/Control/SettingsUi.show()
+func _on_settings_pressed() -> void:
+	print("nasal")
+	$Background/Sound_Settings.mouse_filter = Control.MOUSE_FILTER_STOP
+	$Background/Sound_Settings.show()
 #
 #func _on_exit_support_pressed() -> void:
 	#print("lol")
@@ -55,7 +55,7 @@ func _on_play_pressed() -> void:
 	#$menu/MenuUi/Control2.mouse_filter = Control.MOUSE_FILTER_IGNORE
 #
 #
-#func _on_exit_settings_pressed() -> void:
-	#print("lol")
-	#$menu/MenuUi/Control/SettingsUi.visible = false
-	#$menu/MenuUi/Control.mouse_filter = Control.MOUSE_FILTER_IGNORE
+func _SoundExit() -> void:
+	print("lol")
+	$menu/MenuUi/Control/SettingsUi.visible = false
+	$menu/MenuUi/Control.mouse_filter = Control.MOUSE_FILTER_IGNORE

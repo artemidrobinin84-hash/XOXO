@@ -2,11 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://dgjutv2m53v38" path="res://lvl/back.jpg" id="1_8uc06"]
 [ext_resource type="PackedScene" uid="uid://f0b03p5ljpjf" path="res://CardData/CardManager.tscn" id="2_r30gq"]
-[ext_resource type="Script" uid="uid://dade0acwfe8qv" path="res://lvl/ProgressBar.gd" id="7_d4vtd"]
+[ext_resource type="Script" path="res://lvl/ProgressBar.gd" id="7_d4vtd"]
+[ext_resource type="Script" uid="uid://d35sfwqsfx0j0" path="res://lvl/gameplay_manager.gd" id="8_6fe25"]
+[ext_resource type="Script" uid="uid://bud8pdkppdg4c" path="res://lvl/gameplay_actions.gd" id="9_wtn46"]
+[ext_resource type="AudioStream" uid="uid://ba0j37jy6pwma" path="res://Core/MainSound/voskresnoe-vdokhnovenie-2-29609a.mp3" id="10_dgetj"]
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="22_ck4d2"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
-[ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://DeckCard.tscn" id="24_0qm8x"]
-[ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
+[ext_resource type="PackedScene" path="res://DeckCard.tscn" id="24_0qm8x"]
+[ext_resource type="Script" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8f7ds"]
 bg_color = Color(0.09255666, 0.20777234, 0.14807534, 1)
@@ -126,5 +129,19 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/background = SubResource("StyleBoxFlat_d4vtd")
 value = 100.0
 script = ExtResource("7_d4vtd")
+
+[node name="Gameplay_Manager" type="Node" parent="." unique_id=1144935655 node_paths=PackedStringArray("gameplay_actions")]
+process_mode = 3
+script = ExtResource("8_6fe25")
+gameplay_actions = NodePath("GameplayActions")
+
+[node name="GameplayActions" type="Node" parent="Gameplay_Manager" unique_id=1446524862]
+process_mode = 3
+script = ExtResource("9_wtn46")
+metadata/_custom_type_script = "uid://6ywac67sibr1"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1892208935]
+stream = ExtResource("10_dgetj")
+autoplay = true
 
 [connection signal="pressed" from="TurnButton" to="TurnManager" method="_on_turn_button_pressed"]

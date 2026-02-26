@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cr7ysnc65qua" path="res://UI/MainMenu/MenuDate11.png" id="1_8fkdr"]
 [ext_resource type="Script" uid="uid://dyca21nvba40o" path="res://UI/MainMenu/main_menu.gd" id="1_8x0bb"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="2_fw0vt"]
-[ext_resource type="PackedScene" uid="uid://m6x6jga2c67k" path="res://UI/PauseMenu/PauseMenu.tscn" id="2_nahvw"]
+[ext_resource type="Texture2D" uid="uid://cuivyqo57eiij" path="res://UI/MainMenu/Sound_Menu.png" id="4_4elqj"]
+[ext_resource type="AudioStream" uid="uid://c3qym8xn2jva7" path="res://Core/MainSound/tyoplye-vospominaniya-2-f46ec8.mp3" id="5_4elqj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8x0bb"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
@@ -21,8 +22,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8x0bb")
 
-[node name="CanvasLayer" parent="." unique_id=1970886768 instance=ExtResource("2_nahvw")]
-
 [node name="Background" type="TextureRect" parent="." unique_id=2047166545]
 layout_mode = 0
 offset_right = 1920.0
@@ -32,10 +31,10 @@ texture = ExtResource("1_8fkdr")
 
 [node name="Play" type="Button" parent="Background" unique_id=1889701716]
 layout_mode = 0
-offset_left = 367.0
-offset_top = 457.0
-offset_right = 616.0
-offset_bottom = 579.0
+offset_left = 386.0
+offset_top = 497.0
+offset_right = 635.0
+offset_bottom = 619.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_fw0vt")
 theme_override_font_sizes/font_size = 100
@@ -66,7 +65,7 @@ theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
 text = "Credit"
 
-[node name="Play2" type="Button" parent="Background" unique_id=1325743923]
+[node name="Sound" type="Button" parent="Background" unique_id=1325743923]
 layout_mode = 0
 offset_left = 557.0
 offset_top = 696.0
@@ -77,3 +76,58 @@ theme_override_fonts/font = ExtResource("2_fw0vt")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
 text = "Sound"
+
+[node name="Sound_Settings" type="Control" parent="Background" unique_id=2019063045]
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="TextureRect" type="TextureRect" parent="Background/Sound_Settings" unique_id=1418196732]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 186.0
+offset_right = 1527.0
+offset_bottom = 889.0
+texture = ExtResource("4_4elqj")
+
+[node name="General" type="Button" parent="Background/Sound_Settings/TextureRect" unique_id=1437556851]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 67.0
+offset_right = 449.0
+offset_bottom = 202.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
+text = "General
+"
+
+[node name="Music" type="Button" parent="Background/Sound_Settings/TextureRect" unique_id=199742459]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 265.0
+offset_right = 313.0
+offset_bottom = 400.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
+text = "Music"
+
+[node name="SFX" type="Button" parent="Background/Sound_Settings/TextureRect" unique_id=1439701222]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 478.0
+offset_right = 265.0
+offset_bottom = 613.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
+text = "SFX"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1093463245]
+stream = ExtResource("5_4elqj")
+volume_db = -5.233
+autoplay = true
