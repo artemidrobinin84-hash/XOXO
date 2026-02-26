@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cc1gtm8214jcp"]
+
+[node name="ControlsMenu" type="Control" unique_id=385999780]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
