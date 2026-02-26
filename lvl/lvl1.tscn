@@ -50,10 +50,10 @@ texture = ExtResource("1_8uc06")
 [node name="GirlHitbox" parent="." unique_id=2028270037 instance=ExtResource("22_ck4d2")]
 
 [node name="TurnButton" type="Button" parent="." unique_id=1915894897]
-offset_left = 1597.0
-offset_top = 332.0
-offset_right = 1913.0
-offset_bottom = 413.0
+offset_left = 1594.0
+offset_top = 371.0
+offset_right = 1910.0
+offset_bottom = 452.0
 theme_override_fonts/font = ExtResource("23_8f7ds")
 theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxFlat_8f7ds")
@@ -110,7 +110,7 @@ vertical_alignment = 1
 [node name="CostLabel" type="Label" parent="." unique_id=456625922]
 offset_left = 1409.0
 offset_top = 496.0
-offset_right = 2320.0
+offset_right = 1891.0
 offset_bottom = 838.0
 theme_override_font_sizes/font_size = 90
 text = "Energy: 8/8"
