@@ -233,7 +233,6 @@ text = "SFX
 "
 
 [node name="CreditMenu" type="Control" parent="Background" unique_id=489859479]
-visible = false
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -269,14 +268,17 @@ vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="Background/CreditMenu/TextureRect1" unique_id=1105246408]
 layout_mode = 0
-offset_left = -248.0
-offset_top = 67.0
-offset_right = 596.0
-offset_bottom = 647.0
+offset_left = -45.0
+offset_top = 42.0
+offset_right = 799.0
+offset_bottom = 687.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_a712v")
-theme_override_font_sizes/font_size = 30
-text = "Game Desiner:
+theme_override_font_sizes/font_size = 25
+text = "Lead:
+
+Game Desiner:
+
 
 Animator:
 
@@ -295,14 +297,17 @@ vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="Background/CreditMenu/TextureRect1" unique_id=307061356]
 layout_mode = 0
-offset_left = 75.0
-offset_top = 24.0
-offset_right = 919.0
-offset_bottom = 687.0
+offset_left = 221.0
+offset_top = 31.0
+offset_right = 1065.0
+offset_bottom = 694.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_a712v")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 text = "Cesiumloser (Nikita)
+
+Cesiumloser (Nikita) 
+Name (Artyom)
 
 Viciaia (Vika)
 
