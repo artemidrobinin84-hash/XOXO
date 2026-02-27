@@ -10,6 +10,8 @@
 [ext_resource type="AudioStream" uid="uid://ba0j37jy6pwma" path="res://Core/MainSound/voskresnoe-vdokhnovenie-2-29609a.mp3" id="10_dgetj"]
 [ext_resource type="SpineSkeletonDataResource" uid="uid://dkhwcw68rsxjh" path="res://GirlFriends/girlfrend1-skin/girlv1.tres" id="13_knlhy"]
 [ext_resource type="Script" uid="uid://d36yw2knsq3hm" path="res://lvl/Girl1Sprite.gd" id="14_ya0ci"]
+[ext_resource type="Script" uid="uid://b4hegsirimwru" path="res://lvl/victory.gd" id="15_8q75q"]
+[ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="16_2revy"]
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="22_ck4d2"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
 [ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://DeckCard.tscn" id="24_0qm8x"]
@@ -38,6 +40,54 @@ border_width_top = 4
 border_width_right = 4
 border_width_bottom = 6
 border_color = Color(0.48235294, 0.05490196, 0.05490196, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sf0du"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_veq3y"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.98975796, 0, 0.5368099, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2revy"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.98975796, 0, 0.5368099, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8q75q"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 40
 corner_radius_top_right = 40
 corner_radius_bottom_right = 40
@@ -161,6 +211,7 @@ script = ExtResource("9_wtn46")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=606229576]
 stream = ExtResource("10_dgetj")
+volume_db = -30.409
 autoplay = true
 
 [node name="GirlSprite" type="SpineSprite" parent="." unique_id=1120706506]
@@ -169,8 +220,76 @@ preview_skin = "level1"
 preview_animation = "idle"
 preview_frame = false
 preview_time = 0.0
+texture_filter = 2
 position = Vector2(939, 1080)
 scale = Vector2(0.6, 0.6)
 script = ExtResource("14_ya0ci")
+
+[node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=569317400]
+script = ExtResource("15_8q75q")
+
+[node name="ColorRect" type="ColorRect" parent="VictoryLayer" unique_id=1386651188]
+offset_right = 1916.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.6313726)
+
+[node name="Label" type="Label" parent="VictoryLayer" unique_id=323174681]
+offset_right = 1920.0
+offset_bottom = 511.0
+theme_override_colors/font_color = Color(0.48066747, 0.8468294, 0, 1)
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 200
+text = "You Won!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VictoryLayer" unique_id=617288718]
+offset_top = 233.0
+offset_right = 1920.0
+offset_bottom = 744.0
+theme_override_colors/font_color = Color(0.48066747, 0.8468294, 0, 1)
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 120
+text = "She's yours now!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="VBoxContainer" parent="VictoryLayer" unique_id=76224598]
+offset_left = 547.0
+offset_top = 659.0
+offset_right = 1383.0
+offset_bottom = 1025.0
+
+[node name="NextLevelButton" type="Button" parent="VictoryLayer/HBoxContainer" unique_id=100403545]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_sf0du")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_veq3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2revy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
+text = "Next Level ->"
+
+[node name="Control" type="Control" parent="VictoryLayer/HBoxContainer" unique_id=140574235]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="MainMenuButton" type="Button" parent="VictoryLayer/HBoxContainer" unique_id=1300993356]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_8q75q")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_2revy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2revy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
+text = "Back to Menu"
 
 [connection signal="pressed" from="TurnButton" to="TurnManager" method="_on_turn_button_pressed"]
