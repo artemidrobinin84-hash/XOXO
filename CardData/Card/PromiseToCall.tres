@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_drgui")
 title = "Promise to Call"
-description = "Building anticipation for the next encounter."
+description = "She’ll definitely call you... Honestly."
 icon = ExtResource("1_clxag")
 cost = 3
 damage = 5

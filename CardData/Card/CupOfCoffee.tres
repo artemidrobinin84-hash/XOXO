@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_k3db0")
 title = "Cup of Coffee"
-description = "A little caffeine to keep the conversation flowing."
+description = "Did you actually sleep today? Be honest."
 icon = ExtResource("1_boo4k")
 cost = 4
 heal = 15

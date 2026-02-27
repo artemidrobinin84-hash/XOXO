@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_p6gpn")
 title = "Luxury Bouquet"
-description = "Flowers are the universal language of affection"
+description = "Gorgeous bouquet! Too bad it’ll be in the trash in a few minutes."
 icon = ExtResource("1_cmpnv")
 cost = 6
 damage = 60

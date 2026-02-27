@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("2_p8wby")
 title = "Air Kiss"
-description = "A classic gesture that never goes out of style"
+description = "Normally, this is annoying. But maybe you're just the Main Character."
 icon = ExtResource("1_2c71u")
 cost = 2
 damage = 10

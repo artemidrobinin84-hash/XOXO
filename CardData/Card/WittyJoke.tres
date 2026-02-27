@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_4q2gy")
 title = "Witty Joke"
-description = "Nothing breaks the ice like a perfectly timed pun."
+description = "That joke was so good, even I had to laugh."
 icon = ExtResource("1_j5ucc")
 cost = 4
 damage = 20
