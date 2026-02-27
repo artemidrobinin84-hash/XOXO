@@ -22,11 +22,6 @@ func end_player_turn():
 	await get_tree().create_timer(1.5).timeout
 	start_player_turn()
 
-func _on_button_pressed():
-	print("Кнопка нажата! Завершаю ход игрока...")
-	end_player_turn()
-
-
 func _on_turn_button_pressed() -> void:
 	print("Кнопка нажата! Завершаю ход игрока...")
 	end_player_turn()

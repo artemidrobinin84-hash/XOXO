@@ -2,35 +2,24 @@
 
 [ext_resource type="Texture2D" uid="uid://dgjutv2m53v38" path="res://lvl/back.jpg" id="1_8uc06"]
 [ext_resource type="PackedScene" uid="uid://f0b03p5ljpjf" path="res://CardData/CardManager.tscn" id="2_r30gq"]
-[ext_resource type="Script" path="res://lvl/ProgressBar.gd" id="7_d4vtd"]
-[ext_resource type="Script" uid="uid://d35sfwqsfx0j0" path="res://lvl/gameplay_manager.gd" id="8_6fe25"]
-[ext_resource type="Script" uid="uid://bud8pdkppdg4c" path="res://lvl/gameplay_actions.gd" id="9_wtn46"]
+[ext_resource type="Texture2D" uid="uid://dtuf1ren871xq" path="res://lvl/XOXOBar/XOXOBarUnder.png" id="7_37uxi"]
+[ext_resource type="Texture2D" uid="uid://cferfo6atp3hy" path="res://lvl/XOXOBar/XOXOBarProgress.png" id="7_boooi"]
+[ext_resource type="Script" uid="uid://dade0acwfe8qv" path="res://lvl/XOXOBar/ProgressBar.gd" id="7_d4vtd"]
+[ext_resource type="Script" path="res://lvl/gameplay_manager.gd" id="8_6fe25"]
+[ext_resource type="Script" path="res://lvl/gameplay_actions.gd" id="9_wtn46"]
 [ext_resource type="AudioStream" uid="uid://ba0j37jy6pwma" path="res://Core/MainSound/voskresnoe-vdokhnovenie-2-29609a.mp3" id="10_dgetj"]
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="22_ck4d2"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
-[ext_resource type="PackedScene" path="res://DeckCard.tscn" id="24_0qm8x"]
-[ext_resource type="Script" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8f7ds"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.268188, 0.40346113, 0.2627155, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-shadow_size = 10
+[ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://DeckCard.tscn" id="24_0qm8x"]
+[ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qm8x"]
-bg_color = Color(0.09255666, 0.20777234, 0.14807534, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.29379898, 0.63117933, 0, 1)
+bg_color = Color(0.7936669, 0.9485256, 0.85478485, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.29411766, 0.6313726, 0, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -40,64 +29,77 @@ shadow_size = 10
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vy4a"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4vtd"]
-bg_color = Color(1, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37uxi"]
+bg_color = Color(0.91764706, 0.42352942, 0.42352942, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 6
+border_color = Color(0.48235294, 0.05490196, 0.05490196, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
-[node name="lvl1" type="Node2D" unique_id=55323218]
+[node name="lvl1" type="Node2D" unique_id=1334599637]
 
-[node name="Back" type="Sprite2D" parent="." unique_id=313086565]
+[node name="Back" type="Sprite2D" parent="." unique_id=1865572888]
 position = Vector2(960, 539.99994)
 scale = Vector2(0.99999994, 1)
 texture = ExtResource("1_8uc06")
 
-[node name="GirlHitbox" parent="." unique_id=2028270037 instance=ExtResource("22_ck4d2")]
+[node name="GirlHitbox" parent="." unique_id=1458060286 instance=ExtResource("22_ck4d2")]
+position = Vector2(-30, 0)
 
-[node name="TurnButton" type="Button" parent="." unique_id=1915894897]
+[node name="TurnButton" type="Button" parent="." unique_id=440512428]
 offset_left = 1594.0
-offset_top = 371.0
+offset_top = 430.0
 offset_right = 1910.0
-offset_bottom = 452.0
+offset_bottom = 511.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+theme_override_colors/font_hover_color = Color(0.288518, 0.28851798, 0.28851798, 1)
 theme_override_fonts/font = ExtResource("23_8f7ds")
-theme_override_font_sizes/font_size = 55
-theme_override_styles/normal = SubResource("StyleBoxFlat_8f7ds")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_0qm8x")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0qm8x")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0qm8x")
 text = "Skip to turn"
 
-[node name="TurnManager" type="Node" parent="." unique_id=1999896431]
+[node name="TurnManager" type="Node" parent="." unique_id=1086621257]
 script = ExtResource("25_0vy4a")
 
-[node name="Deck" type="Node" parent="." unique_id=1656373539]
+[node name="Deck" type="Node" parent="." unique_id=818764788]
 
-[node name="DeckCard" parent="Deck" unique_id=1688954903 instance=ExtResource("24_0qm8x")]
+[node name="DeckCard" parent="Deck" unique_id=2074698698 instance=ExtResource("24_0qm8x")]
 offset_left = 1623.0
 offset_top = 644.0
 offset_right = 1873.0
 offset_bottom = 994.0
 
-[node name="DeckCard2" parent="Deck" unique_id=841038188 instance=ExtResource("24_0qm8x")]
+[node name="DeckCard2" parent="Deck" unique_id=1006129121 instance=ExtResource("24_0qm8x")]
 offset_left = 1609.0
 offset_top = 659.0
 offset_right = 1859.0
 offset_bottom = 1009.0
 
-[node name="DeckCard3" parent="Deck" unique_id=1887402244 instance=ExtResource("24_0qm8x")]
+[node name="DeckCard3" parent="Deck" unique_id=1837169238 instance=ExtResource("24_0qm8x")]
 offset_left = 1594.0
 offset_top = 675.00006
 offset_right = 1844.0
 offset_bottom = 1025.0
 
-[node name="DeckCard4" parent="Deck" unique_id=1436201745 instance=ExtResource("24_0qm8x")]
+[node name="DeckCard4" parent="Deck" unique_id=2115781070 instance=ExtResource("24_0qm8x")]
 offset_left = 1579.0
 offset_top = 690.0
 offset_right = 1829.0
 offset_bottom = 1040.0
 
-[node name="DeckLabel" type="Label" parent="Deck" unique_id=1952802472]
-offset_left = 1381.0
-offset_top = 637.0
-offset_right = 1621.0
-offset_bottom = 832.8333
+[node name="DeckLabel" type="Label" parent="Deck" unique_id=1128199101]
+offset_left = 1579.0
+offset_top = 734.0
+offset_right = 1819.0
+offset_bottom = 929.8333
 theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("23_8f7ds")
 theme_override_font_sizes/font_size = 100
@@ -106,44 +108,57 @@ text = "x15"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1980883696]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=832151172]
 
-[node name="CardManager" parent="CanvasLayer" unique_id=102078610 instance=ExtResource("2_r30gq")]
+[node name="CardManager" parent="CanvasLayer" unique_id=297678523 instance=ExtResource("2_r30gq")]
 
-[node name="CostLabel" type="Label" parent="." unique_id=456625922]
-offset_left = 11.0
-offset_top = 6.0
-offset_right = 493.0
-offset_bottom = 348.0
+[node name="CostLabel" type="Label" parent="." unique_id=1223607936]
+offset_left = 1487.0
+offset_top = 531.0
+offset_right = 1916.0
+offset_bottom = 641.0
 theme_override_colors/font_color = Color(0, 1, 1, 1)
 theme_override_font_sizes/font_size = 80
 text = "Energy: 8/8"
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=778174845]
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1266402420]
 
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer2" unique_id=1325065460]
-offset_left = 1265.0
-offset_top = 12.0
-offset_right = 1904.0
-offset_bottom = 83.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-theme_override_styles/background = SubResource("StyleBoxFlat_d4vtd")
+[node name="ProgressBar" type="TextureProgressBar" parent="CanvasLayer2" unique_id=1443384940]
+texture_filter = 1
+offset_left = 547.0
+offset_top = 28.0
+offset_right = 1509.0
+offset_bottom = 97.0
 value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("7_37uxi")
+texture_progress = ExtResource("7_boooi")
 script = ExtResource("7_d4vtd")
 
-[node name="Gameplay_Manager" type="Node" parent="." unique_id=1144935655 node_paths=PackedStringArray("gameplay_actions")]
+[node name="ProgressLabel" type="Label" parent="CanvasLayer2/ProgressBar" unique_id=432625814]
+layout_mode = 0
+offset_left = -160.0
+offset_right = -9.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_8f7ds")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_37uxi")
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gameplay_Manager" type="Node" parent="." unique_id=987755067 node_paths=PackedStringArray("gameplay_actions")]
 process_mode = 3
 script = ExtResource("8_6fe25")
 gameplay_actions = NodePath("GameplayActions")
 
-[node name="GameplayActions" type="Node" parent="Gameplay_Manager" unique_id=1446524862]
+[node name="GameplayActions" type="Node" parent="Gameplay_Manager" unique_id=802634728]
 process_mode = 3
 script = ExtResource("9_wtn46")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1892208935]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=606229576]
 stream = ExtResource("10_dgetj")
 autoplay = true
-bus = &"Music"
 
 [connection signal="pressed" from="TurnButton" to="TurnManager" method="_on_turn_button_pressed"]
