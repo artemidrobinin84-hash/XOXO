@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc4yobso487la"
-path="res://.godot/imported/PromiseToCall.png-5abb84766196aeef364422a67f2408e4.ctex"
+uid="uid://bptgev6ykxmhh"
+path="res://.godot/imported/Sincere Compliment.png-4f33cbe70ff7628cbb30956e4d818199.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CardData/ImgCard/GeneralIconCard/PromiseToCall.png"
-dest_files=["res://.godot/imported/PromiseToCall.png-5abb84766196aeef364422a67f2408e4.ctex"]
+source_file="res://CardData/ImgCard/GeneralIconCard/Sincere Compliment.png"
+dest_files=["res://.godot/imported/Sincere Compliment.png-4f33cbe70ff7628cbb30956e4d818199.ctex"]
 
 [params]
 

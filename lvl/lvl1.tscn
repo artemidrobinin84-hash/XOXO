@@ -12,10 +12,16 @@
 [ext_resource type="Script" uid="uid://d36yw2knsq3hm" path="res://lvl/Girl1Sprite.gd" id="14_ya0ci"]
 [ext_resource type="Script" uid="uid://b4hegsirimwru" path="res://lvl/victory.gd" id="15_8q75q"]
 [ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="16_2revy"]
+[ext_resource type="Shader" uid="uid://nw5oxtopa3dm" path="res://lvl/lvl.gdshader" id="17_sf0du"]
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="22_ck4d2"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
 [ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://DeckCard.tscn" id="24_0qm8x"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_veq3y"]
+shader = ExtResource("17_sf0du")
+shader_parameter/intensity = 1.0
+shader_parameter/softness = 0.45
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qm8x"]
 bg_color = Color(0.7936669, 0.9485256, 0.85478485, 1)
@@ -94,6 +100,17 @@ corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
 [node name="lvl1" type="Node2D" unique_id=1334599637]
+
+[node name="Vignette" type="ColorRect" parent="." unique_id=884735467]
+z_index = 4096
+material = SubResource("ShaderMaterial_veq3y")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Back" type="Sprite2D" parent="." unique_id=1865572888]
 position = Vector2(957.99994, 540)
@@ -226,17 +243,19 @@ scale = Vector2(0.6, 0.6)
 script = ExtResource("14_ya0ci")
 
 [node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=569317400]
+visible = false
 script = ExtResource("15_8q75q")
 
 [node name="ColorRect" type="ColorRect" parent="VictoryLayer" unique_id=1386651188]
 offset_right = 1916.0
 offset_bottom = 1080.0
-color = Color(0, 0, 0, 0.6313726)
+color = Color(0, 0, 0, 0.6862745)
 
 [node name="Label" type="Label" parent="VictoryLayer" unique_id=323174681]
 offset_right = 1920.0
 offset_bottom = 511.0
 theme_override_colors/font_color = Color(0.48066747, 0.8468294, 0, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 200
 text = "You Won!"
@@ -248,6 +267,7 @@ offset_top = 192.0
 offset_right = 1920.0
 offset_bottom = 703.0
 theme_override_colors/font_color = Color(0.48066747, 0.8468294, 0, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 100
 text = "She's yours now!"
