@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_687a0")
 title = "Movie Tickets"
-description = "A dark theater and a romantic plot. The perfect setup"
+description = "Just don't mention the 'free' part. Let her think you're a big spender."
 icon = ExtResource("1_hq5mb")
 cost = 5
 damage = 30

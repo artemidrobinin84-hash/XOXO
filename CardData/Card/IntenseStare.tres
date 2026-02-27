@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_r223n")
 title = "Intense Stare"
-description = "Silence can be much more provocative than words."
+description = "Stare any longer and you'll become a museum exhibit."
 icon = ExtResource("1_nmluh")
 cost = 8
 damage = 45

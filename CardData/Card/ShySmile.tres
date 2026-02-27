@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_kt3wc")
 title = "Shy Smile"
-description = "A modest way to show you're interested."
+description = "Your smile is actually terrifying... You definitely need more practice."
 icon = ExtResource("1_x5a7l")
 cost = 2
 heal = 5

@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_acs8h")
 title = "Intellectual Debate"
-description = "Proving that beauty and brains go hand in hand."
+description = "Victory is yours! But wait... did your intelligence just break up with you?"
 icon = ExtResource("1_5fa8t")
 cost = 3
 damage = 15

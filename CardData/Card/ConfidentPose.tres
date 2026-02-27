@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_ormlf")
 title = "Confident Pose"
-description = "Looking good is half the battle won."
+description = "Pure charisma. People are lining up just to open doors for you."
 icon = ExtResource("1_1kyld")
 cost = 3
 shield = 10

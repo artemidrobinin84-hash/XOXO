@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_pifjv")
 title = "Exquisite Perfume"
-description = "A scent that lingers long after you're gone."
+description = "That’s a very... masculine choice. It’d look great on a boyfriend."
 icon = ExtResource("1_4ojda")
 cost = 3
 shield = 20

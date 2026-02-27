@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_xs56v")
 title = "Dance Invitation"
-description = "The rhythm of the heart dictates the steps"
+description = "Stop dancing. You're becoming a viral video."
 icon = ExtResource("1_gkfeb")
 cost = 8
 damage = 50

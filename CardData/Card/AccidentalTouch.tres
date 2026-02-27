@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_4humu")
 title = "Accidental Touch"
-description = "Was it an accident? She'll be wondering all night."
+description = "Oops, my hand slipped. And kept slipping."
 icon = ExtResource("1_s5a5j")
 cost = 5
 damage = 40
