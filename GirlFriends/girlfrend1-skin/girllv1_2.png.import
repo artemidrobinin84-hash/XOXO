@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dayuvi8qku6tc"
-path="res://.godot/imported/girllv1_3.png-016223818098e19c70f4739301f440f5.ctex"
+uid="uid://b7pvdqkugm41u"
+path="res://.godot/imported/girllv1_2.png-024bb65f41c5c9880b2fff753940f389.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ntkrf/girllv1_3.png"
-dest_files=["res://.godot/imported/girllv1_3.png-016223818098e19c70f4739301f440f5.ctex"]
+source_file="res://GirlFriends/girlfrend1-skin/girllv1_2.png"
+dest_files=["res://.godot/imported/girllv1_2.png-024bb65f41c5c9880b2fff753940f389.ctex"]
 
 [params]
 

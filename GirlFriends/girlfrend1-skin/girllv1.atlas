@@ -1,0 +1,101 @@
+girllv1.png
+size:1995,2048
+filter:Linear,Linear
+armatk1
+bounds:1269,19,609,519
+offsets:432,648,1473,1865
+rotate:90
+bra 1
+bounds:1477,598,487,493
+offsets:484,714,1475,1867
+bra 3
+bounds:1477,1076,487,493
+offsets:484,714,1475,1867
+bra2
+bounds:1477,1553,487,493
+offsets:484,714,1475,1867
+effect3
+bounds:2,181,1473,1865
+hair bang 1
+bounds:380,2,175,361
+offsets:468,1182,1475,1867
+rotate:90
+hair bang 2
+bounds:2,19,160,383
+offsets:713,1168,1475,1867
+rotate:90
+hair bangall
+bounds:1678,2,315,351
+offsets:512,1301,1475,1867
+rotate:180
+
+girllv1_2.png
+size:2048,1869
+filter:Linear,Linear
+arm2
+bounds:1723,1246,272,621
+offsets:429,508,1475,1867
+effect2
+bounds:2,2,1473,1865
+face
+bounds:1477,1518,349,340
+offsets:513,1181,1475,1867
+rotate:90
+facelast
+bounds:1484,774,345,209
+offsets:491,1223,1475,1867
+facemid1
+bounds:1820,903,345,209
+offsets:491,1223,1475,1867
+rotate:90
+facemid2
+bounds:1477,966,345,209
+offsets:491,1223,1475,1867
+rotate:180
+facemid3
+bounds:1477,1173,345,209
+offsets:491,1223,1475,1867
+facenorm1
+bounds:1477,179,344,208
+offsets:491,1222,1473,1865
+facenorm2
+bounds:1702,387,344,208
+offsets:491,1222,1473,1865
+facenorm3
+bounds:1477,568,344,208
+offsets:491,1222,1473,1865
+rotate:180
+
+girllv1_3.png
+size:1687,1869
+filter:Linear,Linear
+arm1
+bounds:1477,1227,208,640
+offsets:1086,886,1475,1867
+effect1
+bounds:2,2,1473,1865
+
+girllv1_4.png
+size:1821,1571
+filter:Linear,Linear
+armatk2
+bounds:79,2,698,862
+offsets:350,294,1473,1865
+rotate:90
+body 3
+bounds:868,174,951,1395
+offsets:333,0,1475,1867
+rotate:180
+hair back
+bounds:2,360,914,1209
+offsets:355,476,1475,1867
+
+girllv1_5.png
+size:1708,1399
+filter:Linear,Linear
+body 1
+bounds:755,2,951,1395
+offsets:333,0,1475,1867
+body 2
+bounds:2,2,951,1395
+offsets:333,0,1475,1867

@@ -1,42 +1,26 @@
 [gd_scene format=3 uid="uid://cis46q33g8cf6"]
 
 [ext_resource type="Texture2D" uid="uid://bj8awpi0h0n04" path="res://UI/Warning/WarningPng.png" id="1_8fp3i"]
+[ext_resource type="Script" uid="uid://dt27cq7vfjgpq" path="res://UI/Warning/Warning.gd" id="1_076eo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ys7jt"]
 bg_color = Color(0.23031491, 0.23031494, 0.23031485, 0)
 
 [node name="Warning" type="Node2D" unique_id=2059840761]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1527268880]
-
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=434052030]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1942.0
-offset_bottom = 1098.0
-
-[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=1259043429]
-layout_mode = 0
-offset_right = 1948.0
-offset_bottom = 1119.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_ys7jt")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ys7jt")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ys7jt")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_ys7jt")
-theme_override_styles/focus = SubResource("StyleBoxFlat_ys7jt")
+script = ExtResource("1_076eo")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=176870954]
-offset_right = 1949.0
-offset_bottom = 1101.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("1_8fp3i")
 
 [node name="Label" type="Label" parent="TextureRect" unique_id=1662604684]
 layout_mode = 0
-offset_right = 1923.0
+offset_right = 1920.0
 offset_bottom = 550.0
 theme_override_colors/font_color = Color(1, 0, 0.101960786, 1)
 theme_override_font_sizes/font_size = 100
-text = "WARNING
+text = "WARNING!!!
 18+ ADULTS ONLY
 "
 horizontal_alignment = 1
@@ -44,25 +28,37 @@ vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="TextureRect" unique_id=1486952872]
 layout_mode = 0
-offset_left = 8.0
 offset_top = 251.0
-offset_right = 1931.0
-offset_bottom = 801.0
+offset_right = 1920.0
+offset_bottom = 901.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 100
-text = "This game contanis Adult game
+text = "This game contanis Adult
 content Discretion is Advised"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="TextureRect" unique_id=683032254]
 layout_mode = 0
-offset_left = -52.0
-offset_top = 564.0
-offset_right = 1871.0
-offset_bottom = 1114.0
+offset_left = 542.0
+offset_top = 700.0
+offset_right = 2462.0
+offset_bottom = 1250.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
-text = "Touch any button to continue..."
+text = "Press any key to continue..."
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1259043429]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1920.0
+offset_bottom = 1079.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ys7jt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ys7jt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ys7jt")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ys7jt")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ys7jt")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

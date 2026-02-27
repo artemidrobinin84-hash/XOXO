@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yyf7h1d1wrau"
-path="res://.godot/imported/girllv1_2.png-893155f9f12fdd44a0b08d0551e54ba4.ctex"
+uid="uid://clwxuqiylxxbg"
+path="res://.godot/imported/MovieTickets.png-f0f8d02dacf28c07356685f7c37330c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ntkrf/girllv1_2.png"
-dest_files=["res://.godot/imported/girllv1_2.png-893155f9f12fdd44a0b08d0551e54ba4.ctex"]
+source_file="res://CardData/ImgCard/GeneralIconCard/MovieTickets.png"
+dest_files=["res://.godot/imported/MovieTickets.png-f0f8d02dacf28c07356685f7c37330c6.ctex"]
 
 [params]
 

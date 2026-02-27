@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+uid="uid://lgtiofo2tggm"
+path="res://.godot/imported/girllv1.skel-c1d0293b36adf5770e26cb1c782944c9.spskel"
+
+[deps]
+
+source_file="res://GirlFriends/girlfrend1-skin/girllv1.skel"
+dest_files=["res://.godot/imported/girllv1.skel-c1d0293b36adf5770e26cb1c782944c9.spskel"]
+
+[params]
+
