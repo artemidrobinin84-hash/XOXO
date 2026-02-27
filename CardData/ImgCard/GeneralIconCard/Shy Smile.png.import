@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chsjh7y1yjfhf"
-path="res://.godot/imported/шгпргни (2).png-56e8e495406ebfad64435641935e9c7c.ctex"
+uid="uid://c21iar0cae4qo"
+path="res://.godot/imported/Shy Smile.png-416251efb6426205af7a7f16a91985b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CardData/ImgCard/GeneralIconCard/шгпргни (2).png"
-dest_files=["res://.godot/imported/шгпргни (2).png-56e8e495406ebfad64435641935e9c7c.ctex"]
+source_file="res://CardData/ImgCard/GeneralIconCard/Shy Smile.png"
+dest_files=["res://.godot/imported/Shy Smile.png-416251efb6426205af7a7f16a91985b9.ctex"]
 
 [params]
 

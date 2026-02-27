@@ -21,5 +21,5 @@ func take_damage(amount: int):
 		die()
 
 func die():
-	boss_defeated.emit()
+	boss_defeated.emit() # Этого достаточно, VictoryLayer это услышит
 	print("Босс повержен!")
