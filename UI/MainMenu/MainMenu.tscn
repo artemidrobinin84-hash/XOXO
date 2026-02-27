@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cypbwglmgabao" path="res://UI/MainMenu/polzunok1.png" id="5_ri767"]
 [ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="6_a712v"]
 [ext_resource type="Texture2D" uid="uid://dqh8xd3eoygls" path="res://UI/MainMenu/Credits_Menu.png" id="7_1dhmk"]
+[ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="9_jhcbk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8x0bb"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
@@ -233,6 +234,7 @@ text = "SFX
 "
 
 [node name="CreditMenu" type="Control" parent="Background" unique_id=489859479]
+visible = false
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -330,6 +332,12 @@ volume_db = -5.233
 autoplay = true
 bus = &"Music"
 
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=482815793]
+stream = ExtResource("9_jhcbk")
+bus = &"SFX"
+
+[connection signal="pressed" from="Background/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Background/Credit" to="." method="_on_credit_pressed"]
 [connection signal="value_changed" from="Background/Sound_Settings/TextureRect/Master" to="." method="_on_master_value_changed"]
 [connection signal="value_changed" from="Background/Sound_Settings/TextureRect/Music" to="." method="_on_music_value_changed"]
 [connection signal="value_changed" from="Background/Sound_Settings/TextureRect/SFX" to="." method="_on_sfx_value_changed"]

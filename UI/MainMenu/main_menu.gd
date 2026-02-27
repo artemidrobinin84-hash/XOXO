@@ -6,13 +6,13 @@ func _ready() -> void:
 	_SoundExit()
 	_Credit()
 	_CreditExit()
-	_Play()
+
 # Called when the node enters the scene tree for the first time.
-func _Play() -> void:
-	$Background/Play.pressed.connect(_on_play_pressed)
+
 	
 
 func _on_play_pressed() -> void:
+	$Click.play()
 	get_tree().change_scene_to_file("res://lvl/lvl1.tscn")
 
 
@@ -23,11 +23,12 @@ func _Credit() -> void:
 func _Sound() -> void:
 	$Background/Sound.pressed.connect(open_settings)
 func _CreditExit() -> void:
+	$Click.play()
 	$Background/CreditMenu/TextureRect1/Exit1.pressed.connect(close_credit)
 
 func _SoundExit() -> void:
 	$Background/Sound_Settings/TextureRect/Exit.pressed.connect(close_settings)
-#
+	$Click.play()
 #func _Exit() -> void:
 	#$menu/MenuUi/Exit.pressed.connect(_on_exit_pressed)
 #
@@ -36,11 +37,13 @@ func _SoundExit() -> void:
 	#get_tree().quit()
 #
 func _on_credit_pressed() -> void:
+	$Click.play()
 	print("nasal")
 	$Background/CreditMenu.mouse_filter = Control.MOUSE_FILTER_STOP
 	$Background/CreditMenu.show()
 #
 func _on_settings_pressed() -> void:
+	$Click.play()
 	print("nasal")
 	$Background/Sound_Settings.mouse_filter = Control.MOUSE_FILTER_STOP
 	$Background/Sound_Settings.show()
@@ -55,7 +58,7 @@ func _SoundExit1() -> void:
 	print("lol")
 	$Background/Sound_Settings.visible = false
 	$Background/Sound_Settings.mouse_filter = Control.MOUSE_FILTER_IGNORE
-
+	$Click.play()
 
 func _on_music_value_changed(value: float) -> void:
 	var bus_index = AudioServer.get_bus_index("Music")
@@ -89,6 +92,7 @@ func open_settings():
 		.set_ease(Tween.EASE_OUT)
 
 func close_settings():
+	$Click.play()
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(sound_settings, "modulate:a", 0.0, 0.2)
@@ -108,6 +112,7 @@ func open_credit():
 		.set_ease(Tween.EASE_OUT)
 
 func close_credit():
+	$Click.play()
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(credit, "modulate:a", 0.0, 0.2)
