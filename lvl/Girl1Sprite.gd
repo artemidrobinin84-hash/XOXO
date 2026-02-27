@@ -1,7 +1,7 @@
 extends SpineSprite
 
 # Путь к прогрессбару (проверь, чтобы путь соответствовал твоей сцене)
-@onready var health_bar = get_node("/root/lvl1/CanvasLayer2/ProgressBar")
+@onready var health_bar = get_node("/root/lvl1/XOXOProgressBar/ProgressBar")
 
 var current_skin = ""
 
