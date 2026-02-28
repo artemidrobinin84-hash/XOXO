@@ -10,9 +10,14 @@ extends Node
 @export var arc_height: float = 25.0
 
 @export_group("Gameplay Settings")
-@export var max_energy: int = 80
+@export var max_energy: int = 8
 var current_energy: int = 0
 var max_hand_size: int = 5
+
+@export_group("Energy Visuals")
+# Пути взяты из твоего FileSystem на скриншоте
+@export var star_full_texture: Texture2D = preload("res://CardData/ImgCard/CostStar.png")
+@export var star_empty_texture: Texture2D = preload("res://CardData/ImgCard/CostStarNo.png")
 
 var deck: Array[CardData] = []
 
@@ -20,6 +25,7 @@ var deck: Array[CardData] = []
 @onready var energy_label = get_node_or_null("../../CostLabel") 
 @onready var turn_manager = get_node_or_null("../../TurnManager")
 @onready var hand_container = $Hand
+@onready var energy_container = get_node_or_null("../../EnergyContainer")
 
 func _ready():
 	add_to_group("card_manager")
@@ -54,45 +60,63 @@ func _on_player_turn_started():
 	replenish_hand()
 
 func update_energy_ui():
+	# Текстовый вариант (если остался)
 	if energy_label:
 		energy_label.text = "Energy: " + str(current_energy) + " / " + str(max_energy)
+	
+	# Визуальный вариант со звездами
+	_update_energy_stars()
+
+func _update_energy_stars():
+	if not energy_container: 
+		return
+	
+	# Очищаем старые звезды
+	for child in energy_container.get_children():
+		child.queue_free()
+	
+	# Создаем новые звезды
+	for i in range(max_energy):
+		var star_rect = TextureRect.new()
+		
+		if i < current_energy:
+			star_rect.texture = star_full_texture
+		else:
+			star_rect.texture = star_empty_texture
+			
+		star_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		star_rect.expand_mode = TextureRect.EXPAND_KEEP_SIZE
+		# Установи небольшой размер, если звезды слишком большие
+		star_rect.custom_minimum_size = Vector2(40, 40) 
+		
+		energy_container.add_child(star_rect)
 
 func use_energy(amount: int):
 	current_energy -= amount
 	update_energy_ui()
 
 func replenish_hand():
-	# 1. Считаем, сколько карт не хватает до максимума
 	var current_count = hand_container.get_child_count()
 	var need = max_hand_size - current_count
 	
-	# Если рука уже полная, ничего не делаем
 	if need <= 0: return
 
 	for i in range(need):
-		# 2. КРИТИЧЕСКАЯ ПРОВЕРКА: 
-		# Проверяем количество детей в контейнере ПРЯМО СЕЙЧАС.
-		# Если пока мы ждали таймер, карт стало 5 — выходим из цикла.
 		if hand_container.get_child_count() >= max_hand_size:
 			break
 			
 		if deck.size() > 0:
 			var data = deck.pop_front()
 			spawn_card_in_ui(data)
-			
 			update_deck_label()
 			update_hand_fan()
-			
-			# Пауза между появлением карт
 			await get_tree().create_timer(0.1).timeout
 
 func spawn_card_in_ui(data: CardData):
 	if not card_scene: return
 	var card_instance = card_scene.instantiate()
-	
 	hand_container.add_child(card_instance)
 	hand_container.move_child(card_instance, 0)
-	
 	card_instance.card_resource = data
 	if card_instance.has_method("render_card"):
 		card_instance.render_card()

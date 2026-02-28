@@ -9,6 +9,7 @@ func _ready() -> void:
 	$Background/Play.mouse_entered.connect(_on_button_hover)
 	$Background/Sound.mouse_entered.connect(_on_button_hover)
 	$Background/Credit.mouse_entered.connect(_on_button_hover)
+	$Background/Tutorial.mouse_entered.connect(_on_button_hover)
 # Called when the node enters the scene tree for the first time.
 func _on_button_hover() -> void:
 	$Click.play()

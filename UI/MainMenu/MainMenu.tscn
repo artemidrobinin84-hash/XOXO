@@ -81,7 +81,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_4elqj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4elqj")
 text = "Play"
 
-[node name="Button4" type="Button" parent="Background" unique_id=1702423009]
+[node name="Tutorial" type="Button" parent="Background" unique_id=1702423009]
 layout_mode = 0
 offset_left = 1276.0
 offset_top = 465.0

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bd411x7plp5qo"]
 
-[ext_resource type="Texture2D" uid="uid://dgjutv2m53v38" path="res://lvl/back.jpg" id="1_8uc06"]
+[ext_resource type="Texture2D" uid="uid://lhrniu7a6cth" path="res://lvl/back2.jpg" id="1_35ihi"]
 [ext_resource type="PackedScene" uid="uid://f0b03p5ljpjf" path="res://CardData/CardManager.tscn" id="2_r30gq"]
 [ext_resource type="Texture2D" uid="uid://dtuf1ren871xq" path="res://lvl/XOXOBar/XOXOBarUnder.png" id="7_37uxi"]
 [ext_resource type="Texture2D" uid="uid://cferfo6atp3hy" path="res://lvl/XOXOBar/XOXOBarProgress.png" id="7_boooi"]
@@ -24,23 +24,19 @@
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="22_ck4d2"]
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="23_0qm8x"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
-<<<<<<< HEAD
 [ext_resource type="AudioStream" uid="uid://dy8spyqfo8ei" path="res://Core/MainSFX/Удар в лицо 2 (mp3cut.net).mp3" id="23_35ihi"]
-[ext_resource type="PackedScene" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
-=======
 [ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
->>>>>>> 36a3792ed8c348bc504ab9cfe60a68b6a0200318
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
 [ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/lose_layer.gd" id="26_gx4g3"]
-[ext_resource type="Script" path="res://lvl/cringe_layer.gd" id="27_wl4wg"]
+[ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/cringe_layer.gd" id="27_wl4wg"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qm8x"]
-bg_color = Color(0.7936669, 0.9485256, 0.85478485, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35ihi"]
+bg_color = Color(0.047058824, 0.54901963, 0, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.29411766, 0.6313726, 0, 1)
+border_color = Color(0.02745098, 0.33333334, 0, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -144,26 +140,26 @@ shader_parameter/vignette_color = Color(0, 0, 0, 1)
 [node name="lvl1" type="Node2D" unique_id=1334599637]
 
 [node name="Back" type="Sprite2D" parent="." unique_id=1865572888]
-position = Vector2(957.99994, 540)
-scale = Vector2(0.6823361, 0.67499995)
-texture = ExtResource("1_8uc06")
+position = Vector2(960, 539)
+scale = Vector2(1.5, 1.4972224)
+texture = ExtResource("1_35ihi")
 
 [node name="GirlHitbox" parent="." unique_id=1458060286 instance=ExtResource("22_ck4d2")]
 position = Vector2(-30, 0)
 
-[node name="TurnButton" type="Button" parent="." unique_id=440512428]
-offset_left = 1594.0
+[node name="TurnButton" type="Button" parent="." unique_id=233404908]
+offset_left = 1543.0
 offset_top = 430.0
-offset_right = 1910.0
+offset_right = 1896.0
 offset_bottom = 511.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
 theme_override_colors/font_hover_color = Color(0.288518, 0.28851798, 0.28851798, 1)
-theme_override_fonts/font = ExtResource("23_8f7ds")
+theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_0qm8x")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_0qm8x")
-theme_override_styles/hover = SubResource("StyleBoxFlat_0qm8x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_35ihi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_35ihi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_35ihi")
 text = "Skip to turn"
 
 [node name="TurnManager" type="Node" parent="." unique_id=1086621257]
@@ -213,6 +209,7 @@ vertical_alignment = 1
 [node name="CardManager" parent="Playing cards" unique_id=297678523 instance=ExtResource("2_r30gq")]
 
 [node name="CostLabel" type="Label" parent="." unique_id=1223607936]
+visible = false
 offset_left = 1487.0
 offset_top = 531.0
 offset_right = 1916.0
@@ -318,8 +315,9 @@ offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
 [node name="Label" type="Label" parent="Gameplay_Manager/GameplayActions/PauseLabel" unique_id=248470207]
+offset_top = -64.0
 offset_right = 1920.0
-offset_bottom = 511.0
+offset_bottom = 447.0
 theme_override_colors/font_color = Color(1, 0.61323047, 0.80748695, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("16_2revy")
@@ -329,9 +327,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="Gameplay_Manager/GameplayActions/PauseLabel" unique_id=1819652800]
-offset_top = 250.0
+offset_top = 224.0
 offset_right = 1920.0
-offset_bottom = 761.0
+offset_bottom = 735.0
 theme_override_colors/font_color = Color(1, 0.6117647, 0.80784315, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("16_2revy")
@@ -344,9 +342,9 @@ vertical_alignment = 1
 
 [node name="HBoxContainer" type="VBoxContainer" parent="Gameplay_Manager/GameplayActions/PauseLabel" unique_id=1616032510]
 offset_left = 547.0
-offset_top = 493.0
+offset_top = 511.0
 offset_right = 1383.0
-offset_bottom = 992.0
+offset_bottom = 1014.0
 
 [node name="Continue" type="Button" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=966397333]
 layout_mode = 2
@@ -363,7 +361,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
 text = "Continue"
 
 [node name="Control" type="Control" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=1643036080]
-custom_minimum_size = Vector2(0, 80)
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
 [node name="Restart" type="Button" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=1486923626]
@@ -381,7 +379,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
 text = "Restart"
 
 [node name="Control2" type="Control" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=1133690665]
-custom_minimum_size = Vector2(0, 80)
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
 [node name="BackToMenu" type="Button" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=1991370907]
@@ -421,7 +419,6 @@ volume_db = 1.947
 pitch_scale = 1.1
 bus = &"SFX"
 
-<<<<<<< HEAD
 [node name="Phase_sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1514752804]
 stream = ExtResource("21_cqoco")
 pitch_scale = 1.1
@@ -437,7 +434,7 @@ position = Vector2(-93.333496, -1256.6672)
 
 [node name="SpeechTimer" type="Timer" parent="GirlSprite" unique_id=168791783]
 autostart = true
-=======
+
 [node name="Vignette" type="ColorRect" parent="." unique_id=884735467]
 z_index = 4096
 material = SubResource("ShaderMaterial_veq3y")
@@ -458,7 +455,6 @@ process_mode = 3
 stream = ExtResource("23_0qm8x")
 volume_db = -14.263
 bus = &"SFX"
->>>>>>> 36a3792ed8c348bc504ab9cfe60a68b6a0200318
 
 [node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=569317400]
 visible = false
@@ -688,6 +684,14 @@ process_mode = 3
 stream = ExtResource("23_0qm8x")
 volume_db = -14.263
 bus = &"SFX"
+
+[node name="EnergyContainer" type="HBoxContainer" parent="." unique_id=1698184804]
+texture_filter = 1
+offset_left = 1527.0
+offset_top = 568.0
+offset_right = 1880.0
+offset_bottom = 608.0
+theme_override_constants/separation = 10
 
 [connection signal="pressed" from="TurnButton" to="TurnManager" method="_on_turn_button_pressed"]
 [connection signal="pressed" from="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer/Continue" to="Gameplay_Manager/GameplayActions/PauseLabel" method="_on_continue_pressed"]

@@ -71,4 +71,4 @@ func deal_damage_to_player(amount: int):
 
 
 func _on_turn_manager_player_turn_started() -> void:
-	pass # Replace with function body.
+	pass

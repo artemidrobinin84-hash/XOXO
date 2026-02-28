@@ -24,15 +24,15 @@
 [ext_resource type="AudioStream" uid="uid://cewix4n40l5co" path="res://Core/MainSFX/Звук взяли одну карту из колоды.mp3" id="21_axhrf"]
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="22_4kc7n"]
 [ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/lose_layer.gd" id="23_uludq"]
-[ext_resource type="Script" path="res://lvl/cringe_layer.gd" id="24_r1pnm"]
+[ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/cringe_layer.gd" id="24_r1pnm"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oa5ss"]
-bg_color = Color(0.7936669, 0.9485256, 0.85478485, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygi6m"]
+bg_color = Color(0.047058824, 0.54901963, 0, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.29411766, 0.6313726, 0, 1)
+border_color = Color(0.02745098, 0.33333334, 0, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -217,19 +217,19 @@ position = Vector2(-30, 0)
 script = ExtResource("3_13fv4")
 max_hp = 25
 
-[node name="TurnButton" type="Button" parent="." unique_id=1370072948]
-offset_left = 1564.0
+[node name="TurnButton" type="Button" parent="." unique_id=1499370575]
+offset_left = 1543.0
 offset_top = 430.0
-offset_right = 1880.0
+offset_right = 1896.0
 offset_bottom = 511.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
 theme_override_colors/font_hover_color = Color(0.288518, 0.28851798, 0.28851798, 1)
-theme_override_fonts/font = ExtResource("3_m0pnn")
+theme_override_fonts/font = ExtResource("19_5jsyb")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_oa5ss")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_oa5ss")
-theme_override_styles/hover = SubResource("StyleBoxFlat_oa5ss")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ygi6m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ygi6m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ygi6m")
 text = "Skip to turn"
 
 [node name="TurnManager" type="Node" parent="." unique_id=1243653056]
@@ -279,6 +279,7 @@ vertical_alignment = 1
 [node name="CardManager" parent="Playing cards" unique_id=102078610 instance=ExtResource("6_7p7e5")]
 
 [node name="CostLabel" type="Label" parent="." unique_id=1967144846]
+visible = false
 offset_left = 1487.0
 offset_top = 531.0
 offset_right = 1916.0
@@ -621,6 +622,14 @@ process_mode = 3
 stream = ExtResource("22_4kc7n")
 volume_db = -14.263
 bus = &"SFX"
+
+[node name="EnergyContainer" type="HBoxContainer" parent="." unique_id=605632102]
+texture_filter = 1
+offset_left = 1527.0
+offset_top = 568.0
+offset_right = 1880.0
+offset_bottom = 608.0
+theme_override_constants/separation = 10
 
 [connection signal="pressed" from="TurnButton" to="TurnManager" method="_on_turn_button_pressed"]
 [connection signal="pressed" from="CringeLayer/HBoxContainer/Restart1" to="CringeLayer" method="_on_restart_1_pressed"]
