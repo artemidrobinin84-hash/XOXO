@@ -176,7 +176,7 @@ offset_top = 659.0
 offset_right = 1859.0
 offset_bottom = 1009.0
 
-[node name="DeckCard3" parent="Deck" unique_id=1837169238 instance=ExtResource("24_0qm8x")]
+[node name="DeckCard33" parent="Deck" unique_id=1837169238 instance=ExtResource("24_0qm8x")]
 offset_left = 1594.0
 offset_top = 675.00006
 offset_right = 1844.0
@@ -201,9 +201,9 @@ text = "x15"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=832151172]
+[node name="Playing cards" type="CanvasLayer" parent="." unique_id=832151172]
 
-[node name="CardManager" parent="CanvasLayer" unique_id=297678523 instance=ExtResource("2_r30gq")]
+[node name="CardManager" parent="Playing cards" unique_id=297678523 instance=ExtResource("2_r30gq")]
 
 [node name="CostLabel" type="Label" parent="." unique_id=1223607936]
 offset_left = 1487.0
