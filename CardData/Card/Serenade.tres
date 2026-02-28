@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_lviy6")
 title = "Serenade"
-description = "You're terrible at this, but your confidence is terrifying. Keep going, I guess?"
+description = "You're terrible at this. Keep going, I guess?"
 icon = ExtResource("1_h4ets")
 cost = 6
 damage = 35

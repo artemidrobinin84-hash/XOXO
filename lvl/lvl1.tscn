@@ -286,6 +286,7 @@ script = ExtResource("14_ya0ci")
 [node name="PhaseSound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1084620996]
 stream = ExtResource("21_cqoco")
 volume_db = -14.263
+pitch_scale = 1.1
 bus = &"SFX"
 
 [node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=569317400]

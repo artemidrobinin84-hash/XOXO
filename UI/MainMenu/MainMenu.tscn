@@ -234,6 +234,7 @@ text = "SFX
 "
 
 [node name="CreditMenu" type="Control" parent="Background" unique_id=489859479]
+visible = false
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
