@@ -55,3 +55,14 @@ func die():
 
 func lose_game(reason: String):
 	print(reason)
+	
+func deal_damage_to_player(amount: int):
+	current_player_hp -= amount
+	current_player_hp = clamp(current_player_hp, 0, max_player_hp)
+	
+	player_hp_changed.emit(current_player_hp, max_player_hp)
+	
+	print("Игрок получил урон от босса: ", amount, ". Осталось HP: ", current_player_hp)
+	
+	if current_player_hp <= 0:
+		lose_game("Ваше HP закончилось!")

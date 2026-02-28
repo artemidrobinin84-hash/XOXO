@@ -10,5 +10,4 @@ description = "Keep breathing. I’d hate for you to pass out right now."
 icon = ExtResource("1_ksfcy")
 cost = 0
 heal = 5
-cringe = 1
 metadata/_custom_type_script = "uid://caihvaeaot5l6"

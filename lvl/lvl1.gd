@@ -11,6 +11,8 @@ func _ready():
 	if victory_screen:
 		victory_screen.hide()
 	
+	await get_tree().process_frame 
+	
 	var animation_state = spine_sprite.get_animation_state()
 	if animation_state:
 		animation_state.set_animation("idle", true, 0)
@@ -27,7 +29,8 @@ func _on_boss_hp_changed(current, max_hp_val):
 		if health_bar.has_node("ProgressLabel"):
 			health_bar.get_node("ProgressLabel").text = str(current) + " / " + str(max_hp_val)
 	
-	_update_boss_skin(current)
+	if spine_sprite and spine_sprite.has_method("update_skin_by_hp"):
+		spine_sprite.update_skin_by_hp(current)
 
 func _update_boss_skin(hp_value: float):
 	var target_skin = ""
