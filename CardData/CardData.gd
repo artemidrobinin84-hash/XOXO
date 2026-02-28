@@ -10,4 +10,4 @@ class_name CardData
 @export var cost: int = 1 # Сколько маны стоит
 @export var damage: int = 0 # Урон по телке (XOXO Bar)
 @export var heal: int = 0 # Хилл
-@export var shield: int = 0 # Доп. ХП
+@export var cringe: int = 0 # Доп. ХП

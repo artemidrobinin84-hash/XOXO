@@ -10,4 +10,5 @@ description = "Normally, this is annoying. But maybe you're just the Main Charac
 icon = ExtResource("1_2c71u")
 cost = 2
 damage = 10
+cringe = 1
 metadata/_custom_type_script = "uid://caihvaeaot5l6"

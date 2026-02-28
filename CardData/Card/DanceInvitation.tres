@@ -10,5 +10,5 @@ description = "Stop dancing. You're becoming a viral video."
 icon = ExtResource("1_gkfeb")
 cost = 8
 damage = 50
-shield = 20
+cringe = 1
 metadata/_custom_type_script = "uid://caihvaeaot5l6"

@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_hna72")
 title = "Pick-up Line"
-description = "That line was pure cringe. But hey, you’ve got Main Character energy, right?"
+description = "That line was pure cringe. But hey, you’ve Main Character, right?"
 icon = ExtResource("1_uvusr")
 damage = 5
 metadata/_custom_type_script = "uid://caihvaeaot5l6"

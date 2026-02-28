@@ -1,17 +1,16 @@
 extends PanelContainer
 class_name BaseCard
 
-# ... (все ваши @export и @onready переменные остаются без изменений) ...
 @export var card_resource: CardData 
-
 @onready var title_label = $Background/Content/TitleLabel
 @onready var desc_label = $Background/Content/Description
 @onready var icon_texture = $Background/Content/CardIcon
 @onready var cost_label = $Background/Content/Cost/CostLabel
 @onready var damage_label = $Background/Content/Damage/DamageLabel
-@onready var shield_label = $Background/Content/Shield/ShieldLabel
+@onready var cringe_label = $Background/Content/Shield/ShieldLabel
 @onready var heal_label = $Background/Content/Heal/HealLabel
 @onready var pick_up_sound = $Card
+
 var home_position: Vector2
 var home_z_index: int = 0
 var home_rotation: float
@@ -24,11 +23,9 @@ func _ready():
 	if card_resource:
 		render_card()
 
-# --- НОВЫЙ МЕТОД ДЛЯ КЛИКА ПО ЭКРАНУ ---
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if is_selected and not is_dragging:
-			# Проверяем, попал ли клик мимо этой карты
 			var mouse_pos = get_global_mouse_position()
 			if not get_global_rect().has_point(mouse_pos):
 				return_to_rest()
@@ -44,7 +41,6 @@ func _gui_input(event):
 				deselect_others()
 				toggle_select()
 			else:
-				# Если уже выбрана, разрешаем начать драг
 				start_drag()
 		elif is_dragging:
 			stop_drag()
@@ -102,8 +98,10 @@ func deselect_others():
 
 func check_drop_zone():
 	var targets = get_tree().get_nodes_in_group("enemy")
+	var player = get_tree().get_first_node_in_group("player")
 	var hit_target = null
 	var mouse_pos = get_global_mouse_position()
+	
 	for target in targets:
 		if target is Area2D:
 			for child in target.get_children():
@@ -112,14 +110,26 @@ func check_drop_zone():
 						hit_target = target
 						break
 		if hit_target: break
+	
 	if hit_target:
 		var manager = get_tree().get_first_node_in_group("card_manager")
 		if manager and manager.can_afford_card(card_resource.cost):
 			manager.use_energy(card_resource.cost)
-			if hit_target.has_method("take_damage"): hit_target.take_damage(card_resource.damage)
+			
+			if hit_target.has_method("take_damage"): 
+				hit_target.take_damage(card_resource.damage)
+			
+			if player:
+				if player.has_method("add_cringe"):
+					player.add_cringe(card_resource.cringe)
+				if player.has_method("heal"):
+					player.heal(card_resource.heal)
+					
 			play_card_animation()
-		else: return_to_rest()
-	else: return_to_rest()
+		else: 
+			return_to_rest()
+	else: 
+		return_to_rest()
 
 func play_card_animation():
 	if active_tween: active_tween.kill()
@@ -139,7 +149,7 @@ func render_card():
 	icon_texture.texture = card_resource.icon
 	cost_label.text = str(card_resource.cost)
 	damage_label.text = str(card_resource.damage)
-	shield_label.text = str(card_resource.shield)
+	cringe_label.text = str(card_resource.cringe)
 	heal_label.text = str(card_resource.heal)
 
 func can_interact() -> bool:

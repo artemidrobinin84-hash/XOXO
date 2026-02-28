@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_20ci5")
 title = "Sincere Compliment"
-description = "You’re so sincere that after that 'compliment,' she never wants to talk to you again."
+description = "You’re so sincere that after that 'compliment,' she never talk to you again."
 icon = ExtResource("1_5rh1c")
 cost = 5
 damage = 25
