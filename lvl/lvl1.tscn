@@ -23,7 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="22_ck4d2"]
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="23_0qm8x"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
-[ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://DeckCard.tscn" id="24_0qm8x"]
+[ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qm8x"]
@@ -222,7 +222,7 @@ offset_top = 90.0
 offset_right = 105.0
 offset_bottom = 1052.0
 value = 100.0
-fill_mode = 2
+fill_mode = 3
 nine_patch_stretch = true
 texture_under = ExtResource("7_nmm5b")
 texture_progress = ExtResource("8_fnejv")
@@ -397,10 +397,10 @@ text = "Back to Menu"
 [node name="Vignette" type="ColorRect" parent="." unique_id=884735467]
 z_index = 4096
 material = SubResource("ShaderMaterial_veq3y")
-offset_left = -609.0
-offset_top = -356.0
-offset_right = 2581.2727
-offset_bottom = 1491.0
+offset_left = -660.0
+offset_top = -347.0
+offset_right = 2530.2727
+offset_bottom = 1500.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
