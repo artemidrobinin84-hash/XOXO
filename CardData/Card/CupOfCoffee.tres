@@ -10,5 +10,4 @@ description = "Did you actually sleep today? Be honest."
 icon = ExtResource("1_boo4k")
 cost = 4
 heal = 15
-cringe = 1
 metadata/_custom_type_script = "uid://caihvaeaot5l6"

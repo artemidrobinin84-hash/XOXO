@@ -165,34 +165,34 @@ script = ExtResource("25_0vy4a")
 [node name="Deck" type="Node" parent="." unique_id=818764788]
 
 [node name="DeckCard4" parent="Deck" unique_id=1688954903 instance=ExtResource("24_0qm8x")]
-offset_left = 1653.0
-offset_top = 636.0
-offset_right = 1903.0
-offset_bottom = 986.0
+offset_left = 1631.0
+offset_top = 651.0
+offset_right = 1881.0
+offset_bottom = 1001.0
 
 [node name="DeckCard3" parent="Deck" unique_id=1421162541 instance=ExtResource("24_0qm8x")]
-offset_left = 1632.0
-offset_top = 653.00006
-offset_right = 1882.0
-offset_bottom = 1003.00006
+offset_left = 1610.0
+offset_top = 669.0
+offset_right = 1860.0
+offset_bottom = 1019.0
 
 [node name="DeckCard2" parent="Deck" unique_id=492554088 instance=ExtResource("24_0qm8x")]
-offset_left = 1613.0
-offset_top = 670.0
-offset_right = 1863.0
-offset_bottom = 1020.0
+offset_left = 1588.0
+offset_top = 688.0
+offset_right = 1838.0
+offset_bottom = 1038.0
 
 [node name="DeckCard1" parent="Deck" unique_id=1303485626 instance=ExtResource("24_0qm8x")]
-offset_left = 1594.0
-offset_top = 687.0
-offset_right = 1844.0
-offset_bottom = 1037.0
+offset_left = 1566.0001
+offset_top = 707.0
+offset_right = 1816.0001
+offset_bottom = 1057.0
 
 [node name="DeckLabel" type="Label" parent="Deck" unique_id=1128199101]
-offset_left = 1579.0
-offset_top = 734.0
-offset_right = 1819.0
-offset_bottom = 929.8333
+offset_left = 1553.0
+offset_top = 769.0
+offset_right = 1793.0
+offset_bottom = 964.8333
 theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("23_8f7ds")
 theme_override_font_sizes/font_size = 100
@@ -223,7 +223,7 @@ offset_top = 90.0
 offset_right = 105.0
 offset_bottom = 1052.0
 value = 100.0
-fill_mode = 2
+fill_mode = 3
 nine_patch_stretch = true
 texture_under = ExtResource("7_nmm5b")
 texture_progress = ExtResource("8_fnejv")
@@ -489,8 +489,8 @@ z_index = 4096
 material = SubResource("ShaderMaterial_veq3y")
 offset_left = -609.0
 offset_top = -356.0
-offset_right = 2581.2727
-offset_bottom = 1491.0
+offset_right = 2591.0
+offset_bottom = 1494.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 

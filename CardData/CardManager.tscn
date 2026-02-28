@@ -30,8 +30,8 @@ all_cards = Array[ExtResource("3_xmoxc")]([ExtResource("4_tsixq"), ExtResource("
 [node name="Hand" type="Control" parent="." unique_id=950334911]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 712.0
-offset_top = 667.0
-offset_right = 712.0
-offset_bottom = 667.0
-rotation = 0.05235988
+offset_left = 815.00006
+offset_top = 669.0
+offset_right = 815.00006
+offset_bottom = 669.0
+rotation = 0.02617994
