@@ -45,15 +45,13 @@ func heal(amount: int):
 	current_player_hp = clampi(current_player_hp + amount, 0, max_player_hp)
 	player_hp_changed.emit(current_player_hp, max_player_hp)
 
-func win():
-	boss_win.emit()
-	print("Лох!")
 
 func die():
 	boss_defeated.emit()
 	print("Победа!")
 
 func lose_game(reason: String):
+	boss_win.emit()
 	print(reason)
 	
 func deal_damage_to_player(amount: int):

@@ -23,7 +23,6 @@
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="22_ck4d2"]
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="23_0qm8x"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
-[ext_resource type="PackedScene" path="res://DeckCard.tscn" id="24_0qm8x"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
 [ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/lose_layer.gd" id="26_gx4g3"]
 
@@ -164,25 +163,25 @@ script = ExtResource("25_0vy4a")
 
 [node name="Deck" type="Node" parent="." unique_id=818764788]
 
-[node name="DeckCard" parent="Deck" unique_id=2074698698 instance=ExtResource("24_0qm8x")]
+[node name="DeckCard" parent="Deck" unique_id=2074698698]
 offset_left = 1623.0
 offset_top = 644.0
 offset_right = 1873.0
 offset_bottom = 994.0
 
-[node name="DeckCard2" parent="Deck" unique_id=1006129121 instance=ExtResource("24_0qm8x")]
+[node name="DeckCard2" parent="Deck" unique_id=1006129121]
 offset_left = 1609.0
 offset_top = 659.0
 offset_right = 1859.0
 offset_bottom = 1009.0
 
-[node name="DeckCard33" parent="Deck" unique_id=1837169238 instance=ExtResource("24_0qm8x")]
+[node name="DeckCard33" parent="Deck" unique_id=1837169238]
 offset_left = 1594.0
 offset_top = 675.00006
 offset_right = 1844.0
 offset_bottom = 1025.0
 
-[node name="DeckCard4" parent="Deck" unique_id=2115781070 instance=ExtResource("24_0qm8x")]
+[node name="DeckCard4" parent="Deck" unique_id=2115781070]
 offset_left = 1579.0
 offset_top = 690.0
 offset_right = 1829.0
