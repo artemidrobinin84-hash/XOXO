@@ -5,7 +5,7 @@ signal enemy_turn_started
 
 enum Turn { PLAYER, ENEMY }
 var current_turn = Turn.PLAYER
-
+@onready var Card_sound = $"../Card"
 func _ready():
 	await get_tree().process_frame
 	start_player_turn()
@@ -20,6 +20,7 @@ func end_player_turn():
 	emit_signal("enemy_turn_started")
 	
 	await get_tree().create_timer(1.5).timeout
+	Card_sound.play()
 	start_player_turn()
 
 func _on_turn_button_pressed() -> void:

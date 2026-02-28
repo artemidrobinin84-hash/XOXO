@@ -190,7 +190,7 @@ theme_override_styles/grabber_area = SubResource("StyleBoxFlat_a712v")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_jhcbk")
 max_value = 1.0
 step = 0.001
-value = 0.5
+value = 1.0
 
 [node name="General" type="Label" parent="Background/Sound_Settings/TextureRect/Music" unique_id=2113810662]
 layout_mode = 0
@@ -219,7 +219,7 @@ theme_override_styles/grabber_area = SubResource("StyleBoxFlat_a712v")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_jhcbk")
 max_value = 1.0
 step = 0.001
-value = 0.5
+value = 1.0
 
 [node name="General" type="Label" parent="Background/Sound_Settings/TextureRect/SFX" unique_id=999964615]
 layout_mode = 0
@@ -234,7 +234,6 @@ text = "SFX
 "
 
 [node name="CreditMenu" type="Control" parent="Background" unique_id=489859479]
-visible = false
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -293,7 +292,7 @@ Ui Desiner:
 Artist:
 
 
-Sound Desiner:"
+Sound:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -328,12 +327,13 @@ vertical_alignment = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1093463245]
 stream = ExtResource("5_4elqj")
-volume_db = -5.233
+volume_db = -10.804
 autoplay = true
 bus = &"Music"
 
 [node name="Click" type="AudioStreamPlayer" parent="." unique_id=482815793]
 stream = ExtResource("9_jhcbk")
+volume_db = -14.263
 bus = &"SFX"
 
 [connection signal="pressed" from="Background/Play" to="." method="_on_play_pressed"]

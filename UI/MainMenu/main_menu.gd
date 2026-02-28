@@ -6,9 +6,12 @@ func _ready() -> void:
 	_SoundExit()
 	_Credit()
 	_CreditExit()
-
+	$Background/Play.mouse_entered.connect(_on_button_hover)
+	$Background/Sound.mouse_entered.connect(_on_button_hover)
+	$Background/Credit.mouse_entered.connect(_on_button_hover)
 # Called when the node enters the scene tree for the first time.
-
+func _on_button_hover() -> void:
+	$Click.play()
 	
 
 func _on_play_pressed() -> void:
@@ -23,12 +26,10 @@ func _Credit() -> void:
 func _Sound() -> void:
 	$Background/Sound.pressed.connect(open_settings)
 func _CreditExit() -> void:
-	$Click.play()
 	$Background/CreditMenu/TextureRect1/Exit1.pressed.connect(close_credit)
 
 func _SoundExit() -> void:
 	$Background/Sound_Settings/TextureRect/Exit.pressed.connect(close_settings)
-	$Click.play()
 #func _Exit() -> void:
 	#$menu/MenuUi/Exit.pressed.connect(_on_exit_pressed)
 #
@@ -79,7 +80,7 @@ func _on_master_value_changed(value: float) -> void:
 @onready var sound_settings = $Background/Sound_Settings
 @onready var credit = $Background/CreditMenu
 func open_settings():
-	print("Открываю настройки")
+	$Click.play()
 	sound_settings.visible = true
 	sound_settings.mouse_filter = Control.MOUSE_FILTER_STOP
 	sound_settings.scale = Vector2(1, 0.8) 
@@ -100,6 +101,7 @@ func close_settings():
 	await tween.finished
 	sound_settings.visible = false
 func open_credit():
+	$Click.play()
 	credit.visible = true
 	credit.mouse_filter = Control.MOUSE_FILTER_STOP
 	credit.scale = Vector2(1, 0.8) 

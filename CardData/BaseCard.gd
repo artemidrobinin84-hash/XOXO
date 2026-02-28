@@ -11,7 +11,7 @@ class_name BaseCard
 @onready var damage_label = $Background/Content/Damage/DamageLabel
 @onready var shield_label = $Background/Content/Shield/ShieldLabel
 @onready var heal_label = $Background/Content/Heal/HealLabel
-
+@onready var pick_up_sound = $Card
 var home_position: Vector2
 var home_z_index: int = 0
 var home_rotation: float
@@ -56,6 +56,7 @@ func _gui_input(event):
 
 func toggle_select():
 	is_selected = true
+	if pick_up_sound: pick_up_sound.play()
 	if active_tween: active_tween.kill()
 	active_tween = create_tween().set_parallel(true).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	
