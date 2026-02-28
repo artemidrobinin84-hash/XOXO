@@ -8,14 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://chbvvo716378m" path="res://lvl/XOXOBar/HPBarUnder.png" id="7_nmm5b"]
 [ext_resource type="Script" uid="uid://d35sfwqsfx0j0" path="res://lvl/gameplay_manager.gd" id="8_6fe25"]
 [ext_resource type="Texture2D" uid="uid://5mtq1gijdush" path="res://lvl/XOXOBar/HPBarProgress.png" id="8_fnejv"]
-[ext_resource type="Script" uid="uid://bud8pdkppdg4c" path="res://lvl/gameplay_actions.gd" id="9_wtn46"]
+[ext_resource type="Script" path="res://lvl/gameplay_actions.gd" id="9_wtn46"]
 [ext_resource type="AudioStream" uid="uid://ba0j37jy6pwma" path="res://Core/MainSound/voskresnoe-vdokhnovenie-2-29609a.mp3" id="10_dgetj"]
 [ext_resource type="Texture2D" uid="uid://dilchgtj8p6so" path="res://lvl/XOXOBar/CringeBarUnder.png" id="12_0vy4a"]
 [ext_resource type="Texture2D" uid="uid://xth407w1lhqw" path="res://lvl/XOXOBar/CringeBarProgress.png" id="13_gx4g3"]
 [ext_resource type="SpineSkeletonDataResource" uid="uid://dkhwcw68rsxjh" path="res://GirlFriends/girlfrend1-skin/girlv1.tres" id="13_knlhy"]
 [ext_resource type="Script" uid="uid://d36yw2knsq3hm" path="res://lvl/Girl1Sprite.gd" id="14_ya0ci"]
-[ext_resource type="Script" uid="uid://b4hegsirimwru" path="res://lvl/victory.gd" id="15_8q75q"]
-[ext_resource type="Script" uid="uid://dnlarl7hhycpq" path="res://lvl/canvas_layer.gd" id="16_0vy4a"]
+[ext_resource type="Script" uid="uid://b4hegsirimwru" path="res://lvl/victorylvl1.gd" id="15_8q75q"]
+[ext_resource type="Script" path="res://lvl/canvas_layer.gd" id="16_0vy4a"]
 [ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="16_2revy"]
 [ext_resource type="Shader" uid="uid://nw5oxtopa3dm" path="res://lvl/lvl.gdshader" id="17_sf0du"]
 [ext_resource type="AudioStream" uid="uid://cewix4n40l5co" path="res://Core/MainSFX/Звук взяли одну карту из колоды.mp3" id="20_fnejv"]
@@ -24,11 +24,15 @@
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="22_ck4d2"]
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="23_0qm8x"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
+<<<<<<< HEAD
 [ext_resource type="AudioStream" uid="uid://dy8spyqfo8ei" path="res://Core/MainSFX/Удар в лицо 2 (mp3cut.net).mp3" id="23_35ihi"]
 [ext_resource type="PackedScene" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
+=======
+[ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
+>>>>>>> 36a3792ed8c348bc504ab9cfe60a68b6a0200318
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
 [ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/lose_layer.gd" id="26_gx4g3"]
-[ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/cringe_layer.gd" id="27_wl4wg"]
+[ext_resource type="Script" path="res://lvl/cringe_layer.gd" id="27_wl4wg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qm8x"]
 bg_color = Color(0.7936669, 0.9485256, 0.85478485, 1)
@@ -402,7 +406,7 @@ bus = &"Music"
 
 [node name="GirlSprite" type="SpineSprite" parent="." unique_id=1120706506]
 skeleton_data_res = ExtResource("13_knlhy")
-preview_skin = "level3"
+preview_skin = "level1"
 preview_animation = "idle"
 preview_frame = false
 preview_time = 0.0
@@ -417,6 +421,7 @@ volume_db = 1.947
 pitch_scale = 1.1
 bus = &"SFX"
 
+<<<<<<< HEAD
 [node name="Phase_sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1514752804]
 stream = ExtResource("21_cqoco")
 pitch_scale = 1.1
@@ -432,6 +437,28 @@ position = Vector2(-93.333496, -1256.6672)
 
 [node name="SpeechTimer" type="Timer" parent="GirlSprite" unique_id=168791783]
 autostart = true
+=======
+[node name="Vignette" type="ColorRect" parent="." unique_id=884735467]
+z_index = 4096
+material = SubResource("ShaderMaterial_veq3y")
+offset_left = -609.0
+offset_top = -356.0
+offset_right = 2591.0
+offset_bottom = 1494.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Card" type="AudioStreamPlayer" parent="." unique_id=1273265441]
+stream = ExtResource("20_fnejv")
+volume_db = -12.0
+bus = &"SFX"
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=997136248]
+process_mode = 3
+stream = ExtResource("23_0qm8x")
+volume_db = -14.263
+bus = &"SFX"
+>>>>>>> 36a3792ed8c348bc504ab9cfe60a68b6a0200318
 
 [node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=569317400]
 visible = false
@@ -503,27 +530,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_2revy")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
 text = "Back to Menu"
 
-[node name="Vignette" type="ColorRect" parent="." unique_id=884735467]
-z_index = 4096
-material = SubResource("ShaderMaterial_veq3y")
-offset_left = -609.0
-offset_top = -356.0
-offset_right = 2591.0
-offset_bottom = 1494.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Card" type="AudioStreamPlayer" parent="." unique_id=1273265441]
-stream = ExtResource("20_fnejv")
-volume_db = -12.0
-bus = &"SFX"
-
-[node name="Click" type="AudioStreamPlayer" parent="." unique_id=997136248]
-process_mode = 3
-stream = ExtResource("23_0qm8x")
-volume_db = -14.263
-bus = &"SFX"
-
 [node name="LoseLayer" type="CanvasLayer" parent="." unique_id=673242330]
 visible = false
 script = ExtResource("26_gx4g3")
@@ -534,21 +540,21 @@ offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
 [node name="Label" type="Label" parent="LoseLayer" unique_id=1482220915]
-offset_top = -77.0
-offset_right = 1948.0
+offset_top = -114.0
+offset_right = 1920.0
 offset_bottom = 426.0
 theme_override_colors/font_color = Color(0.9843137, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 200
-text = "Lose"
+text = "Lose!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="LoseLayer" unique_id=163988106]
-offset_top = 192.0
+offset_top = 147.0
 offset_right = 1920.0
-offset_bottom = 703.0
+offset_bottom = 707.0
 theme_override_colors/font_color = Color(0.98274976, 6.08854e-06, 1.540184e-06, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("16_2revy")
@@ -620,7 +626,7 @@ theme_override_colors/font_color = Color(0.69411767, 0, 1, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 200
-text = "Cringe"
+text = "Cringe!"
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -7,11 +7,9 @@ var current_skin = ""
 @onready var Attack_Sound = $Attack_Sound
 @onready var Dammage_Sound = $Dammage_Sound
 var boss_phrases = [
- "Тебе не победить!",
- "Это всё, на что ты способен?",
- "Ха-ха, мимо!",
- "Попробуй увернись от этого!",
- "Я только разогреваюс!"
+ "Cute, but try harder!",
+ "My grandma throws better!",
+ "Keep dreaming!",
 ]
 func _ready():
 	var animation_state = get_animation_state()
@@ -27,7 +25,6 @@ func _ready():
 	await get_tree().create_timer(1.0).timeout
 	say_something(boss_phrases.pick_random())
 	$SpeechTimer.timeout.connect(_on_speech_timer_timeout)
-	# Запускаем первый рандомный интервал
 	_set_random_timer()
 func _process(_delta):
 	if health_bar and get_skeleton():
@@ -69,19 +66,24 @@ func _on_spine_animation_completed(_sprite, _track_entry, _track_index):
 func say_something(message: String):
 	var bubble = BUBBLE_SCENE.instantiate()
 	get_parent().add_child(bubble)
-	bubble.global_position = $MouthPos.global_position
+	var base_pos = $MouthPos.global_position
+	var offset = Vector2(
+	randf_range(-450, 250), # Смещение по горизонтали
+	randf_range(-160, 150))  # Смещение по вертикали
+	bubble.global_position = base_pos + offset
 	bubble.set_text(message)
+	
 func _on_speech_timer_timeout():
- # Выбираем рандомную фразу и произносим её
 	var phrase : String
-	var random_phrase = boss_phrases.pick_random()
 	if current_skin == "level3":
-		phrase = ["ТЕБЕ КОНЕЦ!", "Я В ЯРОСТИ!", "УМРИ!"].pick_random()
+		phrase = ["I can't think straight!", "MORE!", "Take it all!", "Don't stop!"].pick_random()
+	elif current_skin == "level2":
+		phrase = ["Wait, stop looking!", "It's getting breezy...", "Why am I not stopping you?"].pick_random()
 	else:
-		phrase = boss_phrases.pick_random()
-	say_something(random_phrase)
+		phrase = ["Cute, but try harder!", "My grandma throws better!", "Keep dreaming!"].pick_random()
+	say_something(phrase)
 	_set_random_timer()
 func _set_random_timer():
  # Например, фраза будет появляться каждые 3-7 секунд
-	$SpeechTimer.wait_time = randf_range(3.0, 7.0)
+	$SpeechTimer.wait_time = randf_range(20.0, 25.0)
 	$SpeechTimer.start()
