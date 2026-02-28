@@ -18,7 +18,7 @@ var deck: Array[CardData] = []
 
 @onready var deck_label = get_node_or_null("../../Deck/DeckLabel")
 @onready var energy_label = get_node_or_null("../../CostLabel") 
-@onready var turn_manager = get_node_or_null("/root/lvl1/TurnManager")
+@onready var turn_manager = get_node_or_null("../../TurnManager")
 @onready var hand_container = $Hand
 
 func _ready():
@@ -62,20 +62,29 @@ func use_energy(amount: int):
 	update_energy_ui()
 
 func replenish_hand():
+	# 1. Считаем, сколько карт не хватает до максимума
 	var current_count = hand_container.get_child_count()
 	var need = max_hand_size - current_count
 	
-	var cards_drawn = false
+	# Если рука уже полная, ничего не делаем
+	if need <= 0: return
+
 	for i in range(need):
+		# 2. КРИТИЧЕСКАЯ ПРОВЕРКА: 
+		# Проверяем количество детей в контейнере ПРЯМО СЕЙЧАС.
+		# Если пока мы ждали таймер, карт стало 5 — выходим из цикла.
+		if hand_container.get_child_count() >= max_hand_size:
+			break
+			
 		if deck.size() > 0:
 			var data = deck.pop_front()
 			spawn_card_in_ui(data)
-			cards_drawn = true
-	
-	if cards_drawn:
-		update_deck_label()
-		
-	update_hand_fan()
+			
+			update_deck_label()
+			update_hand_fan()
+			
+			# Пауза между появлением карт
+			await get_tree().create_timer(0.1).timeout
 
 func spawn_card_in_ui(data: CardData):
 	if not card_scene: return
