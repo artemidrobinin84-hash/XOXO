@@ -8,14 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://chbvvo716378m" path="res://lvl/XOXOBar/HPBarUnder.png" id="7_nmm5b"]
 [ext_resource type="Script" uid="uid://d35sfwqsfx0j0" path="res://lvl/gameplay_manager.gd" id="8_6fe25"]
 [ext_resource type="Texture2D" uid="uid://5mtq1gijdush" path="res://lvl/XOXOBar/HPBarProgress.png" id="8_fnejv"]
-[ext_resource type="Script" uid="uid://bud8pdkppdg4c" path="res://lvl/gameplay_actions.gd" id="9_wtn46"]
+[ext_resource type="Script" path="res://lvl/gameplay_actions.gd" id="9_wtn46"]
 [ext_resource type="AudioStream" uid="uid://ba0j37jy6pwma" path="res://Core/MainSound/voskresnoe-vdokhnovenie-2-29609a.mp3" id="10_dgetj"]
 [ext_resource type="Texture2D" uid="uid://dilchgtj8p6so" path="res://lvl/XOXOBar/CringeBarUnder.png" id="12_0vy4a"]
 [ext_resource type="Texture2D" uid="uid://xth407w1lhqw" path="res://lvl/XOXOBar/CringeBarProgress.png" id="13_gx4g3"]
 [ext_resource type="SpineSkeletonDataResource" uid="uid://dkhwcw68rsxjh" path="res://GirlFriends/girlfrend1-skin/girlv1.tres" id="13_knlhy"]
 [ext_resource type="Script" uid="uid://d36yw2knsq3hm" path="res://lvl/Girl1Sprite.gd" id="14_ya0ci"]
 [ext_resource type="Script" uid="uid://b4hegsirimwru" path="res://lvl/victory.gd" id="15_8q75q"]
-[ext_resource type="Script" uid="uid://dnlarl7hhycpq" path="res://lvl/canvas_layer.gd" id="16_0vy4a"]
+[ext_resource type="Script" path="res://lvl/canvas_layer.gd" id="16_0vy4a"]
 [ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="16_2revy"]
 [ext_resource type="Shader" uid="uid://nw5oxtopa3dm" path="res://lvl/lvl.gdshader" id="17_sf0du"]
 [ext_resource type="AudioStream" uid="uid://cewix4n40l5co" path="res://Core/MainSFX/Звук взяли одну карту из колоды.mp3" id="20_fnejv"]
@@ -23,9 +23,9 @@
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="22_ck4d2"]
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="23_0qm8x"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
-[ext_resource type="PackedScene" path="res://DeckCard.tscn" id="24_0qm8x"]
+[ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
-[ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/lose_layer.gd" id="26_gx4g3"]
+[ext_resource type="Script" path="res://lvl/lose_layer.gd" id="26_gx4g3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qm8x"]
 bg_color = Color(0.7936669, 0.9485256, 0.85478485, 1)
@@ -164,29 +164,29 @@ script = ExtResource("25_0vy4a")
 
 [node name="Deck" type="Node" parent="." unique_id=818764788]
 
-[node name="DeckCard" parent="Deck" unique_id=2074698698 instance=ExtResource("24_0qm8x")]
-offset_left = 1623.0
-offset_top = 644.0
-offset_right = 1873.0
-offset_bottom = 994.0
+[node name="DeckCard4" parent="Deck" unique_id=1688954903 instance=ExtResource("24_0qm8x")]
+offset_left = 1653.0
+offset_top = 636.0
+offset_right = 1903.0
+offset_bottom = 986.0
 
-[node name="DeckCard2" parent="Deck" unique_id=1006129121 instance=ExtResource("24_0qm8x")]
-offset_left = 1609.0
-offset_top = 659.0
-offset_right = 1859.0
-offset_bottom = 1009.0
+[node name="DeckCard3" parent="Deck" unique_id=1421162541 instance=ExtResource("24_0qm8x")]
+offset_left = 1632.0
+offset_top = 653.00006
+offset_right = 1882.0
+offset_bottom = 1003.00006
 
-[node name="DeckCard33" parent="Deck" unique_id=1837169238 instance=ExtResource("24_0qm8x")]
+[node name="DeckCard2" parent="Deck" unique_id=492554088 instance=ExtResource("24_0qm8x")]
+offset_left = 1613.0
+offset_top = 670.0
+offset_right = 1863.0
+offset_bottom = 1020.0
+
+[node name="DeckCard1" parent="Deck" unique_id=1303485626 instance=ExtResource("24_0qm8x")]
 offset_left = 1594.0
-offset_top = 675.00006
+offset_top = 687.0
 offset_right = 1844.0
-offset_bottom = 1025.0
-
-[node name="DeckCard4" parent="Deck" unique_id=2115781070 instance=ExtResource("24_0qm8x")]
-offset_left = 1579.0
-offset_top = 690.0
-offset_right = 1829.0
-offset_bottom = 1040.0
+offset_bottom = 1037.0
 
 [node name="DeckLabel" type="Label" parent="Deck" unique_id=1128199101]
 offset_left = 1579.0
