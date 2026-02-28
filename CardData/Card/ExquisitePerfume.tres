@@ -9,5 +9,5 @@ title = "Exquisite Perfume"
 description = "That’s a very... masculine choice. It’d look great on a boyfriend."
 icon = ExtResource("1_4ojda")
 cost = 3
-shield = 20
+cringe = 10
 metadata/_custom_type_script = "uid://caihvaeaot5l6"
