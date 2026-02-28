@@ -2,7 +2,7 @@ extends SpineSprite
 
 # Путь к прогрессбару (проверь, чтобы путь соответствовал твоей сцене)
 @onready var health_bar = get_node("/root/lvl1/XOXOProgressBar/ProgressBar")
-
+@onready var phase_sound = $PhaseSound
 var current_skin = ""
 
 func _ready():
@@ -42,5 +42,10 @@ func _update_visuals(hp_value: float):
 		skeleton.set_skin_by_name(target_skin)
 		# Сбрасываем позу, чтобы новые элементы скина отобразились корректно
 		skeleton.set_to_setup_pose()
+		if current_skin != "" and phase_sound:
+			print("Смена фазы: играю звук")
+			phase_sound.play()
+		
+		# 2. И только теперь записываем новый скин в переменную
 		current_skin = target_skin
 		print("Фаза изменена на: ", target_skin)

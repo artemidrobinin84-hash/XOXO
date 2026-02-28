@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://rdjkmxl5t5gl" path="res://CardData/ImgCard/HearthCard.png" id="8_g8j4h"]
 [ext_resource type="Texture2D" uid="uid://kvk1bhxfllbu" path="res://CardData/ImgCard/HillCard.png" id="8_hj4yk"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="9_hj4yk"]
+[ext_resource type="AudioStream" uid="uid://cewix4n40l5co" path="res://Core/MainSFX/Звук взяли одну карту из колоды.mp3" id="11_g8j4h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bl1hs"]
 corner_radius_top_left = 25
@@ -307,3 +308,8 @@ theme_override_font_sizes/font_size = 35
 text = "12"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Card" type="AudioStreamPlayer" parent="." unique_id=1995092174]
+stream = ExtResource("11_g8j4h")
+volume_db = -14.263
+bus = &"SFX"

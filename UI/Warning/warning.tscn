@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bj8awpi0h0n04" path="res://UI/Warning/WarningPng.png" id="1_8fp3i"]
 [ext_resource type="Script" uid="uid://dt27cq7vfjgpq" path="res://UI/Warning/Warning.gd" id="1_076eo"]
+[ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="3_cog57"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ys7jt"]
 bg_color = Color(0.23031491, 0.23031494, 0.23031485, 0)
@@ -17,24 +18,25 @@ texture = ExtResource("1_8fp3i")
 [node name="Label" type="Label" parent="TextureRect" unique_id=1662604684]
 layout_mode = 0
 offset_right = 1920.0
-offset_bottom = 550.0
+offset_bottom = 815.0
 theme_override_colors/font_color = Color(1, 0, 0.101960786, 1)
 theme_override_font_sizes/font_size = 100
 text = "WARNING!!!
-18+ ADULTS ONLY
+
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="TextureRect" unique_id=1486952872]
 layout_mode = 0
-offset_top = 251.0
-offset_right = 1920.0
-offset_bottom = 901.0
+offset_left = 19.0
+offset_top = 249.0
+offset_right = 1895.0
+offset_bottom = 899.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 100
-text = "This game contanis Adult
-content Discretion is Advised"
+text = "This game
+ may contain sexual content."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -60,5 +62,11 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ys7jt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ys7jt")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_ys7jt")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ys7jt")
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=897733629]
+process_mode = 3
+stream = ExtResource("3_cog57")
+volume_db = -14.263
+bus = &"SFX"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
