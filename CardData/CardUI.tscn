@@ -97,6 +97,7 @@ offset_left = 790.0
 offset_top = 330.0
 offset_right = 1040.0
 offset_bottom = 680.0
+scale = Vector2(0.9, 0.9)
 pivot_offset = Vector2(130, 350)
 theme_override_styles/panel = SubResource("StyleBoxFlat_bl1hs")
 script = ExtResource("1_ethmh")
