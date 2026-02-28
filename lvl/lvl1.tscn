@@ -348,10 +348,10 @@ text = "Back to Menu"
 [node name="Vignette" type="ColorRect" parent="." unique_id=884735467]
 z_index = 4096
 material = SubResource("ShaderMaterial_veq3y")
-offset_left = -640.0
-offset_top = -370.0
-offset_right = 971.0
-offset_bottom = 1477.0
+offset_left = -602.0
+offset_top = -378.0
+offset_right = 2588.2727
+offset_bottom = 1469.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
