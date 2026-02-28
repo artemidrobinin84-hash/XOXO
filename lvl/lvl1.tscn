@@ -415,6 +415,27 @@ volume_db = -14.263
 pitch_scale = 1.1
 bus = &"SFX"
 
+[node name="Vignette" type="ColorRect" parent="." unique_id=884735467]
+z_index = 4096
+material = SubResource("ShaderMaterial_veq3y")
+offset_left = -609.0
+offset_top = -356.0
+offset_right = 2591.0
+offset_bottom = 1494.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Card" type="AudioStreamPlayer" parent="." unique_id=1273265441]
+stream = ExtResource("20_fnejv")
+volume_db = -12.0
+bus = &"SFX"
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=997136248]
+process_mode = 3
+stream = ExtResource("23_0qm8x")
+volume_db = -14.263
+bus = &"SFX"
+
 [node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=569317400]
 visible = false
 script = ExtResource("15_8q75q")
@@ -485,27 +506,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_2revy")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
 text = "Back to Menu"
 
-[node name="Vignette" type="ColorRect" parent="." unique_id=884735467]
-z_index = 4096
-material = SubResource("ShaderMaterial_veq3y")
-offset_left = -609.0
-offset_top = -356.0
-offset_right = 2591.0
-offset_bottom = 1494.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Card" type="AudioStreamPlayer" parent="." unique_id=1273265441]
-stream = ExtResource("20_fnejv")
-volume_db = -12.0
-bus = &"SFX"
-
-[node name="Click" type="AudioStreamPlayer" parent="." unique_id=997136248]
-process_mode = 3
-stream = ExtResource("23_0qm8x")
-volume_db = -14.263
-bus = &"SFX"
-
 [node name="LoseLayer" type="CanvasLayer" parent="." unique_id=673242330]
 visible = false
 script = ExtResource("26_gx4g3")
@@ -516,21 +516,21 @@ offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
 [node name="Label" type="Label" parent="LoseLayer" unique_id=1482220915]
-offset_top = -77.0
-offset_right = 1948.0
+offset_top = -114.0
+offset_right = 1920.0
 offset_bottom = 426.0
 theme_override_colors/font_color = Color(0.9843137, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 200
-text = "Lose"
+text = "Lose!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="LoseLayer" unique_id=163988106]
-offset_top = 192.0
+offset_top = 147.0
 offset_right = 1920.0
-offset_bottom = 703.0
+offset_bottom = 707.0
 theme_override_colors/font_color = Color(0.98274976, 6.08854e-06, 1.540184e-06, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("16_2revy")
@@ -602,7 +602,7 @@ theme_override_colors/font_color = Color(0.69411767, 0, 1, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 200
-text = "Cringe"
+text = "Cringe!"
 horizontal_alignment = 1
 vertical_alignment = 1
 

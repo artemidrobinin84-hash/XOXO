@@ -77,6 +77,13 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xouyr"]
+shader = ExtResource("20_o0te1")
+shader_parameter/intensity = 1.0
+shader_parameter/softness = 0.45
+shader_parameter/inner_brightness = 0.0
+shader_parameter/vignette_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6atp"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
 border_width_left = 2
@@ -125,14 +132,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xouyr"]
-shader = ExtResource("20_o0te1")
-shader_parameter/intensity = 1.0
-shader_parameter/softness = 0.45
-shader_parameter/inner_brightness = 0.0
-shader_parameter/vignette_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_albq0"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0s7vr"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
 border_width_left = 2
 border_width_top = 2
@@ -144,7 +144,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6n1u"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_grstn"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
 border_width_left = 2
 border_width_top = 2
@@ -156,7 +156,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vogqm"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f6ulh"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
 border_width_left = 2
 border_width_top = 2
@@ -168,7 +168,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8r6gc"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvdxa"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
 border_width_left = 2
 border_width_top = 2
@@ -180,7 +180,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ked3v"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxqox"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
 border_width_left = 2
 border_width_top = 2
@@ -192,7 +192,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ka0th"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7ish"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
 border_width_left = 2
 border_width_top = 2
@@ -204,7 +204,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tv52p"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03d8g"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
 border_width_left = 2
 border_width_top = 2
@@ -216,7 +216,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqwyf"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6l4s"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
 border_width_left = 2
 border_width_top = 2
@@ -407,6 +407,27 @@ volume_db = -14.263
 pitch_scale = 1.1
 bus = &"SFX"
 
+[node name="Vignette" type="ColorRect" parent="." unique_id=640261088]
+z_index = 4096
+material = SubResource("ShaderMaterial_xouyr")
+offset_left = -609.0
+offset_top = -356.0
+offset_right = 2591.0
+offset_bottom = 1494.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Card" type="AudioStreamPlayer" parent="." unique_id=608364976]
+stream = ExtResource("21_0jrwo")
+volume_db = -12.0
+bus = &"SFX"
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1548618522]
+process_mode = 3
+stream = ExtResource("22_k2y27")
+volume_db = -14.263
+bus = &"SFX"
+
 [node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=2137009371]
 visible = false
 script = ExtResource("18_0s7vr")
@@ -477,52 +498,31 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_t80h6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t80h6")
 text = "Back to Menu"
 
-[node name="Vignette" type="ColorRect" parent="." unique_id=640261088]
-z_index = 4096
-material = SubResource("ShaderMaterial_xouyr")
-offset_left = -609.0
-offset_top = -356.0
-offset_right = 2591.0
-offset_bottom = 1494.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Card" type="AudioStreamPlayer" parent="." unique_id=608364976]
-stream = ExtResource("21_0jrwo")
-volume_db = -12.0
-bus = &"SFX"
-
-[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1548618522]
-process_mode = 3
-stream = ExtResource("22_k2y27")
-volume_db = -14.263
-bus = &"SFX"
-
-[node name="LoseLayer" type="CanvasLayer" parent="." unique_id=1481964693]
+[node name="LoseLayer" type="CanvasLayer" parent="." unique_id=1889101551]
 visible = false
 script = ExtResource("23_5p765")
 
-[node name="ColorRect" type="ColorRect" parent="LoseLayer" unique_id=362609446]
+[node name="ColorRect" type="ColorRect" parent="LoseLayer" unique_id=528772364]
 offset_right = 1916.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
-[node name="Label" type="Label" parent="LoseLayer" unique_id=2062629112]
-offset_top = -77.0
-offset_right = 1948.0
+[node name="Label" type="Label" parent="LoseLayer" unique_id=261973827]
+offset_top = -114.0
+offset_right = 1920.0
 offset_bottom = 426.0
 theme_override_colors/font_color = Color(0.9843137, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("19_i7t8p")
 theme_override_font_sizes/font_size = 200
-text = "Lose"
+text = "Lose!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="LoseLayer" unique_id=1806478353]
-offset_top = 192.0
+[node name="Label2" type="Label" parent="LoseLayer" unique_id=1029530034]
+offset_top = 147.0
 offset_right = 1920.0
-offset_bottom = 703.0
+offset_bottom = 707.0
 theme_override_colors/font_color = Color(0.98274976, 6.08854e-06, 1.540184e-06, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("19_i7t8p")
@@ -533,13 +533,13 @@ text = "Weak moves, bro.
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="VBoxContainer" parent="LoseLayer" unique_id=441559417]
+[node name="HBoxContainer" type="VBoxContainer" parent="LoseLayer" unique_id=237380186]
 offset_left = 547.0
 offset_top = 659.0
 offset_right = 1383.0
 offset_bottom = 1025.0
 
-[node name="Restart1" type="Button" parent="LoseLayer/HBoxContainer" unique_id=1032019025]
+[node name="Restart1" type="Button" parent="LoseLayer/HBoxContainer" unique_id=537779682]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -547,17 +547,17 @@ theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511
 theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
 theme_override_fonts/font = ExtResource("19_i7t8p")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_albq0")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_h6n1u")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vogqm")
-theme_override_styles/hover = SubResource("StyleBoxFlat_vogqm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0s7vr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_grstn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f6ulh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f6ulh")
 text = "Restart"
 
-[node name="Control" type="Control" parent="LoseLayer/HBoxContainer" unique_id=1088518453]
+[node name="Control" type="Control" parent="LoseLayer/HBoxContainer" unique_id=109961866]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="MainMenuButton1" type="Button" parent="LoseLayer/HBoxContainer" unique_id=957132635]
+[node name="MainMenuButton1" type="Button" parent="LoseLayer/HBoxContainer" unique_id=390928293]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -565,28 +565,28 @@ theme_override_colors/font_pressed_color = Color(0.20392157, 0.20392157, 0.20392
 theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
 theme_override_fonts/font = ExtResource("19_i7t8p")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_8r6gc")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_vogqm")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vogqm")
-theme_override_styles/hover = SubResource("StyleBoxFlat_vogqm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jvdxa")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_f6ulh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f6ulh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f6ulh")
 text = "Back to Menu"
 
-[node name="Click" type="AudioStreamPlayer" parent="LoseLayer" unique_id=1340562712]
+[node name="Click" type="AudioStreamPlayer" parent="LoseLayer" unique_id=781520504]
 process_mode = 3
 stream = ExtResource("22_k2y27")
 volume_db = -14.263
 bus = &"SFX"
 
-[node name="CringeLayer" type="CanvasLayer" parent="." unique_id=1738338152]
+[node name="CringeLayer" type="CanvasLayer" parent="." unique_id=1292876500]
 visible = false
 script = ExtResource("24_pdg3r")
 
-[node name="ColorRect" type="ColorRect" parent="CringeLayer" unique_id=818917320]
+[node name="ColorRect" type="ColorRect" parent="CringeLayer" unique_id=997818913]
 offset_right = 1916.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
-[node name="Label" type="Label" parent="CringeLayer" unique_id=966112895]
+[node name="Label" type="Label" parent="CringeLayer" unique_id=1751123804]
 offset_top = -114.0
 offset_right = 1948.0
 offset_bottom = 389.0
@@ -598,7 +598,7 @@ text = "Cringe"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="CringeLayer" unique_id=1299910874]
+[node name="Label2" type="Label" parent="CringeLayer" unique_id=1798705320]
 offset_top = 224.0
 offset_right = 1920.0
 offset_bottom = 735.0
@@ -613,13 +613,13 @@ won't help you here.
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="VBoxContainer" parent="CringeLayer" unique_id=1878553892]
+[node name="HBoxContainer" type="VBoxContainer" parent="CringeLayer" unique_id=509991296]
 offset_left = 547.0
 offset_top = 659.0
 offset_right = 1383.0
 offset_bottom = 1025.0
 
-[node name="Restart1" type="Button" parent="CringeLayer/HBoxContainer" unique_id=393385140]
+[node name="Restart1" type="Button" parent="CringeLayer/HBoxContainer" unique_id=1128190022]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -627,17 +627,17 @@ theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511
 theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
 theme_override_fonts/font = ExtResource("19_i7t8p")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_ked3v")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_ka0th")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_tv52p")
-theme_override_styles/hover = SubResource("StyleBoxFlat_tv52p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cxqox")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_l7ish")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_03d8g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_03d8g")
 text = "Restart"
 
-[node name="Control" type="Control" parent="CringeLayer/HBoxContainer" unique_id=255551304]
+[node name="Control" type="Control" parent="CringeLayer/HBoxContainer" unique_id=841779400]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="MainMenuButton1" type="Button" parent="CringeLayer/HBoxContainer" unique_id=1707490858]
+[node name="MainMenuButton1" type="Button" parent="CringeLayer/HBoxContainer" unique_id=1374378268]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -645,13 +645,13 @@ theme_override_colors/font_pressed_color = Color(0.20392157, 0.20392157, 0.20392
 theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
 theme_override_fonts/font = ExtResource("19_i7t8p")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_vqwyf")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_tv52p")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_tv52p")
-theme_override_styles/hover = SubResource("StyleBoxFlat_tv52p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j6l4s")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_03d8g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_03d8g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_03d8g")
 text = "Back to Menu"
 
-[node name="Click" type="AudioStreamPlayer" parent="CringeLayer" unique_id=100984799]
+[node name="Click" type="AudioStreamPlayer" parent="CringeLayer" unique_id=1276736678]
 process_mode = 3
 stream = ExtResource("22_k2y27")
 volume_db = -14.263
