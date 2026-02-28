@@ -17,7 +17,10 @@ func _ready():
 func _on_button_hover() -> void:
 	click_sound.play()
 func _on_cringe():
-	show() # Показываем экран победы
+	show() 
+	$Label2.text = ["Bro, you're cringe,
+	 the main character aura
+	 won't help you here."].pick_random()# Показываем экран победы
 	# Если нужно остановить игру, раскомментируй строку ниже:
 	# get_tree().paused = true 
 

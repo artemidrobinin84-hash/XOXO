@@ -8,7 +8,6 @@ signal boss_win
 signal cringe_game
 @export var max_hp: int = 100
 var current_hp: int
-
 var current_player_hp: int = 100
 var max_player_hp: int = 100
 var current_cringe: int = 0

@@ -20,9 +20,11 @@
 [ext_resource type="Shader" uid="uid://nw5oxtopa3dm" path="res://lvl/lvl.gdshader" id="17_sf0du"]
 [ext_resource type="AudioStream" uid="uid://cewix4n40l5co" path="res://Core/MainSFX/Звук взяли одну карту из колоды.mp3" id="20_fnejv"]
 [ext_resource type="AudioStream" uid="uid://dmx2cn3ba0iuw" path="res://Core/MainSFX/Короткий звук женщина стонет когда кончает.mp3" id="21_cqoco"]
+[ext_resource type="AudioStream" uid="uid://crgojtcf6ch6q" path="res://Core/MainSFX/Звук взмаха рукой (mp3cut.net) (1).mp3" id="21_wl4wg"]
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="22_ck4d2"]
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="23_0qm8x"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
+[ext_resource type="AudioStream" uid="uid://dy8spyqfo8ei" path="res://Core/MainSFX/Удар в лицо 2 (mp3cut.net).mp3" id="23_35ihi"]
 [ext_resource type="PackedScene" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
 [ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/lose_layer.gd" id="26_gx4g3"]
@@ -409,11 +411,27 @@ position = Vector2(939, 1080)
 scale = Vector2(0.6, 0.6)
 script = ExtResource("14_ya0ci")
 
-[node name="PhaseSound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1084620996]
-stream = ExtResource("21_cqoco")
-volume_db = -14.263
+[node name="Attack_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1084620996]
+stream = ExtResource("21_wl4wg")
+volume_db = 1.947
 pitch_scale = 1.1
 bus = &"SFX"
+
+[node name="Phase_sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1514752804]
+stream = ExtResource("21_cqoco")
+pitch_scale = 1.1
+
+[node name="Dammage_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1831954373]
+stream = ExtResource("23_35ihi")
+volume_db = -15.325
+pitch_scale = 1.2
+
+[node name="MouthPos" type="Marker2D" parent="GirlSprite" unique_id=1236348905]
+show_behind_parent = true
+position = Vector2(-93.333496, -1256.6672)
+
+[node name="SpeechTimer" type="Timer" parent="GirlSprite" unique_id=168791783]
+autostart = true
 
 [node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=569317400]
 visible = false

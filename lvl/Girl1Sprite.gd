@@ -1,10 +1,18 @@
 extends SpineSprite
-
+const BUBBLE_SCENE = preload("res://UI/Dialogue/speech_bubble.tscn")
 @onready var health_bar = get_node("../ProgressBar/XOXOProgressBar")
-@onready var phase_sound = $PhaseSound
+@onready var phase_sound = $Phase_sound
 @onready var boss_hitbox = get_node("../GirlHitbox")
 var current_skin = ""
-
+@onready var Attack_Sound = $Attack_Sound
+@onready var Dammage_Sound = $Dammage_Sound
+var boss_phrases = [
+ "Тебе не победить!",
+ "Это всё, на что ты способен?",
+ "Ха-ха, мимо!",
+ "Попробуй увернись от этого!",
+ "Я только разогреваюс!"
+]
 func _ready():
 	var animation_state = get_animation_state()
 	if animation_state:
@@ -16,7 +24,11 @@ func _ready():
 	await get_tree().process_frame
 	if health_bar:
 		_update_visuals(health_bar.value)
-
+	await get_tree().create_timer(1.0).timeout
+	say_something(boss_phrases.pick_random())
+	$SpeechTimer.timeout.connect(_on_speech_timer_timeout)
+	# Запускаем первый рандомный интервал
+	_set_random_timer()
 func _process(_delta):
 	if health_bar and get_skeleton():
 		_update_visuals(health_bar.value)
@@ -44,9 +56,9 @@ func perform_enemy_attack():
 		var skeleton = get_skeleton()
 		if skeleton:
 			skeleton.set_to_setup_pose()
-
 		animation_state.set_animation("attack", false, 0)
-		
+		Attack_Sound.play()
+		Dammage_Sound.play()
 	if boss_hitbox:
 		boss_hitbox.deal_damage_to_player(randi_range(10, 30))
 		
@@ -54,3 +66,22 @@ func _on_spine_animation_completed(_sprite, _track_entry, _track_index):
 	var animation_state = get_animation_state()
 	if animation_state:
 		animation_state.set_animation("idle", true, 0)
+func say_something(message: String):
+	var bubble = BUBBLE_SCENE.instantiate()
+	get_parent().add_child(bubble)
+	bubble.global_position = $MouthPos.global_position
+	bubble.set_text(message)
+func _on_speech_timer_timeout():
+ # Выбираем рандомную фразу и произносим её
+	var phrase : String
+	var random_phrase = boss_phrases.pick_random()
+	if current_skin == "level3":
+		phrase = ["ТЕБЕ КОНЕЦ!", "Я В ЯРОСТИ!", "УМРИ!"].pick_random()
+	else:
+		phrase = boss_phrases.pick_random()
+	say_something(random_phrase)
+	_set_random_timer()
+func _set_random_timer():
+ # Например, фраза будет появляться каждые 3-7 секунд
+	$SpeechTimer.wait_time = randf_range(3.0, 7.0)
+	$SpeechTimer.start()

@@ -20,7 +20,9 @@ func _ready():
 func _on_button_hover() -> void:
 	click_sound.play()
 func _on_victory():
-	show() # Показываем экран победы
+	show()
+	$Label2.text = ["She's yours now!", "She’s crazy about you.", "Damn, you definitely
+	 cooked her."].pick_random() # Показываем экран победы
 	# Если нужно остановить игру, раскомментируй строку ниже:
 	# get_tree().paused = true 
 

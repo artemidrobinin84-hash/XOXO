@@ -19,7 +19,12 @@ func _ready():
 func _on_button_hover() -> void:
 	click_sound.play()
 func _on_lose():
-	show() # Показываем экран победы
+	show()
+	$Label2.text = ["Next time,
+	 choose who you flirt 
+	with more carefully.", "Weak moves, bro. 
+	Keep practicing", "Did you really
+	 just lose to her?"].pick_random() # Показываем экран победы
 	# Если нужно остановить игру, раскомментируй строку ниже:
 	# get_tree().paused = true 
 

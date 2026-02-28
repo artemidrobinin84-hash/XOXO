@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dibdoq026n2m8"]
+
+[ext_resource type="Script" uid="uid://c7lq57rc4xvwx" path="res://UI/Dialogue/speech_bubble.gd" id="1_6d4mp"]
+[ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="2_kf51r"]
+
+[node name="SpeechBubble" type="Node2D" unique_id=835357818]
+z_index = 10
+script = ExtResource("1_6d4mp")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1804663431]
+offset_left = 227.0
+offset_top = 160.0
+offset_right = 827.0
+offset_bottom = 403.0
+
+[node name="Label" type="Label" parent="NinePatchRect" unique_id=859601060]
+layout_mode = 0
+offset_left = -723.0
+offset_top = -236.0
+offset_right = -155.0
+offset_bottom = -55.0
+theme_override_colors/font_color = Color(0.99999994, 0.14684266, 0.4759193, 1)
+theme_override_fonts/font = ExtResource("2_kf51r")
+theme_override_font_sizes/font_size = 50
+text = "Hello"
+autowrap_mode = 2
