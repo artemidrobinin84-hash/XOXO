@@ -50,7 +50,7 @@ func _on_boss_defeated():
 	if victory_screen:
 		victory_screen.show()
 	print("Уровень пройден!")
-
+#fdsfsd
 func _on_next_level_pressed():
 	get_tree().change_scene_to_file("res://lvl/lvl2.tscn")
 
