@@ -9,5 +9,5 @@ title = "Confident Pose"
 description = "Pure charisma. People are lining up just to open doors for you."
 icon = ExtResource("1_1kyld")
 cost = 3
-cringe = 1
+cringe = 10
 metadata/_custom_type_script = "uid://caihvaeaot5l6"

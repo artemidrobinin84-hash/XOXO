@@ -5,6 +5,7 @@ signal player_hp_changed(current, max_val)
 signal cringe_changed(current, max_val)
 signal boss_defeated
 signal boss_win
+signal cringe_game
 @export var max_hp: int = 100
 var current_hp: int
 
@@ -39,21 +40,23 @@ func add_cringe(amount: int):
 	cringe_changed.emit(current_cringe, MAX_CRINGE)
 	
 	if current_cringe >= MAX_CRINGE:
-		lose_game("Слишком кринжово!")
+		cringe("Слишком кринжово!")
 
 func heal(amount: int):
 	current_player_hp = clampi(current_player_hp + amount, 0, max_player_hp)
 	player_hp_changed.emit(current_player_hp, max_player_hp)
 
-func win():
-	boss_win.emit()
-	print("Лох!")
 
 func die():
 	boss_defeated.emit()
 	print("Победа!")
 
+func cringe(reason: String):
+	cringe_game.emit()
+	print(reason)
+
 func lose_game(reason: String):
+	boss_win.emit()
 	print(reason)
 	
 func deal_damage_to_player(amount: int):

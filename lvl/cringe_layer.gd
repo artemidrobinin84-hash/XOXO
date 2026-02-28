@@ -11,25 +11,22 @@ func _ready():
 	hide()
 	Restart1.mouse_entered.connect(_on_button_hover)
 	MainMenu1.mouse_entered.connect(_on_button_hover)
-	Restart1.pressed.connect(_on_restart_pressed)
-	MainMenu1.pressed.connect(_on_main_menu_button_pressed)
 	# Подписываемся на сигнал победы из твоего GirlHitbox
 	if boss:
-		boss.boss_win.connect(_on_lose)
+		boss.cringe_game.connect(_on_cringe)
 func _on_button_hover() -> void:
 	click_sound.play()
-func _on_lose():
+func _on_cringe():
 	show() # Показываем экран победы
 	# Если нужно остановить игру, раскомментируй строку ниже:
 	# get_tree().paused = true 
 
-func _on_restart_pressed():
+func _on_restart_1_pressed():
 	click_sound.play()
 	await get_tree().create_timer(0.15).timeout
 	get_tree().paused = false
 	get_tree().reload_current_scene()
-
-func _on_main_menu_button_pressed():
+func _on_main_menu_button_1_pressed():
 	click_sound.play()
 	await get_tree().create_timer(0.15).timeout
 	get_tree().paused = false
