@@ -44,6 +44,18 @@ shadow_size = 10
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vy4a"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdijn"]
+bg_color = Color(0.91764706, 0.42352942, 0.42352942, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cqoco"]
 bg_color = Color(0.047058824, 0.54901963, 0, 1)
 border_width_left = 4
@@ -56,6 +68,18 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n0t34"]
+bg_color = Color(0.91764706, 0.42352942, 0.42352942, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37uxi"]
 bg_color = Color(0.91764706, 0.42352942, 0.42352942, 1)
 border_width_left = 4
@@ -63,6 +87,18 @@ border_width_top = 4
 border_width_right = 4
 border_width_bottom = 6
 border_color = Color(0.48235294, 0.05490196, 0.05490196, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rln3k"]
+bg_color = Color(0.91764706, 0.42352942, 0.42352942, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 40
 corner_radius_top_right = 40
 corner_radius_bottom_right = 40
@@ -231,6 +267,20 @@ nine_patch_stretch = true
 texture_under = ExtResource("7_nmm5b")
 texture_progress = ExtResource("8_fnejv")
 
+[node name="ProgressLabel2" type="Label" parent="ProgressBar/HPProgressBar" unique_id=1850271957]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 448.0
+offset_right = 249.0
+offset_bottom = 525.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_8f7ds")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_qdijn")
+text = "25/25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ProgressLabel" type="Label" parent="ProgressBar/HPProgressBar" unique_id=252887667]
 layout_mode = 0
 offset_left = 95.0
@@ -256,6 +306,20 @@ nine_patch_stretch = true
 texture_under = ExtResource("7_37uxi")
 texture_progress = ExtResource("7_boooi")
 
+[node name="ProgressLabel2" type="Label" parent="ProgressBar/XOXOProgressBar" unique_id=1200188219]
+layout_mode = 0
+offset_left = -163.0
+offset_top = -3.0
+offset_right = -6.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_8f7ds")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_n0t34")
+text = "25/25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ProgressLabel" type="Label" parent="ProgressBar/XOXOProgressBar" unique_id=432625814]
 layout_mode = 0
 offset_left = -160.0
@@ -279,6 +343,20 @@ max_value = 10.0
 nine_patch_stretch = true
 texture_under = ExtResource("12_0vy4a")
 texture_progress = ExtResource("13_gx4g3")
+
+[node name="ProgressLabel2" type="Label" parent="ProgressBar/CringeProgressBar" unique_id=1632744901]
+layout_mode = 0
+offset_left = -130.0
+offset_top = -3.0
+offset_right = -6.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_8f7ds")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_rln3k")
+text = "25/25"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ProgressLabel" type="Label" parent="ProgressBar/CringeProgressBar" unique_id=1521890253]
 layout_mode = 0
