@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fne3fme78x1"]
 
-[ext_resource type="Texture2D" uid="uid://boealbosr20kq" path="res://lvl/back2.jpg" id="1_0s7vr"]
+[ext_resource type="Texture2D" uid="uid://buec47g6mvkfp" path="res://lvl/photo_2026-02-28_20-45-12.jpg" id="1_f6ulh"]
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="2_grstn"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="3_f6ulh"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="4_jvdxa"]
@@ -28,12 +28,12 @@
 [ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/cringe_layer.gd" id="24_pdg3r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdmic"]
-bg_color = Color(0.7936669, 0.9485256, 0.85478485, 1)
+bg_color = Color(0.047058824, 0.54901963, 0, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.29411766, 0.6313726, 0, 1)
+border_color = Color(0.02745098, 0.33333334, 0, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -233,22 +233,22 @@ corner_radius_bottom_left = 40
 [node name="Lvl2" type="Node2D" unique_id=1875160965]
 
 [node name="Back2" type="Sprite2D" parent="." unique_id=622320036]
-position = Vector2(960, 540.00006)
-scale = Vector2(1.2, 1.1751904)
-texture = ExtResource("1_0s7vr")
+position = Vector2(959.9999, 540)
+scale = Vector2(1.4999996, 1.4999999)
+texture = ExtResource("1_f6ulh")
 
 [node name="GirlHitbox" parent="." unique_id=2028270037 instance=ExtResource("2_grstn")]
 position = Vector2(-30, 0)
 
 [node name="TurnButton" type="Button" parent="." unique_id=2135038510]
-offset_left = 1564.0
+offset_left = 1543.0
 offset_top = 430.0
-offset_right = 1880.0
+offset_right = 1896.0
 offset_bottom = 511.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
 theme_override_colors/font_hover_color = Color(0.288518, 0.28851798, 0.28851798, 1)
-theme_override_fonts/font = ExtResource("3_f6ulh")
+theme_override_fonts/font = ExtResource("19_i7t8p")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_vdmic")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vdmic")
@@ -302,6 +302,7 @@ vertical_alignment = 1
 [node name="CardManager" parent="Playing cards" unique_id=102078610 instance=ExtResource("6_l7ish")]
 
 [node name="CostLabel" type="Label" parent="." unique_id=1913157496]
+visible = false
 offset_left = 1487.0
 offset_top = 531.0
 offset_right = 1916.0
@@ -409,22 +410,26 @@ volume_db = -14.263
 pitch_scale = 1.1
 bus = &"SFX"
 
-[node name="Attack_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1224305137]
+[node name="Attack_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1321197644]
 stream = ExtResource("18_f6ulh")
 volume_db = 1.947
 pitch_scale = 1.1
 bus = &"SFX"
 
-[node name="Dammage_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=711677432]
+[node name="Phase_sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1074739406]
+stream = ExtResource("17_21h47")
+pitch_scale = 1.1
+
+[node name="Dammage_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1037292496]
 stream = ExtResource("19_jvdxa")
 volume_db = -15.325
 pitch_scale = 1.2
 
-[node name="MouthPos" type="Marker2D" parent="GirlSprite" unique_id=157669764]
+[node name="MouthPos" type="Marker2D" parent="GirlSprite" unique_id=898654162]
 show_behind_parent = true
 position = Vector2(-93.333496, -1256.6672)
 
-[node name="SpeechTimer" type="Timer" parent="GirlSprite" unique_id=1796560314]
+[node name="SpeechTimer" type="Timer" parent="GirlSprite" unique_id=1583710899]
 autostart = true
 
 [node name="Vignette" type="ColorRect" parent="." unique_id=640261088]
@@ -676,6 +681,14 @@ process_mode = 3
 stream = ExtResource("22_k2y27")
 volume_db = -14.263
 bus = &"SFX"
+
+[node name="EnergyContainer" type="HBoxContainer" parent="." unique_id=302797055]
+texture_filter = 1
+offset_left = 1527.0
+offset_top = 568.0
+offset_right = 1880.0
+offset_bottom = 608.0
+theme_override_constants/separation = 10
 
 [connection signal="pressed" from="TurnButton" to="TurnManager" method="_on_turn_button_pressed"]
 [connection signal="pressed" from="CringeLayer/HBoxContainer/Restart1" to="CringeLayer" method="_on_restart_1_pressed"]
