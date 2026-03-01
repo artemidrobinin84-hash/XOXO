@@ -6,14 +6,19 @@ func _ready() -> void:
 	_SoundExit()
 	_Credit()
 	_CreditExit()
+	$Background/Tutorial.mouse_entered.connect(_on_button_hover)
 	$Background/Play.mouse_entered.connect(_on_button_hover)
 	$Background/Sound.mouse_entered.connect(_on_button_hover)
 	$Background/Credit.mouse_entered.connect(_on_button_hover)
-	$Background/Tutorial.mouse_entered.connect(_on_button_hover)
 # Called when the node enters the scene tree for the first time.
 func _on_button_hover() -> void:
 	$Click.play()
 	
+
+func _on_tutorial_pressed() -> void:
+	$Click.play()
+	get_tree().change_scene_to_file("res://lvl/lvlTutor.tscn")
+
 
 func _on_play_pressed() -> void:
 	$Click.play()

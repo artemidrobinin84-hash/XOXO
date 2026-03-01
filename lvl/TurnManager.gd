@@ -33,4 +33,5 @@ func end_player_turn():
 
 func _on_turn_button_pressed() -> void:
 	print("Кнопка нажата! Завершаю ход игрока...")
+	$"../CringeLayer/Click".play()
 	end_player_turn()

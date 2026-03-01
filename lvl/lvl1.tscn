@@ -8,14 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://chbvvo716378m" path="res://lvl/XOXOBar/HPBarUnder.png" id="7_nmm5b"]
 [ext_resource type="Script" uid="uid://d35sfwqsfx0j0" path="res://lvl/gameplay_manager.gd" id="8_6fe25"]
 [ext_resource type="Texture2D" uid="uid://5mtq1gijdush" path="res://lvl/XOXOBar/HPBarProgress.png" id="8_fnejv"]
-[ext_resource type="Script" path="res://lvl/gameplay_actions.gd" id="9_wtn46"]
+[ext_resource type="Script" uid="uid://bud8pdkppdg4c" path="res://lvl/gameplay_actions.gd" id="9_wtn46"]
 [ext_resource type="AudioStream" uid="uid://ba0j37jy6pwma" path="res://Core/MainSound/voskresnoe-vdokhnovenie-2-29609a.mp3" id="10_dgetj"]
 [ext_resource type="Texture2D" uid="uid://dilchgtj8p6so" path="res://lvl/XOXOBar/CringeBarUnder.png" id="12_0vy4a"]
 [ext_resource type="Texture2D" uid="uid://xth407w1lhqw" path="res://lvl/XOXOBar/CringeBarProgress.png" id="13_gx4g3"]
 [ext_resource type="SpineSkeletonDataResource" uid="uid://dkhwcw68rsxjh" path="res://GirlFriends/girlfrend1-skin/girlv1.tres" id="13_knlhy"]
 [ext_resource type="Script" uid="uid://d36yw2knsq3hm" path="res://lvl/Girl1Sprite.gd" id="14_ya0ci"]
 [ext_resource type="Script" uid="uid://b4hegsirimwru" path="res://lvl/victorylvl1.gd" id="15_8q75q"]
-[ext_resource type="Script" path="res://lvl/canvas_layer.gd" id="16_0vy4a"]
+[ext_resource type="Script" uid="uid://dnlarl7hhycpq" path="res://lvl/canvas_layer.gd" id="16_0vy4a"]
 [ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="16_2revy"]
 [ext_resource type="Shader" uid="uid://nw5oxtopa3dm" path="res://lvl/lvl.gdshader" id="17_sf0du"]
 [ext_resource type="AudioStream" uid="uid://cewix4n40l5co" path="res://Core/MainSFX/Звук взяли одну карту из колоды.mp3" id="20_fnejv"]
@@ -25,7 +25,7 @@
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="23_0qm8x"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
 [ext_resource type="AudioStream" uid="uid://dy8spyqfo8ei" path="res://Core/MainSFX/Удар в лицо 2 (mp3cut.net).mp3" id="23_35ihi"]
-[ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
+[ext_resource type="PackedScene" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
 [ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/lose_layer.gd" id="26_gx4g3"]
 [ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/cringe_layer.gd" id="27_wl4wg"]
@@ -152,6 +152,7 @@ offset_left = 1543.0
 offset_top = 430.0
 offset_right = 1896.0
 offset_bottom = 511.0
+mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
 theme_override_colors/font_hover_color = Color(0.288518, 0.28851798, 0.28851798, 1)
@@ -419,7 +420,7 @@ volume_db = 1.947
 pitch_scale = 1.1
 bus = &"SFX"
 
-[node name="Phase_sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1514752804]
+[node name="Phase_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1514752804]
 stream = ExtResource("21_cqoco")
 pitch_scale = 1.1
 

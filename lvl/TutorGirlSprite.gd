@@ -1,7 +1,7 @@
 extends SpineSprite
 
 @onready var health_bar = get_node("../ProgressBar/XOXOProgressBar")
-@onready var phase_sound = $PhaseSound
+@onready var phase_sound = $Phase_Sound
 @onready var boss_hitbox = get_node("../GirlHitbox")
 var current_skin = ""
 

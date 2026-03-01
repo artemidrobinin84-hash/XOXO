@@ -9,7 +9,7 @@ func _ready():
 	hide()
 	Restart1.mouse_entered.connect(_on_button_hover)
 	MainMenu1.mouse_entered.connect(_on_button_hover)
-	if boss:
+	if boss and not boss.boss_win:
 		boss.cringe_game.connect(_on_cringe)
 func _on_button_hover() -> void:
 	click_sound.play()
