@@ -68,7 +68,3 @@ func deal_damage_to_player(amount: int):
 	
 	if current_player_hp <= 0:
 		lose_game("Ваше HP закончилось!")
-
-
-func _on_turn_manager_player_turn_started() -> void:
-	pass # Replace with function body.

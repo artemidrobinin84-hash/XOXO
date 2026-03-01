@@ -1,7 +1,7 @@
 extends SpineSprite
 const BUBBLE_SCENE = preload("res://UI/Dialogue/speech_bubble.tscn")
 @onready var health_bar = get_node("../ProgressBar/XOXOProgressBar")
-@onready var phase_sound = $Phase_sound
+@onready var phase_sound = $Phase_Sound
 @onready var boss_hitbox = get_node("../GirlHitbox")
 var current_skin = ""
 @onready var Attack_Sound = $Attack_Sound

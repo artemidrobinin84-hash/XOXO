@@ -81,7 +81,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_4elqj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4elqj")
 text = "Play"
 
-[node name="Button4" type="Button" parent="Background" unique_id=1702423009]
+[node name="Tutorial" type="Button" parent="Background" unique_id=1702423009]
 layout_mode = 0
 offset_left = 1276.0
 offset_top = 465.0
@@ -338,6 +338,7 @@ volume_db = -14.263
 bus = &"SFX"
 
 [connection signal="pressed" from="Background/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Background/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="Background/Credit" to="." method="_on_credit_pressed"]
 [connection signal="value_changed" from="Background/Sound_Settings/TextureRect/Master" to="." method="_on_master_value_changed"]
 [connection signal="value_changed" from="Background/Sound_Settings/TextureRect/Music" to="." method="_on_music_value_changed"]

@@ -14,7 +14,7 @@ func _ready():
 	Restart1.pressed.connect(_on_restart_pressed)
 	MainMenu1.pressed.connect(_on_main_menu_button_pressed)
 	# Подписываемся на сигнал победы из твоего GirlHitbox
-	if boss:
+	if boss and not boss.cringe_game:
 		boss.boss_win.connect(_on_lose)
 func _on_button_hover() -> void:
 	click_sound.play()
