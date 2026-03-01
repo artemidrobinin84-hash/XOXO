@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://uwhlsr6yw318"]
 
+[ext_resource type="Script" path="res://UI/MainMenu/MainMenu.gd" id="1_4qf4k"]
 [ext_resource type="Texture2D" uid="uid://cr7ysnc65qua" path="res://UI/MainMenu/MenuDate11.png" id="1_8fkdr"]
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://dyca21nvba40o" path="res://UI/MainMenu/MainMenu.gd" id="1_8x0bb"]
 [ext_resource type="Texture2D" uid="uid://gabjot1abml1" path="res://UI/MainMenu/button_purple.png" id="3_a6vv6"]
+=======
+[ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="3_4qf4k"]
+>>>>>>> e94e50a5f87597cbe3f44e55fc1f404a61f534fd
 [ext_resource type="FontFile" uid="uid://caiuju44j21k5" path="res://Core/Comfortaa-VariableFont_wght.ttf" id="3_jhcbk"]
 [ext_resource type="Texture2D" uid="uid://bad21lo2yfkbe" path="res://UI/MainMenu/button_pushed.png" id="4_00tn1"]
 [ext_resource type="Texture2D" uid="uid://cuivyqo57eiij" path="res://UI/MainMenu/Sound_Menu.png" id="4_4elqj"]
@@ -15,11 +20,15 @@
 [ext_resource type="Script" uid="uid://daaiaxjsvaugx" path="res://UI/MainMenu/credit.gd" id="6_migmm"]
 [ext_resource type="Texture2D" uid="uid://dqh8xd3eoygls" path="res://UI/MainMenu/Credits_Menu.png" id="7_1dhmk"]
 [ext_resource type="Script" uid="uid://c128ipxomvojk" path="res://UI/MainMenu/sound.gd" id="7_migmm"]
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://UI/MainMenu/exit.gd" id="8_jt3i8"]
+=======
+[ext_resource type="Script" uid="uid://piuw2l4pcg4n" path="res://UI/MainMenu/exit.gd" id="8_jt3i8"]
+>>>>>>> e94e50a5f87597cbe3f44e55fc1f404a61f534fd
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="9_jhcbk"]
-[ext_resource type="Script" path="res://UI/MainMenu/master.gd" id="11_jt3i8"]
-[ext_resource type="Script" path="res://UI/MainMenu/music.gd" id="12_hvgpy"]
-[ext_resource type="Script" path="res://UI/MainMenu/sfx.gd" id="13_4qf4k"]
+[ext_resource type="Script" uid="uid://dxisqslsuj3m4" path="res://UI/MainMenu/master.gd" id="11_jt3i8"]
+[ext_resource type="Script" uid="uid://bw8fmghhx01la" path="res://UI/MainMenu/music.gd" id="12_hvgpy"]
+[ext_resource type="Script" uid="uid://b4vosp2fwanot" path="res://UI/MainMenu/sfx.gd" id="13_4qf4k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a712v"]
 bg_color = Color(0.99999994, 0.2759502, 0.58477014, 1)
@@ -43,7 +52,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8x0bb")
+script = ExtResource("1_4qf4k")
 
 [node name="Background" type="TextureRect" parent="." unique_id=2047166545]
 layout_mode = 0

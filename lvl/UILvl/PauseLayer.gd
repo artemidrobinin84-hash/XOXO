@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var click_sound = $"../Click"
+@onready var click_sound =  $Click
 
 func _ready() -> void:
 	hide()

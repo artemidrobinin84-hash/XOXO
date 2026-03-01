@@ -23,7 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="23_0qm8x"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
 [ext_resource type="AudioStream" uid="uid://dy8spyqfo8ei" path="res://Core/MainSFX/Удар в лицо 2 (mp3cut.net).mp3" id="23_35ihi"]
-[ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
+[ext_resource type="PackedScene" uid="uid://c5t3876wlibmb" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
 [ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/UILvl/LoseLayer.gd" id="26_gx4g3"]
 [ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/UILvl/CringeLayer.gd" id="27_wl4wg"]
@@ -573,6 +573,12 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_p5swj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_p5swj")
 text = "Back to menu"
 
+[node name="Click" type="AudioStreamPlayer" parent="PauseLayer" unique_id=562712289]
+process_mode = 3
+stream = ExtResource("23_0qm8x")
+volume_db = -14.263
+bus = &"SFX"
+
 [node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=569317400]
 process_mode = 3
 visible = false
@@ -646,6 +652,10 @@ text = "Back to Menu"
 
 [node name="LoseLayer" type="CanvasLayer" parent="." unique_id=673242330]
 process_mode = 3
+<<<<<<< HEAD
+=======
+visible = false
+>>>>>>> e94e50a5f87597cbe3f44e55fc1f404a61f534fd
 script = ExtResource("26_gx4g3")
 
 [node name="ColorRect" type="ColorRect" parent="LoseLayer" unique_id=1953735948]

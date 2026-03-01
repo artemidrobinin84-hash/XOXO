@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://babn0rur3i4wj" path="res://lvl/back3lvl.png" id="1_vn6kh"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="2_vn6kh"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="3_crxqj"]
-[ext_resource type="Script" uid="uid://g2l0ik7o5mij" path="res://GirlFriends/GirlHitbox3.gd" id="3_p346q"]
-[ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://CardData/DeckCard.tscn" id="4_p346q"]
+[ext_resource type="Script" path="res://GirlFriends/GirlHitbox3.gd" id="3_p346q"]
+[ext_resource type="PackedScene" uid="uid://c5t3876wlibmb" path="res://CardData/DeckCard.tscn" id="4_p346q"]
 [ext_resource type="PackedScene" uid="uid://f0b03p5ljpjf" path="res://CardData/CardManager.tscn" id="5_8r586"]
 [ext_resource type="Script" uid="uid://dade0acwfe8qv" path="res://lvl/XOXOBar/ProgressBar.gd" id="6_kwfs0"]
 [ext_resource type="Texture2D" uid="uid://chbvvo716378m" path="res://lvl/XOXOBar/HPBarUnder.png" id="7_d3x6f"]
@@ -18,7 +18,7 @@
 [ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="16_msv35"]
 [ext_resource type="Shader" uid="uid://nw5oxtopa3dm" path="res://lvl/lvl.gdshader" id="17_ngng0"]
 [ext_resource type="AudioStream" uid="uid://ba0j37jy6pwma" path="res://Core/MainSound/voskresnoe-vdokhnovenie-2-29609a.mp3" id="18_c3he2"]
-[ext_resource type="Script" uid="uid://dm8jqqs5thggp" path="res://lvl/Girl3Sprite.gd" id="19_2gget"]
+[ext_resource type="Script" path="res://lvl/Girl3Sprite.gd" id="19_2gget"]
 [ext_resource type="SpineSkeletonDataResource" uid="uid://su2012wm2uo" path="res://GirlFriends/girlfrend2-skin/girlv2.tres" id="19_60krb"]
 [ext_resource type="AudioStream" uid="uid://crgojtcf6ch6q" path="res://Core/MainSFX/Звук взмаха рукой (mp3cut.net) (1).mp3" id="21_ufrys"]
 [ext_resource type="AudioStream" uid="uid://dmx2cn3ba0iuw" path="res://Core/MainSFX/Короткий звук женщина стонет когда кончает.mp3" id="22_i6ph6"]
@@ -662,6 +662,12 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_crxqj")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_p346q")
 theme_override_styles/hover = SubResource("StyleBoxFlat_p346q")
 text = "Back to menu"
+
+[node name="Click" type="AudioStreamPlayer" parent="PauseLayer" unique_id=1286451583]
+process_mode = 3
+stream = ExtResource("25_yb0y0")
+volume_db = -14.263
+bus = &"SFX"
 
 [node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=197266617]
 visible = false
