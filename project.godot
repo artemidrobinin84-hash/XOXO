@@ -26,13 +26,11 @@ window/size/viewport_height=1080
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
-[input]
+[input_devices]
 
-Esc={
-"deadzone": 0.2,
-"events": []
-}
+pointing/emulate_touch_from_mouse=true
 
 [physics]
 
@@ -41,3 +39,5 @@ Esc={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/stretch/aspect="expand"
+textures/emulate_touch_from_mouse=true

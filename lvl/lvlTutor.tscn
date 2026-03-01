@@ -473,7 +473,7 @@ vertical_alignment = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=226546805]
 stream = ExtResource("14_d6oqk")
-volume_db = -25.0
+volume_db = -15.0
 autoplay = true
 bus = &"Music"
 
@@ -745,7 +745,7 @@ script = ExtResource("17_13fv4")
 
 [node name="Phase_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1390044754]
 stream = ExtResource("17_l6odt")
-volume_db = -14.263
+volume_db = -10.455
 pitch_scale = 1.1
 bus = &"SFX"
 

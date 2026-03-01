@@ -1,6 +1,8 @@
 extends Control
 
 func _ready() -> void:
+	 # Соединяем сигналы через код, чтобы не тыкать мышкой в редакторе
+	pivot_offset = size / 2
 	#_Exit()
 	_Sound()
 	_SoundExit()
@@ -14,7 +16,13 @@ func _ready() -> void:
 func _on_button_hover() -> void:
 	$Click.play()
 	
+func _on_play_mouse_entered() -> void:
+	var tween = create_tween()
+	tween.tween_property(self, "scale", Vector2(1.1, 1.1), 0.1).set_trans(Tween.TRANS_SINE)
 
+func _on_play_mouse_exited():
+	var tween = create_tween()
+	tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.1).set_trans(Tween.TRANS_SINE)
 func _on_tutorial_pressed() -> void:
 	$Click.play()
 	get_tree().change_scene_to_file("res://lvl/lvlTutor.tscn")
