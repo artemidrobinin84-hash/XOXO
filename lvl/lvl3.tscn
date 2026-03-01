@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dyinci1po086n"]
 
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="1_2gget"]
-[ext_resource type="Texture2D" uid="uid://babn0rur3i4wj" path="res://lvl/нршпдг.png" id="1_vn6kh"]
+[ext_resource type="Texture2D" uid="uid://babn0rur3i4wj" path="res://lvl/back3lvl.png" id="1_vn6kh"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="2_vn6kh"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="3_crxqj"]
 [ext_resource type="Script" uid="uid://g2l0ik7o5mij" path="res://GirlFriends/GirlHitbox3.gd" id="3_p346q"]
@@ -311,7 +311,7 @@ script = ExtResource("3_p346q")
 max_hp = 150
 
 [node name="TurnButton" type="Button" parent="." unique_id=1926065802]
-offset_left = 1543.0
+offset_left = 1562.0
 offset_top = 430.0
 offset_right = 1896.0
 offset_bottom = 511.0
@@ -323,7 +323,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_vn6kh")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vn6kh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vn6kh")
-text = "Skip to turn"
+text = "End Turn"
 
 [node name="TurnManager" type="Node" parent="." unique_id=1067060554]
 script = ExtResource("3_crxqj")
@@ -457,7 +457,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vn6kh")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_wkoec")
-text = "100/100"
+text = "150/150"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -517,7 +517,7 @@ bus = &"Music"
 
 [node name="GirlSprite" type="SpineSprite" parent="." unique_id=1568190187]
 skeleton_data_res = ExtResource("19_60krb")
-preview_skin = "level2"
+preview_skin = "level1"
 preview_animation = "idle"
 preview_frame = false
 preview_time = 0.0
@@ -528,12 +528,13 @@ script = ExtResource("19_2gget")
 
 [node name="Attack_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1690237027]
 stream = ExtResource("21_ufrys")
+volume_db = -10.0
 pitch_scale = 1.1
 bus = &"SFX"
 
 [node name="Phase_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=863289505]
 stream = ExtResource("22_i6ph6")
-volume_db = -10.455
+volume_db = -14.0
 pitch_scale = 1.1
 
 [node name="Dammage_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=420169408]
@@ -551,10 +552,10 @@ autostart = true
 [node name="Vignette2" type="ColorRect" parent="." unique_id=1752521149]
 z_index = 4096
 material = SubResource("ShaderMaterial_cch8v")
-offset_left = -609.0
-offset_top = -356.0
-offset_right = 2591.0
-offset_bottom = 1494.0
+offset_left = -641.0
+offset_top = -374.0
+offset_right = 2623.0
+offset_bottom = 1526.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
