@@ -17,7 +17,10 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="XOXO"
 run/main_scene="uid://cis46q33g8cf6"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout=""
 
 [display]
 
@@ -27,6 +30,13 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[input]
+
+Esc={
+"deadzone": 0.2,
+"events": []
+}
 
 [input_devices]
 

@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://bd411x7plp5qo"]
 
-[ext_resource type="Texture2D" uid="uid://bjulfqrgya2bx" path="res://lvl/апиыаип.png" id="1_35ihi"]
+[ext_resource type="Texture2D" uid="uid://bjulfqrgya2bx" path="res://lvl/back1lvl.png" id="1_35ihi"]
 [ext_resource type="PackedScene" uid="uid://f0b03p5ljpjf" path="res://CardData/CardManager.tscn" id="2_r30gq"]
-[ext_resource type="FontFile" uid="uid://caiuju44j21k5" path="res://Core/Comfortaa-VariableFont_wght.ttf" id="3_n0t34"]
-[ext_resource type="Script" uid="uid://de7dj4jdhr0xq" path="res://lvl/turn_button.gd" id="4_qdijn"]
+[ext_resource type="Texture2D" uid="uid://dtuf1ren871xq" path="res://lvl/XOXOBar/XOXOBarUnder.png" id="7_37uxi"]
 [ext_resource type="Texture2D" uid="uid://cferfo6atp3hy" path="res://lvl/XOXOBar/XOXOBarProgress.png" id="7_boooi"]
 [ext_resource type="Script" uid="uid://dade0acwfe8qv" path="res://lvl/XOXOBar/ProgressBar.gd" id="7_d4vtd"]
+[ext_resource type="Texture2D" uid="uid://chbvvo716378m" path="res://lvl/XOXOBar/HPBarUnder.png" id="7_nmm5b"]
 [ext_resource type="Texture2D" uid="uid://5mtq1gijdush" path="res://lvl/XOXOBar/HPBarProgress.png" id="8_fnejv"]
-[ext_resource type="Script" uid="uid://ciaylycjinj5s" path="res://lvl/gameplay_actions.gd" id="9_wtn46"]
 [ext_resource type="AudioStream" uid="uid://ba0j37jy6pwma" path="res://Core/MainSound/voskresnoe-vdokhnovenie-2-29609a.mp3" id="10_dgetj"]
+[ext_resource type="Texture2D" uid="uid://dilchgtj8p6so" path="res://lvl/XOXOBar/CringeBarUnder.png" id="12_0vy4a"]
 [ext_resource type="Texture2D" uid="uid://xth407w1lhqw" path="res://lvl/XOXOBar/CringeBarProgress.png" id="13_gx4g3"]
 [ext_resource type="SpineSkeletonDataResource" uid="uid://dkhwcw68rsxjh" path="res://GirlFriends/girlfrend1-skin/girlv1.tres" id="13_knlhy"]
 [ext_resource type="Script" uid="uid://d36yw2knsq3hm" path="res://lvl/Girl1Sprite.gd" id="14_ya0ci"]
@@ -28,47 +28,24 @@
 [ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/UILvl/LoseLayer.gd" id="26_gx4g3"]
 [ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/UILvl/CringeLayer.gd" id="27_wl4wg"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35ihi"]
-bg_color = Color(0.16712788, 0, 0.8543756, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qm8x"]
+bg_color = Color(0.047058824, 0.54901963, 0, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0, 0, 0, 1)
+border_color = Color(0.02745098, 0.33333334, 0, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdijn"]
-bg_color = Color(0.16862746, 0, 0.85490197, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
+shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vy4a"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cqoco"]
-bg_color = Color(0, 0.65882355, 0, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 6
-border_color = Color(0.02745098, 0.33333334, 0, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5swj"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl4wg"]
+bg_color = Color(0.91764706, 0.42352942, 0.42352942, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -80,17 +57,30 @@ corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n0t34"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 10
+bg_color = Color(0.047058824, 0.54901963, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 6
+border_color = Color(0.02745098, 0.33333334, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rln3k"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.91764706, 0.42352942, 0.42352942, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37uxi"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtgly"]
 bg_color = Color(0.91764706, 0.42352942, 0.42352942, 1)
 border_width_left = 4
 border_width_top = 4
@@ -102,8 +92,8 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtgly"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4s4w3"]
+bg_color = Color(0.91764706, 0.42352942, 0.42352942, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -114,7 +104,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl4wg"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jaxl7"]
 bg_color = Color(0.69411767, 0, 1, 1)
 border_width_left = 4
 border_width_top = 4
@@ -126,12 +116,55 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_veq3y"]
+shader = ExtResource("17_sf0du")
+shader_parameter/intensity = 1.0
+shader_parameter/softness = 0.45
+shader_parameter/inner_brightness = 0.0
+shader_parameter/vignette_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdijn"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35ihi"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.98975796, 0, 0.5368099, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5swj"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.98975796, 0, 0.5368099, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdh2e"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 6
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 40
 corner_radius_top_right = 40
@@ -186,13 +219,6 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_veq3y"]
-shader = ExtResource("17_sf0du")
-shader_parameter/intensity = 1.0
-shader_parameter/softness = 0.45
-shader_parameter/inner_brightness = 0.0
-shader_parameter/vignette_color = Color(0, 0, 0, 1)
-
 [node name="lvl1" type="Node2D" unique_id=1334599637]
 
 [node name="Back" type="Sprite2D" parent="." unique_id=1865572888]
@@ -203,24 +229,21 @@ texture = ExtResource("1_35ihi")
 [node name="GirlHitbox" parent="." unique_id=1458060286 instance=ExtResource("22_ck4d2")]
 position = Vector2(-30, 0)
 
-[node name="TurnButton" type="Button" parent="." unique_id=233404908]
-offset_left = 1543.0
+[node name="TurnButton" type="Button" parent="." unique_id=1021226340]
+offset_left = 1561.0
 offset_top = 430.0
 offset_right = 1896.0
 offset_bottom = 511.0
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("3_n0t34")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+theme_override_colors/font_hover_color = Color(0.288518, 0.28851798, 0.28851798, 1)
+theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_35ihi")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_qdijn")
-theme_override_styles/hover = SubResource("StyleBoxFlat_35ihi")
-text = "Skip to turn"
-script = ExtResource("4_qdijn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0qm8x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0qm8x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0qm8x")
+text = "End Turn"
 
 [node name="TurnManager" type="Node" parent="." unique_id=1086621257]
 script = ExtResource("25_0vy4a")
@@ -252,10 +275,10 @@ offset_right = 1816.0001
 offset_bottom = 1057.0
 
 [node name="DeckLabel" type="Label" parent="Deck" unique_id=1128199101]
-offset_left = 1357.0
-offset_top = 768.0
-offset_right = 1597.0
-offset_bottom = 963.8333
+offset_left = 1553.0
+offset_top = 769.0
+offset_right = 1793.0
+offset_bottom = 964.8333
 theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("23_8f7ds")
 theme_override_font_sizes/font_size = 90
@@ -278,10 +301,10 @@ theme_override_colors/font_color = Color(0, 1, 1, 1)
 theme_override_font_sizes/font_size = 80
 text = "Energy: 8/8"
 
-[node name="ProgressBar" type="CanvasLayer" parent="." unique_id=1266402420]
+[node name="ProgressBar" type="CanvasLayer" parent="." unique_id=1461419603]
 script = ExtResource("7_d4vtd")
 
-[node name="HPProgressBar" type="TextureProgressBar" parent="ProgressBar" unique_id=216428006]
+[node name="HPProgressBar" type="TextureProgressBar" parent="ProgressBar" unique_id=1898543401]
 offset_left = 36.0
 offset_top = 90.0
 offset_right = 105.0
@@ -289,52 +312,38 @@ offset_bottom = 1052.0
 value = 100.0
 fill_mode = 3
 nine_patch_stretch = true
+texture_under = ExtResource("7_nmm5b")
 texture_progress = ExtResource("8_fnejv")
 
-[node name="ProgressLabel" type="Label" parent="ProgressBar/HPProgressBar" unique_id=252887667]
+[node name="ProgressLabel2" type="Label" parent="ProgressBar/HPProgressBar" unique_id=1108221567]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 447.0
+offset_right = 249.0
+offset_bottom = 524.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_8f7ds")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_wl4wg")
+text = "25/25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressLabel" type="Label" parent="ProgressBar/HPProgressBar" unique_id=1210431188]
 layout_mode = 0
 offset_left = 95.0
 offset_top = 451.0
 offset_right = 246.0
 offset_bottom = 520.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("23_8f7ds")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_cqoco")
-text = "100/100"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ProgressLabel1" type="Label" parent="ProgressBar/HPProgressBar/ProgressLabel" unique_id=1272079189]
-show_behind_parent = true
-layout_mode = 0
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 155.0
-offset_bottom = 73.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("23_8f7ds")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_p5swj")
-text = "100/100"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label" type="Label" parent="ProgressBar/HPProgressBar" unique_id=2012115123]
-show_behind_parent = true
-layout_mode = 0
-offset_left = -6.0
-offset_top = -6.0
-offset_right = 75.0
-offset_bottom = 968.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_n0t34")
-theme_override_styles/focus = SubResource("StyleBoxFlat_rln3k")
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="XOXOProgressBar" type="TextureProgressBar" parent="ProgressBar" unique_id=1443384940]
+[node name="XOXOProgressBar" type="TextureProgressBar" parent="ProgressBar" unique_id=450730507]
 texture_filter = 1
 offset_left = 547.0
 offset_top = 9.0
@@ -342,50 +351,37 @@ offset_right = 1505.0
 offset_bottom = 61.0
 value = 100.0
 nine_patch_stretch = true
+texture_under = ExtResource("7_37uxi")
 texture_progress = ExtResource("7_boooi")
 
-[node name="ProgressLabel" type="Label" parent="ProgressBar/XOXOProgressBar" unique_id=432625814]
+[node name="ProgressLabel2" type="Label" parent="ProgressBar/XOXOProgressBar" unique_id=961605518]
 layout_mode = 0
-offset_left = -166.0
-offset_right = -15.0
+offset_left = -163.0
+offset_top = -3.0
+offset_right = -6.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_8f7ds")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_rln3k")
+text = "25/25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressLabel" type="Label" parent="ProgressBar/XOXOProgressBar" unique_id=1414512847]
+layout_mode = 0
+offset_left = -160.0
+offset_right = -9.0
 offset_bottom = 52.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("23_8f7ds")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_37uxi")
-text = "100/100"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ProgressLabel" type="Label" parent="ProgressBar/XOXOProgressBar/ProgressLabel" unique_id=1511096623]
-show_behind_parent = true
-layout_mode = 0
-offset_left = -3.0
-offset_top = -3.0
-offset_right = 154.0
-offset_bottom = 55.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("23_8f7ds")
-theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_wtgly")
-text = "100/100"
+text = "120/120"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label" type="Label" parent="ProgressBar/XOXOProgressBar" unique_id=1383985099]
-show_behind_parent = true
-layout_mode = 0
-offset_left = -6.0
-offset_top = -5.0
-offset_right = 964.0
-offset_bottom = 58.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_n0t34")
-theme_override_styles/focus = SubResource("StyleBoxFlat_rln3k")
-
-[node name="CringeProgressBar" type="TextureProgressBar" parent="ProgressBar" unique_id=1281846726]
+[node name="CringeProgressBar" type="TextureProgressBar" parent="ProgressBar" unique_id=911392609]
 texture_filter = 1
 offset_left = 547.0
 offset_top = 73.0
@@ -393,152 +389,35 @@ offset_right = 939.0
 offset_bottom = 117.0
 max_value = 10.0
 nine_patch_stretch = true
+texture_under = ExtResource("12_0vy4a")
 texture_progress = ExtResource("13_gx4g3")
 
-[node name="ProgressLabel" type="Label" parent="ProgressBar/CringeProgressBar" unique_id=1521890253]
+[node name="ProgressLabel2" type="Label" parent="ProgressBar/CringeProgressBar" unique_id=2080949806]
 layout_mode = 0
-offset_left = -165.0
-offset_right = -47.0
-offset_bottom = 44.270832
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("23_8f7ds")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_wl4wg")
-text = "0/10"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ProgressLabel" type="Label" parent="ProgressBar/CringeProgressBar/ProgressLabel" unique_id=1687255549]
-show_behind_parent = true
-layout_mode = 0
-offset_left = -3.0
+offset_left = -130.0
 offset_top = -3.0
-offset_right = 121.0
+offset_right = -6.0
 offset_bottom = 48.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("23_8f7ds")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_qdh2e")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4s4w3")
+text = "25/25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressLabel" type="Label" parent="ProgressBar/CringeProgressBar" unique_id=1922274151]
+layout_mode = 0
+offset_left = -127.0
+offset_right = -9.0
+offset_bottom = 44.270832
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_8f7ds")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_jaxl7")
 text = "0/10"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Label" type="Label" parent="ProgressBar/CringeProgressBar" unique_id=1755160715]
-show_behind_parent = true
-layout_mode = 0
-offset_left = -7.0
-offset_top = -5.0
-offset_right = 399.0
-offset_bottom = 50.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_n0t34")
-theme_override_styles/focus = SubResource("StyleBoxFlat_rln3k")
-
-[node name="Gameplay_Manager" type="Node" parent="." unique_id=987755067]
-process_mode = 3
-
-[node name="GameplayActions" type="Node" parent="Gameplay_Manager" unique_id=802634728]
-process_mode = 3
-script = ExtResource("9_wtn46")
-
-[node name="PauseLabel" type="CanvasLayer" parent="Gameplay_Manager/GameplayActions" unique_id=472239151]
-layer = 100
-visible = false
-script = ExtResource("16_0vy4a")
-
-[node name="ColorRect" type="ColorRect" parent="Gameplay_Manager/GameplayActions/PauseLabel" unique_id=1244985868]
-offset_right = 1916.0
-offset_bottom = 1080.0
-color = Color(0, 0, 0, 0.6862745)
-
-[node name="Label" type="Label" parent="Gameplay_Manager/GameplayActions/PauseLabel" unique_id=248470207]
-offset_top = -64.0
-offset_right = 1920.0
-offset_bottom = 447.0
-theme_override_colors/font_color = Color(1, 0.61323047, 0.80748695, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("16_2revy")
-theme_override_font_sizes/font_size = 200
-text = "Pause"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="Gameplay_Manager/GameplayActions/PauseLabel" unique_id=1819652800]
-offset_top = 224.0
-offset_right = 1920.0
-offset_bottom = 735.0
-theme_override_colors/font_color = Color(1, 0.6117647, 0.80784315, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("16_2revy")
-theme_override_font_sizes/font_size = 75
-text = "Are you tired already?
-
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="HBoxContainer" type="VBoxContainer" parent="Gameplay_Manager/GameplayActions/PauseLabel" unique_id=1616032510]
-offset_left = 547.0
-offset_top = 511.0
-offset_right = 1383.0
-offset_bottom = 1014.0
-
-[node name="Continue" type="Button" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=966397333]
-layout_mode = 2
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
-theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
-theme_override_fonts/font = ExtResource("16_2revy")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_sf0du")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_veq3y")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_2revy")
-theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
-text = "Continue"
-
-[node name="Control" type="Control" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=1643036080]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-
-[node name="Restart" type="Button" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=1486923626]
-layout_mode = 2
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
-theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
-theme_override_fonts/font = ExtResource("16_2revy")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_8q75q")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_2revy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_2revy")
-theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
-text = "Restart"
-
-[node name="Control2" type="Control" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=1133690665]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-
-[node name="BackToMenu" type="Button" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=1991370907]
-layout_mode = 2
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
-theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
-theme_override_fonts/font = ExtResource("16_2revy")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_sf0du")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_veq3y")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_2revy")
-theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
-text = "Back to menu"
-
-[node name="Click" type="AudioStreamPlayer" parent="Gameplay_Manager/GameplayActions/PauseLabel" unique_id=981014259]
-process_mode = 3
-stream = ExtResource("23_0qm8x")
-volume_db = -14.263
-bus = &"SFX"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=606229576]
 stream = ExtResource("10_dgetj")
@@ -559,18 +438,18 @@ script = ExtResource("14_ya0ci")
 
 [node name="Attack_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1084620996]
 stream = ExtResource("21_wl4wg")
-volume_db = 1.947
+volume_db = -10.0
 pitch_scale = 1.1
 bus = &"SFX"
 
 [node name="Phase_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1514752804]
 stream = ExtResource("21_cqoco")
-volume_db = -10.455
+volume_db = -14.0
 pitch_scale = 1.1
 
 [node name="Dammage_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1831954373]
 stream = ExtResource("23_35ihi")
-volume_db = -15.325
+volume_db = -30.0
 pitch_scale = 1.2
 
 [node name="MouthPos" type="Marker2D" parent="GirlSprite" unique_id=1236348905]
@@ -601,7 +480,107 @@ stream = ExtResource("23_0qm8x")
 volume_db = -14.263
 bus = &"SFX"
 
+[node name="PauseLayer" type="CanvasLayer" parent="." unique_id=121647872]
+process_mode = 3
+layer = 100
+visible = false
+script = ExtResource("16_0vy4a")
+
+[node name="ColorRect" type="ColorRect" parent="PauseLayer" unique_id=2138616209]
+offset_right = 1916.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.6862745)
+
+[node name="Label" type="Label" parent="PauseLayer" unique_id=801559294]
+offset_top = -64.0
+offset_right = 1920.0
+offset_bottom = 447.0
+theme_override_colors/font_color = Color(1, 0.61323047, 0.80748695, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 200
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PauseLayer" unique_id=1554390355]
+offset_top = 224.0
+offset_right = 1920.0
+offset_bottom = 735.0
+theme_override_colors/font_color = Color(1, 0.6117647, 0.80784315, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 75
+text = "Are you tired already?
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="VBoxContainer" parent="PauseLayer" unique_id=70903958]
+offset_left = 547.0
+offset_top = 511.0
+offset_right = 1383.0
+offset_bottom = 1014.0
+
+[node name="Continue" type="Button" parent="PauseLayer/HBoxContainer" unique_id=1648728297]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_qdijn")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_35ihi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p5swj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_p5swj")
+text = "Continue"
+
+[node name="Control" type="Control" parent="PauseLayer/HBoxContainer" unique_id=4233100]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Restart" type="Button" parent="PauseLayer/HBoxContainer" unique_id=483633188]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_qdh2e")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_p5swj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p5swj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_p5swj")
+text = "Restart"
+
+[node name="Control2" type="Control" parent="PauseLayer/HBoxContainer" unique_id=1077185086]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="BackToMenu" type="Button" parent="PauseLayer/HBoxContainer" unique_id=980799485]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_qdijn")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_35ihi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p5swj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_p5swj")
+text = "Back to menu"
+
+[node name="Click" type="AudioStreamPlayer" parent="PauseLayer" unique_id=562712289]
+process_mode = 3
+stream = ExtResource("23_0qm8x")
+volume_db = -14.263
+bus = &"SFX"
+
 [node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=569317400]
+process_mode = 3
 visible = false
 script = ExtResource("15_8q75q")
 
@@ -643,8 +622,8 @@ offset_bottom = 1025.0
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
 theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_sf0du")
@@ -661,8 +640,8 @@ layout_mode = 2
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
 theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_8q75q")
@@ -672,6 +651,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
 text = "Back to Menu"
 
 [node name="LoseLayer" type="CanvasLayer" parent="." unique_id=673242330]
+process_mode = 3
 visible = false
 script = ExtResource("26_gx4g3")
 
@@ -716,8 +696,8 @@ offset_bottom = 1025.0
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
 theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_sf0du")
@@ -734,8 +714,8 @@ layout_mode = 2
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
 theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_8q75q")
@@ -751,6 +731,7 @@ volume_db = -14.263
 bus = &"SFX"
 
 [node name="CringeLayer" type="CanvasLayer" parent="." unique_id=1182132186]
+process_mode = 3
 visible = false
 script = ExtResource("27_wl4wg")
 
@@ -796,8 +777,8 @@ offset_bottom = 1025.0
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
 theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_sf0du")
@@ -814,8 +795,8 @@ layout_mode = 2
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
 theme_override_fonts/font = ExtResource("16_2revy")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_8q75q")
@@ -839,8 +820,8 @@ offset_bottom = 608.0
 theme_override_constants/separation = 10
 
 [connection signal="pressed" from="TurnButton" to="TurnManager" method="_on_turn_button_pressed"]
-[connection signal="pressed" from="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer/Continue" to="Gameplay_Manager/GameplayActions/PauseLabel" method="_on_continue_pressed"]
-[connection signal="pressed" from="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer/Restart" to="Gameplay_Manager/GameplayActions/PauseLabel" method="_on_restart_pressed"]
-[connection signal="pressed" from="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer/BackToMenu" to="Gameplay_Manager/GameplayActions/PauseLabel" method="_on_back_to_menu_pressed"]
+[connection signal="pressed" from="PauseLayer/HBoxContainer/Continue" to="PauseLayer" method="_on_continue_pressed"]
+[connection signal="pressed" from="PauseLayer/HBoxContainer/Restart" to="PauseLayer" method="_on_restart_pressed"]
+[connection signal="pressed" from="PauseLayer/HBoxContainer/BackToMenu" to="PauseLayer" method="_on_back_to_menu_pressed"]
 [connection signal="pressed" from="CringeLayer/HBoxContainer/Restart1" to="CringeLayer" method="_on_restart_1_pressed"]
 [connection signal="pressed" from="CringeLayer/HBoxContainer/MainMenuButton1" to="CringeLayer" method="_on_main_menu_button_1_pressed"]
