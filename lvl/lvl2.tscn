@@ -591,7 +591,7 @@ visible = false
 script = ExtResource("25_cxqox")
 
 [node name="ColorRect" type="ColorRect" parent="PauseLayer" unique_id=327072209]
-offset_right = 1916.0
+offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
@@ -682,7 +682,7 @@ visible = false
 script = ExtResource("18_0s7vr")
 
 [node name="ColorRect" type="ColorRect" parent="VictoryLayer" unique_id=1166828306]
-offset_right = 1916.0
+offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
@@ -753,7 +753,7 @@ visible = false
 script = ExtResource("23_5p765")
 
 [node name="ColorRect" type="ColorRect" parent="LoseLayer" unique_id=528772364]
-offset_right = 1916.0
+offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
@@ -833,7 +833,7 @@ visible = false
 script = ExtResource("24_pdg3r")
 
 [node name="ColorRect" type="ColorRect" parent="CringeLayer" unique_id=997818913]
-offset_right = 1916.0
+offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 

@@ -2,70 +2,24 @@
 
 [ext_resource type="Texture2D" uid="uid://cr7ysnc65qua" path="res://UI/MainMenu/MenuDate11.png" id="1_8fkdr"]
 [ext_resource type="Script" uid="uid://dyca21nvba40o" path="res://UI/MainMenu/MainMenu.gd" id="1_8x0bb"]
-[ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="3_4qf4k"]
+[ext_resource type="Texture2D" uid="uid://gabjot1abml1" path="res://UI/MainMenu/button_purple.png" id="3_a6vv6"]
 [ext_resource type="FontFile" uid="uid://caiuju44j21k5" path="res://Core/Comfortaa-VariableFont_wght.ttf" id="3_jhcbk"]
+[ext_resource type="Texture2D" uid="uid://bad21lo2yfkbe" path="res://UI/MainMenu/button_pushed.png" id="4_00tn1"]
 [ext_resource type="Texture2D" uid="uid://cuivyqo57eiij" path="res://UI/MainMenu/Sound_Menu.png" id="4_4elqj"]
-[ext_resource type="Script" path="res://UI/MainMenu/play.gd" id="4_32jca"]
+[ext_resource type="Script" uid="uid://cbt6hrvl0hmxf" path="res://UI/MainMenu/play.gd" id="4_32jca"]
 [ext_resource type="AudioStream" uid="uid://c3qym8xn2jva7" path="res://Core/MainSound/tyoplye-vospominaniya-2-f46ec8.mp3" id="5_4elqj"]
+[ext_resource type="Texture2D" uid="uid://c8w7man0hf144" path="res://UI/MainMenu/button.png" id="5_rehxt"]
 [ext_resource type="Texture2D" uid="uid://cypbwglmgabao" path="res://UI/MainMenu/polzunok1.png" id="5_ri767"]
-[ext_resource type="Script" path="res://UI/MainMenu/tutorial.gd" id="5_wdl18"]
+[ext_resource type="Script" uid="uid://dndwmg1d68e7o" path="res://UI/MainMenu/tutorial.gd" id="5_wdl18"]
 [ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="6_a712v"]
-[ext_resource type="Script" path="res://UI/MainMenu/credit.gd" id="6_migmm"]
+[ext_resource type="Script" uid="uid://daaiaxjsvaugx" path="res://UI/MainMenu/credit.gd" id="6_migmm"]
 [ext_resource type="Texture2D" uid="uid://dqh8xd3eoygls" path="res://UI/MainMenu/Credits_Menu.png" id="7_1dhmk"]
-[ext_resource type="Script" path="res://UI/MainMenu/sound.gd" id="7_migmm"]
+[ext_resource type="Script" uid="uid://c128ipxomvojk" path="res://UI/MainMenu/sound.gd" id="7_migmm"]
 [ext_resource type="Script" path="res://UI/MainMenu/exit.gd" id="8_jt3i8"]
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="9_jhcbk"]
 [ext_resource type="Script" path="res://UI/MainMenu/master.gd" id="11_jt3i8"]
 [ext_resource type="Script" path="res://UI/MainMenu/music.gd" id="12_hvgpy"]
 [ext_resource type="Script" path="res://UI/MainMenu/sfx.gd" id="13_4qf4k"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hvgpy"]
-bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qf4k"]
-bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4elqj"]
-bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.98975796, 0, 0.5368099, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8x0bb"]
-bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a712v"]
 bg_color = Color(0.99999994, 0.2759502, 0.58477014, 1)
@@ -98,69 +52,52 @@ offset_bottom = 1080.0
 mouse_filter = 2
 texture = ExtResource("1_8fkdr")
 
-[node name="Play" type="Button" parent="Background" unique_id=1889701716]
+[node name="Play" type="TextureButton" parent="Background" unique_id=1944444167]
 layout_mode = 0
 offset_left = 351.0
 offset_top = 481.0
 offset_right = 600.0
 offset_bottom = 606.0
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_4qf4k")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_hvgpy")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_4qf4k")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_4elqj")
-theme_override_styles/hover = SubResource("StyleBoxFlat_4elqj")
-text = "Play"
+texture_normal = ExtResource("3_a6vv6")
+texture_pressed = ExtResource("4_00tn1")
+texture_hover = ExtResource("5_rehxt")
 script = ExtResource("4_32jca")
 
-[node name="Tutorial" type="Button" parent="Background" unique_id=1702423009]
+[node name="Tutorial" type="TextureButton" parent="Background" unique_id=179038215]
 layout_mode = 0
 offset_left = 1276.0
 offset_top = 465.0
 offset_right = 1665.0
 offset_bottom = 589.0
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_4qf4k")
-theme_override_font_sizes/font_size = 90
-theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_4elqj")
-theme_override_styles/hover = SubResource("StyleBoxFlat_4elqj")
-text = "Tutorial"
+texture_normal = ExtResource("3_a6vv6")
+texture_pressed = ExtResource("4_00tn1")
+texture_hover = ExtResource("5_rehxt")
 script = ExtResource("5_wdl18")
 
-[node name="Credit" type="Button" parent="Background" unique_id=359606614]
+[node name="Credit" type="TextureButton" parent="Background" unique_id=732501425]
 layout_mode = 0
 offset_left = 1058.0
 offset_top = 711.0
-offset_right = 1318.0
+offset_right = 1322.0
 offset_bottom = 846.0
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_4qf4k")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_4elqj")
-theme_override_styles/hover = SubResource("StyleBoxFlat_4elqj")
-text = "Credit"
+texture_normal = ExtResource("3_a6vv6")
+texture_pressed = ExtResource("4_00tn1")
+texture_hover = ExtResource("5_rehxt")
 script = ExtResource("6_migmm")
 
-[node name="Sound" type="Button" parent="Background" unique_id=1325743923]
+[node name="Sound" type="TextureButton" parent="Background" unique_id=1897474303]
 layout_mode = 0
 offset_left = 584.0
 offset_top = 710.0
 offset_right = 928.0
 offset_bottom = 845.0
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_4qf4k")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_4elqj")
-theme_override_styles/hover = SubResource("StyleBoxFlat_4elqj")
-text = "Sound"
+texture_normal = ExtResource("3_a6vv6")
+texture_pressed = ExtResource("4_00tn1")
+texture_hover = ExtResource("5_rehxt")
 script = ExtResource("7_migmm")
 
 [node name="Sound_Settings" type="Control" parent="Background" unique_id=2019063045]
@@ -277,6 +214,7 @@ text = "SFX
 "
 
 [node name="CreditMenu" type="Control" parent="Background" unique_id=489859479]
+visible = false
 anchors_preset = 0
 offset_left = -28.0
 offset_top = 2.0
@@ -294,9 +232,9 @@ texture = ExtResource("7_1dhmk")
 [node name="Exit1" type="Button" parent="Background/CreditMenu/TextureRect1" unique_id=1553115627]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 1178.0
+offset_left = 1180.0
 offset_top = 30.0
-offset_right = 1283.0
+offset_right = 1285.0
 offset_bottom = 134.0
 mouse_default_cursor_shape = 2
 

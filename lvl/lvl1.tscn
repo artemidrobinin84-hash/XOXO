@@ -487,7 +487,7 @@ visible = false
 script = ExtResource("16_0vy4a")
 
 [node name="ColorRect" type="ColorRect" parent="PauseLayer" unique_id=2138616209]
-offset_right = 1916.0
+offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
@@ -574,11 +574,12 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_p5swj")
 text = "Back to menu"
 
 [node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=569317400]
+process_mode = 3
 visible = false
 script = ExtResource("15_8q75q")
 
 [node name="ColorRect" type="ColorRect" parent="VictoryLayer" unique_id=1386651188]
-offset_right = 1916.0
+offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
@@ -644,11 +645,11 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
 text = "Back to Menu"
 
 [node name="LoseLayer" type="CanvasLayer" parent="." unique_id=673242330]
-visible = false
+process_mode = 3
 script = ExtResource("26_gx4g3")
 
 [node name="ColorRect" type="ColorRect" parent="LoseLayer" unique_id=1953735948]
-offset_right = 1916.0
+offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
@@ -723,6 +724,7 @@ volume_db = -14.263
 bus = &"SFX"
 
 [node name="CringeLayer" type="CanvasLayer" parent="." unique_id=1182132186]
+process_mode = 3
 visible = false
 script = ExtResource("27_wl4wg")
 

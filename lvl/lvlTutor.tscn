@@ -584,8 +584,10 @@ color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
 [node name="Label" type="Label" parent="TutorLayer" unique_id=1746226932]
 offset_left = 612.0
 offset_top = 581.0
-offset_right = 1325.0
-offset_bottom = 900.0
+offset_right = 1178.0
+offset_bottom = 643.5
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("19_5jsyb")
 theme_override_font_sizes/font_size = 50
 text = "These are your cards"
@@ -609,6 +611,8 @@ offset_left = 122.0
 offset_top = 469.0
 offset_right = 629.0
 offset_bottom = 756.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("19_5jsyb")
 theme_override_font_sizes/font_size = 40
 text = "This is your HP bar"
@@ -618,6 +622,8 @@ offset_left = 1501.0
 offset_top = 257.0
 offset_right = 1924.0
 offset_bottom = 394.25
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("19_5jsyb")
 theme_override_font_sizes/font_size = 35
 text = "Click here to skip 
@@ -629,6 +635,8 @@ offset_left = 1513.0
 offset_top = 656.0
 offset_right = 1908.0
 offset_bottom = 935.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("19_5jsyb")
 theme_override_font_sizes/font_size = 40
 text = "Your deck, it says 
@@ -641,6 +649,8 @@ offset_left = 1026.0
 offset_top = 86.0
 offset_right = 1420.0
 offset_bottom = 404.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("19_5jsyb")
 theme_override_font_sizes/font_size = 30
 text = "Red - This is the girls' 
@@ -653,6 +663,8 @@ offset_left = 392.0
 offset_top = 148.0
 offset_right = 734.0
 offset_bottom = 347.5
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("19_5jsyb")
 theme_override_font_sizes/font_size = 30
 text = "Purple - This is the 
@@ -674,9 +686,11 @@ offset_top = 468.0
 offset_right = 1100.0
 offset_bottom = 549.0
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
-theme_override_colors/font_hover_color = Color(0.288518, 0.28851798, 0.28851798, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.5211406, 0.52114064, 0.52114046, 1)
+theme_override_colors/font_hover_color = Color(0.52156866, 0.52156866, 0.52156866, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("19_5jsyb")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_ygi6m")
@@ -727,6 +741,8 @@ offset_left = 1512.0
 offset_top = 532.0
 offset_right = 1822.0
 offset_bottom = 569.5
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("19_5jsyb")
 theme_override_font_sizes/font_size = 30
 text = "This is your energy"
@@ -794,7 +810,7 @@ visible = false
 script = ExtResource("29_rr1ml")
 
 [node name="ColorRect" type="ColorRect" parent="PauseLayer" unique_id=603109920]
-offset_right = 1916.0
+offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
@@ -886,7 +902,7 @@ visible = false
 script = ExtResource("19_13fv4")
 
 [node name="ColorRect" type="ColorRect" parent="VictoryLayer" unique_id=81177094]
-offset_right = 1916.0
+offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
@@ -957,7 +973,7 @@ visible = false
 script = ExtResource("23_uludq")
 
 [node name="ColorRect" type="ColorRect" parent="LoseLayer" unique_id=590687679]
-offset_right = 1916.0
+offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
@@ -1037,7 +1053,7 @@ visible = false
 script = ExtResource("24_r1pnm")
 
 [node name="ColorRect" type="ColorRect" parent="CringeLayer" unique_id=464667984]
-offset_right = 1916.0
+offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.6862745)
 
