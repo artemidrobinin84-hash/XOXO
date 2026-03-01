@@ -1,137 +1,120 @@
 extends Control
 
-func _ready() -> void:
-	 # Соединяем сигналы через код, чтобы не тыкать мышкой в редакторе
-	pivot_offset = size / 2
-	#_Exit()
-	_Sound()
-	_SoundExit()
-	_Credit()
-	_CreditExit()
-	$Background/Tutorial.mouse_entered.connect(_on_button_hover)
-	$Background/Play.mouse_entered.connect(_on_button_hover)
-	$Background/Sound.mouse_entered.connect(_on_button_hover)
-	$Background/Credit.mouse_entered.connect(_on_button_hover)
-# Called when the node enters the scene tree for the first time.
-func _on_button_hover() -> void:
-	$Click.play()
-	
-func _on_play_mouse_entered() -> void:
-	var tween = create_tween()
-	tween.tween_property(self, "scale", Vector2(1.1, 1.1), 0.1).set_trans(Tween.TRANS_SINE)
-
-func _on_play_mouse_exited():
-	var tween = create_tween()
-	tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.1).set_trans(Tween.TRANS_SINE)
-func _on_tutorial_pressed() -> void:
-	$Click.play()
-	get_tree().change_scene_to_file("res://lvl/lvlTutor.tscn")
-
-
-func _on_play_pressed() -> void:
-	$Click.play()
-	get_tree().change_scene_to_file("res://lvl/lvl1.tscn")
-
-
-func _Credit() -> void:
-	$Background/Credit.pressed.connect(open_credit)
-	
-
-func _Sound() -> void:
-	$Background/Sound.pressed.connect(open_settings)
-func _CreditExit() -> void:
-	$Background/CreditMenu/TextureRect1/Exit1.pressed.connect(close_credit)
-
-func _SoundExit() -> void:
-	$Background/Sound_Settings/TextureRect/Exit.pressed.connect(close_settings)
-#func _Exit() -> void:
-	#$menu/MenuUi/Exit.pressed.connect(_on_exit_pressed)
-#
-#
-#func _on_exit_pressed() -> void:
-	#get_tree().quit()
-#
-func _on_credit_pressed() -> void:
-	$Click.play()
-	print("nasal")
-	$Background/CreditMenu.mouse_filter = Control.MOUSE_FILTER_STOP
-	$Background/CreditMenu.show()
-#
-func _on_settings_pressed() -> void:
-	$Click.play()
-	print("nasal")
-	$Background/Sound_Settings.mouse_filter = Control.MOUSE_FILTER_STOP
-	$Background/Sound_Settings.show()
-#
-#func _on_exit_support_pressed() -> void:
-	#print("lol")
-	#$menu/MenuUi/Control2/SupportUi.visible = false
-	#$menu/MenuUi/Control2.mouse_filter = Control.MOUSE_FILTER_IGNORE
-#
-#
-func _SoundExit1() -> void:
-	print("lol")
-	$Background/Sound_Settings.visible = false
-	$Background/Sound_Settings.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$Click.play()
-
-func _on_music_value_changed(value: float) -> void:
-	var bus_index = AudioServer.get_bus_index("Music")
-	if value > 0:
-		AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))
-		AudioServer.set_bus_mute(bus_index, false)
-	else:
-		AudioServer.set_bus_mute(bus_index, true)
-
-func _on_sfx_value_changed(value: float) -> void:
-	var bus_index = AudioServer.get_bus_index("SFX")
-	AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))
-
-
-func _on_master_value_changed(value: float) -> void:
-	var bus_index = AudioServer.get_bus_index("Master")
-	AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))
 @onready var sound_settings = $Background/Sound_Settings
 @onready var credit = $Background/CreditMenu
+@onready var play_btn = $HBoxContainer/Play
+@onready var tutorial_btn = $HBoxContainer/Tutorial
+@onready var credit_btn = $HBoxContainer/Credit
+@onready var sound_btn = $HBoxContainer/Sound
+
+func _ready() -> void:
+	pivot_offset = size / 2
+	
+	# Настройка фильтров мыши
+	sound_settings.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	credit.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$Background/Sound_Settings/TextureRect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$Background/CreditMenu/TextureRect1.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	
+	# Подключение кнопок меню
+	_safe_connect(credit_btn.pressed, open_credit)
+	_safe_connect(sound_btn.pressed, open_settings)
+	_safe_connect(play_btn.pressed, _on_play_pressed)
+	_safe_connect(tutorial_btn.pressed, _on_tutorial_pressed)
+	
+	# Кнопки выхода
+	_safe_connect($Background/Sound_Settings/TextureRect/Exit1.pressed, close_settings)
+	_safe_connect($Background/CreditMenu/TextureRect1/Exit1.pressed, close_credit)
+
+	# Слайдеры звука
+	var m_sl = $Background/Sound_Settings/TextureRect/Master
+	var mu_sl = $Background/Sound_Settings/TextureRect/Music
+	var s_sl = $Background/Sound_Settings/TextureRect/SFX
+	
+	_safe_connect(m_sl.value_changed, _on_master_value_changed)
+	_safe_connect(mu_sl.value_changed, _on_music_value_changed)
+	_safe_connect(s_sl.value_changed, _on_sfx_value_changed)
+
+	# Звуки наведения
+	_safe_connect(play_btn.mouse_entered, _on_button_hover)
+	_safe_connect(tutorial_btn.mouse_entered, _on_button_hover)
+	_safe_connect(credit_btn.mouse_entered, _on_button_hover)
+	_safe_connect(sound_btn.mouse_entered, _on_button_hover)
+
+func _safe_connect(sig: Signal, target: Callable):
+	if !sig.is_connected(target):
+		sig.connect(target)
+
+func _on_button_hover() -> void:
+	if has_node("Click"): $Click.play()
+
+# --- ЛОГИКА ПЕРЕКЛЮЧЕНИЯ ОКОН ---
+
 func open_settings():
-	$Click.play()
+	if has_node("Click"): $Click.play()
+	
+	# Если открыты кредиты — закрываем их без анимации (мгновенно) для скорости
+	if credit.visible:
+		credit.visible = false
+	
 	sound_settings.visible = true
-	sound_settings.mouse_filter = Control.MOUSE_FILTER_STOP
-	sound_settings.scale = Vector2(1, 0.8) 
-	sound_settings.modulate.a = 0           
-	var tween = create_tween()
-	tween.set_parallel(true)
-	tween.tween_property(sound_settings, "modulate:a", 1.0, 0.3)
-	tween.tween_property(sound_settings, "scale", Vector2.ONE, 0.4)\
-		.set_trans(Tween.TRANS_BACK)\
-		.set_ease(Tween.EASE_OUT)
+	_animate_open(sound_settings)
+
+func open_credit():
+	if has_node("Click"): $Click.play()
+	
+	# Если открыт звук — закрываем его
+	if sound_settings.visible:
+		sound_settings.visible = false
+	
+	credit.visible = true
+	_animate_open(credit)
+
+# --- ЗАКРЫТИЕ ---
 
 func close_settings():
-	$Click.play()
-	var tween = create_tween()
-	tween.set_parallel(true)
-	tween.tween_property(sound_settings, "modulate:a", 0.0, 0.2)
-	tween.tween_property(sound_settings, "scale", Vector2(1, 0.8), 0.2)
-	await tween.finished
+	if has_node("Click"): $Click.play()
+	await _animate_close(sound_settings)
 	sound_settings.visible = false
-func open_credit():
-	$Click.play()
-	credit.visible = true
-	credit.mouse_filter = Control.MOUSE_FILTER_STOP
-	credit.scale = Vector2(1, 0.8) 
-	credit.modulate.a = 0           
-	var tween = create_tween()
-	tween.set_parallel(true)
-	tween.tween_property(credit, "modulate:a", 1.0, 0.3)
-	tween.tween_property(credit, "scale", Vector2.ONE, 0.4)\
-		.set_trans(Tween.TRANS_BACK)\
-		.set_ease(Tween.EASE_OUT)
 
 func close_credit():
-	$Click.play()
-	var tween = create_tween()
-	tween.set_parallel(true)
-	tween.tween_property(credit, "modulate:a", 0.0, 0.2)
-	tween.tween_property(credit, "scale", Vector2(1, 0.8), 0.2)
-	await tween.finished
+	if has_node("Click"): $Click.play()
+	await _animate_close(credit)
 	credit.visible = false
+
+# --- ПЕРЕХОДЫ ---
+
+func _on_play_pressed() -> void:
+	if has_node("Click"): $Click.play()
+	get_tree().change_scene_to_file("res://lvl/lvl1.tscn")
+
+func _on_tutorial_pressed() -> void:
+	if has_node("Click"): $Click.play()
+	get_tree().change_scene_to_file("res://lvl/lvlTutor.tscn")
+
+# --- ЗВУК ---
+
+func _on_master_value_changed(v: float): _upd_bus("Master", v)
+func _on_music_value_changed(v: float): _upd_bus("Music", v)
+func _on_sfx_value_changed(v: float): _upd_bus("SFX", v)
+
+func _upd_bus(bus_name: String, val: float):
+	var idx = AudioServer.get_bus_index(bus_name)
+	if idx != -1:
+		AudioServer.set_bus_volume_db(idx, linear_to_db(val))
+		AudioServer.set_bus_mute(idx, val <= 0.001)
+
+# --- АНИМАЦИЯ ---
+
+func _animate_open(node):
+	node.scale = Vector2(1, 0.8)
+	node.modulate.a = 0
+	var tw = create_tween().set_parallel(true)
+	tw.tween_property(node, "modulate:a", 1.0, 0.3)
+	tw.tween_property(node, "scale", Vector2.ONE, 0.4).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+func _animate_close(node):
+	var tw = create_tween().set_parallel(true)
+	tw.tween_property(node, "modulate:a", 0.0, 0.2)
+	tw.tween_property(node, "scale", Vector2(1, 0.8), 0.2)
+	return tw.finished

@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://bxgda17im6ruw"]
 
-[ext_resource type="Texture2D" uid="uid://b7tldkknu3yln" path="res://lvl/backtutor.jpg" id="1_pu1o8"]
+[ext_resource type="Texture2D" uid="uid://hve4y8bq5ctf" path="res://lvl/увкег.png" id="1_h437x"]
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="2_13fv4"]
 [ext_resource type="Script" uid="uid://d0t6mm70o4" path="res://GirlFriends/GirlHitboxTutor.gd" id="3_13fv4"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="3_m0pnn"]
+[ext_resource type="Texture2D" uid="uid://gabjot1abml1" path="res://UI/MainMenu/button_purple.png" id="4_h437x"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="4_rjx6k"]
+[ext_resource type="Texture2D" uid="uid://bad21lo2yfkbe" path="res://UI/MainMenu/button_pushed.png" id="5_n4bof"]
 [ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://CardData/DeckCard.tscn" id="5_v3mde"]
 [ext_resource type="PackedScene" uid="uid://f0b03p5ljpjf" path="res://CardData/CardManager.tscn" id="6_7p7e5"]
+[ext_resource type="Texture2D" uid="uid://c8w7man0hf144" path="res://UI/MainMenu/button.png" id="6_okjcp"]
 [ext_resource type="Script" uid="uid://dade0acwfe8qv" path="res://lvl/XOXOBar/ProgressBar.gd" id="7_lx5gf"]
 [ext_resource type="Texture2D" uid="uid://chbvvo716378m" path="res://lvl/XOXOBar/HPBarUnder.png" id="8_6i5p8"]
 [ext_resource type="Texture2D" uid="uid://5mtq1gijdush" path="res://lvl/XOXOBar/HPBarProgress.png" id="9_hypfh"]
@@ -30,20 +33,7 @@
 [ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/UILvl/CringeLayer.gd" id="24_r1pnm"]
 [ext_resource type="Script" uid="uid://dnlarl7hhycpq" path="res://lvl/UILvl/PauseLayer.gd" id="29_rr1ml"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygi6m"]
-bg_color = Color(0.047058824, 0.54901963, 0, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.02745098, 0.33333334, 0, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-shadow_size = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fvvn"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_okjcp"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rr1ml"]
@@ -93,6 +83,19 @@ corner_radius_top_left = 40
 corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygi6m"]
+bg_color = Color(0.047058824, 0.54901963, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.02745098, 0.33333334, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 10
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nsg1c"]
 shader = ExtResource("20_fkcmp")
@@ -274,67 +277,76 @@ corner_radius_bottom_left = 40
 [node name="Tutorback" type="Sprite2D" parent="." unique_id=386783603]
 position = Vector2(960, 540)
 scale = Vector2(0.98765427, 1)
-texture = ExtResource("1_pu1o8")
+texture = ExtResource("1_h437x")
 
 [node name="GirlHitbox" parent="." unique_id=2028270037 instance=ExtResource("2_13fv4")]
 position = Vector2(-30, 0)
 script = ExtResource("3_13fv4")
 max_hp = 25
 
-[node name="TurnButton" type="Button" parent="." unique_id=1499370575]
-offset_left = 1543.0
-offset_top = 430.0
-offset_right = 1896.0
-offset_bottom = 511.0
+[node name="TurnButton" type="TextureButton" parent="." unique_id=2040110644]
+offset_left = 1598.0
+offset_top = 401.0
+offset_right = 1980.0
+offset_bottom = 560.0
+scale = Vector2(0.8, 0.8)
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
-theme_override_colors/font_hover_color = Color(0.288518, 0.28851798, 0.28851798, 1)
+texture_normal = ExtResource("4_h437x")
+texture_pressed = ExtResource("5_n4bof")
+texture_hover = ExtResource("6_okjcp")
+
+[node name="Label" type="Label" parent="TurnButton" unique_id=988637021]
+layout_mode = 0
+offset_left = 11.25
+offset_top = 11.25
+offset_right = 370.0
+offset_bottom = 147.5
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
 theme_override_fonts/font = ExtResource("19_5jsyb")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_ygi6m")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ygi6m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ygi6m")
-text = "Skip to turn"
+theme_override_font_sizes/font_size = 63
+text = "End Turn"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TurnManager" type="Node" parent="." unique_id=1243653056]
 script = ExtResource("4_rjx6k")
 
-[node name="Deck" type="Node" parent="." unique_id=2051021245]
+[node name="Deck" type="Node" parent="." unique_id=329227876]
 
 [node name="DeckCard4" parent="Deck" unique_id=1688954903 instance=ExtResource("5_v3mde")]
-offset_left = 1631.0
-offset_top = 651.0
-offset_right = 1881.0
-offset_bottom = 1001.0
+offset_left = 1678.0001
+offset_top = 642.0
+offset_right = 1928.0001
+offset_bottom = 992.0
 
-[node name="DeckCard3" parent="Deck" unique_id=1426525039 instance=ExtResource("5_v3mde")]
-offset_left = 1610.0
-offset_top = 669.0
-offset_right = 1860.0
-offset_bottom = 1019.0
+[node name="DeckCard3" parent="Deck" unique_id=1252283684 instance=ExtResource("5_v3mde")]
+offset_left = 1660.0001
+offset_top = 658.00006
+offset_right = 1910.0001
+offset_bottom = 1008.00006
 
-[node name="DeckCard2" parent="Deck" unique_id=1170793909 instance=ExtResource("5_v3mde")]
-offset_left = 1588.0
-offset_top = 688.0
-offset_right = 1838.0
-offset_bottom = 1038.0
+[node name="DeckCard2" parent="Deck" unique_id=1602795898 instance=ExtResource("5_v3mde")]
+offset_left = 1642.0001
+offset_top = 675.0
+offset_right = 1892.0001
+offset_bottom = 1025.0
 
-[node name="DeckCard1" parent="Deck" unique_id=305104201 instance=ExtResource("5_v3mde")]
-offset_left = 1566.0001
-offset_top = 707.0
-offset_right = 1816.0001
-offset_bottom = 1057.0
+[node name="DeckCard1" parent="Deck" unique_id=779935583 instance=ExtResource("5_v3mde")]
+offset_left = 1624.0
+offset_top = 692.0
+offset_right = 1874.0
+offset_bottom = 1042.0
 
-[node name="DeckLabel" type="Label" parent="Deck" unique_id=1743643295]
-offset_left = 1553.0
-offset_top = 769.0
-offset_right = 1793.0
-offset_bottom = 964.8333
+[node name="DeckLabel" type="Label" parent="Deck" unique_id=2135469225]
+offset_left = 1616.0
+offset_top = 706.0
+offset_right = 1856.0
+offset_bottom = 901.8333
 theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("3_m0pnn")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_2fvvn")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_okjcp")
 text = "x15"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -488,13 +500,6 @@ offset_right = 112.0
 offset_bottom = 1080.0
 color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
 
-[node name="ColorRect21" type="ColorRect" parent="TutorLayer" unique_id=1300210329]
-offset_left = 1510.0
-offset_top = 569.0
-offset_right = 1515.0
-offset_bottom = 615.0
-color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
-
 [node name="ColorRect20" type="ColorRect" parent="TutorLayer" unique_id=1199517556]
 offset_left = 382.0
 offset_right = 1561.0
@@ -522,6 +527,14 @@ offset_right = 1510.0
 offset_bottom = 1080.0
 color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
 
+[node name="ColorRect" type="ColorRect" parent="TutorLayer/ColorRect8" unique_id=758645211]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 178.0
+offset_right = 285.0
+offset_bottom = 388.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
 [node name="ColorRect7" type="ColorRect" parent="TutorLayer" unique_id=328524356]
 offset_left = 291.0
 offset_right = 382.1375
@@ -538,8 +551,23 @@ color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
 [node name="ColorRect" type="ColorRect" parent="TutorLayer" unique_id=692951530]
 offset_left = 291.0
 offset_top = 138.0
-offset_right = 1510.0
+offset_right = 1491.0
 offset_bottom = 642.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect2" type="ColorRect" parent="TutorLayer/ColorRect" unique_id=1554760088]
+layout_mode = 0
+offset_left = 1200.0
+offset_right = 1219.0
+offset_bottom = 431.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect" type="ColorRect" parent="TutorLayer/ColorRect" unique_id=1252103233]
+layout_mode = 0
+offset_left = 1200.0
+offset_top = 477.0
+offset_right = 1219.0
+offset_bottom = 504.0
 color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
 
 [node name="ColorRect5" type="ColorRect" parent="TutorLayer" unique_id=498445069]
@@ -674,11 +702,11 @@ you lose!
 "
 
 [node name="ColorRect11" type="ColorRect" parent="TutorLayer" unique_id=441061604]
-offset_left = 736.0
-offset_top = 329.0
-offset_right = 1108.0
-offset_bottom = 562.0
-color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+offset_left = 709.0
+offset_top = 319.0
+offset_right = 1132.0
+offset_bottom = 579.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.84313726)
 
 [node name="OkayButton" type="Button" parent="TutorLayer" unique_id=1079316879]
 offset_left = 747.0
@@ -716,7 +744,7 @@ offset_bottom = 1080.0
 color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
 
 [node name="ColorRect14" type="ColorRect" parent="TutorLayer" unique_id=1162575331]
-offset_left = 1876.0
+offset_left = 1906.0
 offset_top = 820.0
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -727,6 +755,13 @@ offset_left = 1510.0
 offset_top = 1031.0
 offset_right = 1876.0
 offset_bottom = 1080.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect15" type="ColorRect" parent="TutorLayer/ColorRect15" unique_id=2110529342]
+layout_mode = 0
+offset_left = 366.0
+offset_right = 396.0
+offset_bottom = 49.0
 color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
 
 [node name="ColorRect16" type="ColorRect" parent="TutorLayer" unique_id=242643125]
@@ -746,6 +781,20 @@ theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("19_5jsyb")
 theme_override_font_sizes/font_size = 30
 text = "This is your energy"
+
+[node name="ColorRect23" type="ColorRect" parent="TutorLayer" unique_id=870044254]
+offset_left = 1510.0
+offset_top = 396.0
+offset_right = 1587.0
+offset_bottom = 532.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect21" type="ColorRect" parent="TutorLayer" unique_id=1743527798]
+offset_left = 1587.0
+offset_top = 396.0
+offset_right = 1912.0
+offset_bottom = 532.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0)
 
 [node name="GirlSprite" type="SpineSprite" parent="." unique_id=1075071169]
 skeleton_data_res = ExtResource("15_lqkjo")
@@ -1128,12 +1177,13 @@ stream = ExtResource("22_4kc7n")
 volume_db = -14.263
 bus = &"SFX"
 
-[node name="EnergyContainer" type="HBoxContainer" parent="." unique_id=605632102]
+[node name="EnergyContainer" type="HBoxContainer" parent="." unique_id=998296256]
 texture_filter = 1
-offset_left = 1527.0
+offset_left = 1499.0
 offset_top = 568.0
-offset_right = 1880.0
+offset_right = 1866.7144
 offset_bottom = 608.0
+scale = Vector2(0.7, 0.7)
 theme_override_constants/separation = 10
 
 [connection signal="pressed" from="TurnButton" to="TurnManager" method="_on_turn_button_pressed"]
