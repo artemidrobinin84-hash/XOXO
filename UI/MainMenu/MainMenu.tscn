@@ -294,10 +294,10 @@ texture = ExtResource("7_1dhmk")
 [node name="Exit1" type="Button" parent="Background/CreditMenu/TextureRect1" unique_id=1553115627]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 949.0
-offset_top = 4.0
-offset_right = 1054.0
-offset_bottom = 108.0
+offset_left = 1178.0
+offset_top = 30.0
+offset_right = 1283.0
+offset_bottom = 134.0
 mouse_default_cursor_shape = 2
 
 [node name="Label" type="Label" parent="Background/CreditMenu/TextureRect1" unique_id=306917613]

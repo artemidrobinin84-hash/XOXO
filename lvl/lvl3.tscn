@@ -523,7 +523,7 @@ preview_frame = false
 preview_time = 0.0
 texture_filter = 2
 position = Vector2(951, 1078)
-scale = Vector2(0.55, 0.55)
+scale = Vector2(0.53, 0.53)
 script = ExtResource("19_2gget")
 
 [node name="Attack_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1690237027]
