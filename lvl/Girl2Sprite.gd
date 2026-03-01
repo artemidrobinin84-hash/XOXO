@@ -38,8 +38,8 @@ func _process(_delta):
 
 func _update_visuals(hp_value: float):
 	var target_skin = ""
-	if hp_value >= 67: target_skin = "level1"
-	elif hp_value >= 34: target_skin = "level2"
+	if hp_value >= 81: target_skin = "level1"
+	elif hp_value >= 41: target_skin = "level2"
 	else: target_skin = "level3"
 	
 	if current_skin == target_skin: return

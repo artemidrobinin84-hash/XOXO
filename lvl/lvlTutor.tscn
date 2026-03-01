@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://d0t6mm70o4" path="res://GirlFriends/TutorHitbox.gd" id="3_13fv4"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="3_m0pnn"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="4_rjx6k"]
-[ext_resource type="PackedScene" path="res://CardData/DeckCard.tscn" id="5_v3mde"]
+[ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://CardData/DeckCard.tscn" id="5_v3mde"]
 [ext_resource type="PackedScene" uid="uid://f0b03p5ljpjf" path="res://CardData/CardManager.tscn" id="6_7p7e5"]
 [ext_resource type="Script" uid="uid://dade0acwfe8qv" path="res://lvl/XOXOBar/ProgressBar.gd" id="7_lx5gf"]
 [ext_resource type="Texture2D" uid="uid://chbvvo716378m" path="res://lvl/XOXOBar/HPBarUnder.png" id="8_6i5p8"]
@@ -16,17 +16,19 @@
 [ext_resource type="Texture2D" uid="uid://xth407w1lhqw" path="res://lvl/XOXOBar/CringeBarProgress.png" id="13_y44e5"]
 [ext_resource type="AudioStream" uid="uid://ba0j37jy6pwma" path="res://Core/MainSound/voskresnoe-vdokhnovenie-2-29609a.mp3" id="14_d6oqk"]
 [ext_resource type="SpineSkeletonDataResource" uid="uid://dkhwcw68rsxjh" path="res://GirlFriends/girlfrend1-skin/girlv1.tres" id="15_lqkjo"]
+[ext_resource type="Script" uid="uid://b3wf6y5s2q5o4" path="res://lvl/tutor_layer.gd" id="17_4elxp"]
 [ext_resource type="Script" uid="uid://4534gys2b4ny" path="res://lvl/TutorGirlSprite.gd" id="17_13fv4"]
 [ext_resource type="AudioStream" uid="uid://dmx2cn3ba0iuw" path="res://Core/MainSFX/Короткий звук женщина стонет когда кончает.mp3" id="17_l6odt"]
 [ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="19_5jsyb"]
-[ext_resource type="Script" uid="uid://dknlo3un74oge" path="res://lvl/victorytutor.gd" id="19_13fv4"]
+[ext_resource type="Script" uid="uid://dknlo3un74oge" path="res://lvl/UILvl/VictoryLayerTutor.gd" id="19_13fv4"]
 [ext_resource type="AudioStream" uid="uid://crgojtcf6ch6q" path="res://Core/MainSFX/Звук взмаха рукой (mp3cut.net) (1).mp3" id="20_16b76"]
 [ext_resource type="Shader" uid="uid://nw5oxtopa3dm" path="res://lvl/lvl.gdshader" id="20_fkcmp"]
 [ext_resource type="AudioStream" uid="uid://dy8spyqfo8ei" path="res://Core/MainSFX/Удар в лицо 2 (mp3cut.net).mp3" id="21_4elxp"]
 [ext_resource type="AudioStream" uid="uid://cewix4n40l5co" path="res://Core/MainSFX/Звук взяли одну карту из колоды.mp3" id="21_axhrf"]
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="22_4kc7n"]
-[ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/lose_layer.gd" id="23_uludq"]
-[ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/cringe_layer.gd" id="24_r1pnm"]
+[ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/UILvl/LoseLayer.gd" id="23_uludq"]
+[ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/UILvl/CringeLayer.gd" id="24_r1pnm"]
+[ext_resource type="Script" uid="uid://dnlarl7hhycpq" path="res://lvl/UILvl/PauseLayer.gd" id="29_rr1ml"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygi6m"]
 bg_color = Color(0.047058824, 0.54901963, 0, 1)
@@ -207,6 +209,54 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2etl"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2q5c"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.98975796, 0, 0.5368099, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h437x"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.98975796, 0, 0.5368099, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4bof"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
 [node name="Tutor" type="Node2D" unique_id=996713009]
 
 [node name="Tutorback" type="Sprite2D" parent="." unique_id=386783603]
@@ -373,6 +423,260 @@ volume_db = -25.0
 autoplay = true
 bus = &"Music"
 
+[node name="TutorLayer" type="CanvasLayer" parent="." unique_id=988814434]
+layer = 0
+script = ExtResource("17_4elxp")
+
+[node name="ColorRect22" type="ColorRect" parent="TutorLayer" unique_id=46887778]
+offset_left = 28.0
+offset_top = 1061.0
+offset_right = 112.0
+offset_bottom = 1080.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect21" type="ColorRect" parent="TutorLayer" unique_id=1300210329]
+offset_left = 1510.0
+offset_top = 569.0
+offset_right = 1515.0
+offset_bottom = 615.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect20" type="ColorRect" parent="TutorLayer" unique_id=1199517556]
+offset_left = 382.0
+offset_right = 1561.0
+offset_bottom = 3.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect19" type="ColorRect" parent="TutorLayer" unique_id=1152810700]
+offset_left = 1918.0
+offset_top = 569.0
+offset_right = 1920.0
+offset_bottom = 615.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect17" type="ColorRect" parent="TutorLayer" unique_id=469522435]
+offset_left = 1014.0
+offset_top = 73.0
+offset_right = 1561.0
+offset_bottom = 138.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect8" type="ColorRect" parent="TutorLayer" unique_id=1229254219]
+offset_left = 1302.0
+offset_top = 642.0
+offset_right = 1510.0
+offset_bottom = 1080.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect7" type="ColorRect" parent="TutorLayer" unique_id=328524356]
+offset_left = 291.0
+offset_right = 382.1375
+offset_bottom = 138.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect6" type="ColorRect" parent="TutorLayer" unique_id=629568810]
+offset_left = 291.0
+offset_top = 642.0
+offset_right = 522.0
+offset_bottom = 1080.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect" type="ColorRect" parent="TutorLayer" unique_id=692951530]
+offset_left = 291.0
+offset_top = 138.0
+offset_right = 1510.0
+offset_bottom = 642.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect5" type="ColorRect" parent="TutorLayer" unique_id=498445069]
+offset_left = 1510.0
+offset_top = 532.0
+offset_right = 1920.0
+offset_bottom = 569.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect4" type="ColorRect" parent="TutorLayer" unique_id=1699587684]
+offset_left = 1510.0
+offset_top = 138.0
+offset_right = 1561.0
+offset_bottom = 396.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect2" type="ColorRect" parent="TutorLayer" unique_id=353460702]
+offset_right = 291.0
+offset_bottom = 74.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect3" type="ColorRect" parent="TutorLayer" unique_id=1624322301]
+offset_left = 1561.0
+offset_right = 1920.0
+offset_bottom = 396.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect12" type="ColorRect" parent="TutorLayer" unique_id=66182055]
+offset_left = 112.0
+offset_top = 638.0
+offset_right = 291.0
+offset_bottom = 1080.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect18" type="ColorRect" parent="TutorLayer" unique_id=485145815]
+offset_left = 1510.0
+offset_top = 615.0
+offset_right = 1920.0
+offset_bottom = 820.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="Label" type="Label" parent="TutorLayer" unique_id=1746226932]
+offset_left = 612.0
+offset_top = 581.0
+offset_right = 1325.0
+offset_bottom = 900.0
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 50
+text = "These are your cards"
+
+[node name="ColorRect9" type="ColorRect" parent="TutorLayer" unique_id=925470548]
+offset_left = 112.0
+offset_top = 74.0
+offset_right = 291.0
+offset_bottom = 521.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect10" type="ColorRect" parent="TutorLayer" unique_id=1791012665]
+offset_left = 1912.0
+offset_top = 396.0
+offset_right = 1920.0
+offset_bottom = 532.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="Label2" type="Label" parent="TutorLayer" unique_id=1145242754]
+offset_left = 122.0
+offset_top = 469.0
+offset_right = 629.0
+offset_bottom = 756.0
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 40
+text = "This is your HP bar"
+
+[node name="Label3" type="Label" parent="TutorLayer" unique_id=996964405]
+offset_left = 1501.0
+offset_top = 257.0
+offset_right = 1924.0
+offset_bottom = 394.25
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 35
+text = "Click here to skip 
+the turn move and 
+get the missing cards"
+
+[node name="Label4" type="Label" parent="TutorLayer" unique_id=48839999]
+offset_left = 1513.0
+offset_top = 656.0
+offset_right = 1908.0
+offset_bottom = 935.0
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 40
+text = "Your deck, it says 
+how many cards 
+you have left
+"
+
+[node name="Label5" type="Label" parent="TutorLayer" unique_id=1589220970]
+offset_left = 1026.0
+offset_top = 86.0
+offset_right = 1420.0
+offset_bottom = 404.0
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 30
+text = "Red - This is the girls' 
+XOXO Bar, if you get 
+it down to zero you win!
+"
+
+[node name="Label6" type="Label" parent="TutorLayer" unique_id=1415760707]
+offset_left = 392.0
+offset_top = 148.0
+offset_right = 734.0
+offset_bottom = 347.5
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 30
+text = "Purple - This is the 
+Cringe Bar, if it rises 
+above the threshold 
+you lose!
+"
+
+[node name="ColorRect11" type="ColorRect" parent="TutorLayer" unique_id=441061604]
+offset_left = 736.0
+offset_top = 329.0
+offset_right = 1108.0
+offset_bottom = 562.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="OkayButton" type="Button" parent="TutorLayer" unique_id=1079316879]
+offset_left = 747.0
+offset_top = 468.0
+offset_right = 1100.0
+offset_bottom = 549.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+theme_override_colors/font_hover_color = Color(0.288518, 0.28851798, 0.28851798, 1)
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ygi6m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ygi6m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ygi6m")
+text = "Okay!"
+
+[node name="Label7" type="Label" parent="TutorLayer" unique_id=466617731]
+offset_left = 765.0
+offset_top = 345.0
+offset_right = 1083.0
+offset_bottom = 463.5
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 30
+text = "Click here when 
+you've finished 
+reading ALL of this."
+
+[node name="ColorRect13" type="ColorRect" parent="TutorLayer" unique_id=2146620412]
+offset_top = 74.0
+offset_right = 28.0
+offset_bottom = 1080.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect14" type="ColorRect" parent="TutorLayer" unique_id=1162575331]
+offset_left = 1876.0
+offset_top = 820.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect15" type="ColorRect" parent="TutorLayer" unique_id=316015412]
+offset_left = 1510.0
+offset_top = 1031.0
+offset_right = 1876.0
+offset_bottom = 1080.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="ColorRect16" type="ColorRect" parent="TutorLayer" unique_id=242643125]
+offset_left = 522.0
+offset_top = 1070.0
+offset_right = 1302.0
+offset_bottom = 1080.0
+color = Color(0.05490196, 0.05490196, 0.05490196, 0.5294118)
+
+[node name="Label8" type="Label" parent="TutorLayer" unique_id=1061801591]
+offset_left = 1512.0
+offset_top = 532.0
+offset_right = 1822.0
+offset_bottom = 569.5
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 30
+text = "This is your energy"
+
 [node name="GirlSprite" type="SpineSprite" parent="." unique_id=1075071169]
 skeleton_data_res = ExtResource("15_lqkjo")
 preview_skin = "level1"
@@ -408,6 +712,7 @@ position = Vector2(-93.333496, -1256.6672)
 autostart = true
 
 [node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=2143042670]
+process_mode = 3
 visible = false
 script = ExtResource("19_13fv4")
 
@@ -445,6 +750,20 @@ offset_top = 565.0
 offset_right = 1383.0
 offset_bottom = 931.0
 
+[node name="Restart1" type="Button" parent="VictoryLayer/HBoxContainer" unique_id=1762336476]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_07afl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_x06o8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x06o8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x06o8")
+text = "Restart"
+
 [node name="Control" type="Control" parent="VictoryLayer/HBoxContainer" unique_id=1135072861]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
@@ -464,6 +783,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_x06o8")
 text = "Back to Menu"
 
 [node name="Vignette" type="ColorRect" parent="." unique_id=899936353]
+visible = false
 z_index = 4096
 material = SubResource("ShaderMaterial_nsg1c")
 offset_left = -621.0
@@ -485,6 +805,7 @@ volume_db = -14.263
 bus = &"SFX"
 
 [node name="LoseLayer" type="CanvasLayer" parent="." unique_id=1295918260]
+process_mode = 3
 visible = false
 script = ExtResource("23_uludq")
 
@@ -564,6 +885,7 @@ volume_db = -14.263
 bus = &"SFX"
 
 [node name="CringeLayer" type="CanvasLayer" parent="." unique_id=585913828]
+process_mode = 3
 visible = false
 script = ExtResource("24_r1pnm")
 
@@ -643,6 +965,99 @@ stream = ExtResource("22_4kc7n")
 volume_db = -14.263
 bus = &"SFX"
 
+[node name="PauseLayer" type="CanvasLayer" parent="." unique_id=772348595]
+process_mode = 3
+layer = 100
+visible = false
+script = ExtResource("29_rr1ml")
+
+[node name="ColorRect" type="ColorRect" parent="PauseLayer" unique_id=603109920]
+offset_right = 1916.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.6862745)
+
+[node name="Label" type="Label" parent="PauseLayer" unique_id=1650520734]
+offset_top = -64.0
+offset_right = 1920.0
+offset_bottom = 447.0
+theme_override_colors/font_color = Color(1, 0.61323047, 0.80748695, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 200
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PauseLayer" unique_id=319923295]
+offset_top = 224.0
+offset_right = 1920.0
+offset_bottom = 735.0
+theme_override_colors/font_color = Color(1, 0.6117647, 0.80784315, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 75
+text = "Are you tired already?
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="VBoxContainer" parent="PauseLayer" unique_id=1397267283]
+offset_left = 547.0
+offset_top = 511.0
+offset_right = 1383.0
+offset_bottom = 1014.0
+
+[node name="Continue" type="Button" parent="PauseLayer/HBoxContainer" unique_id=975587987]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_n2etl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_g2q5c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h437x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h437x")
+text = "Continue"
+
+[node name="Control" type="Control" parent="PauseLayer/HBoxContainer" unique_id=1939980104]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Restart" type="Button" parent="PauseLayer/HBoxContainer" unique_id=942479364]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_n4bof")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_h437x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h437x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h437x")
+text = "Restart"
+
+[node name="Control2" type="Control" parent="PauseLayer/HBoxContainer" unique_id=744844984]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="BackToMenu" type="Button" parent="PauseLayer/HBoxContainer" unique_id=1715119187]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("19_5jsyb")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_n2etl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_g2q5c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h437x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h437x")
+text = "Back to menu"
+
 [node name="EnergyContainer" type="HBoxContainer" parent="." unique_id=605632102]
 texture_filter = 1
 offset_left = 1527.0
@@ -652,5 +1067,9 @@ offset_bottom = 608.0
 theme_override_constants/separation = 10
 
 [connection signal="pressed" from="TurnButton" to="TurnManager" method="_on_turn_button_pressed"]
+[connection signal="pressed" from="TutorLayer/OkayButton" to="TutorLayer" method="_on_okay_button_pressed"]
 [connection signal="pressed" from="CringeLayer/HBoxContainer/Restart1" to="CringeLayer" method="_on_restart_1_pressed"]
 [connection signal="pressed" from="CringeLayer/HBoxContainer/MainMenuButton1" to="CringeLayer" method="_on_main_menu_button_1_pressed"]
+[connection signal="pressed" from="PauseLayer/HBoxContainer/Continue" to="PauseLayer" method="_on_continue_pressed"]
+[connection signal="pressed" from="PauseLayer/HBoxContainer/Restart" to="PauseLayer" method="_on_restart_pressed"]
+[connection signal="pressed" from="PauseLayer/HBoxContainer/BackToMenu" to="PauseLayer" method="_on_back_to_menu_pressed"]

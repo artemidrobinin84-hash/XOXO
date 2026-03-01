@@ -3,8 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://buec47g6mvkfp" path="res://lvl/photo_2026-02-28_20-45-12.jpg" id="1_f6ulh"]
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="2_grstn"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="3_f6ulh"]
+[ext_resource type="Script" uid="uid://wvxipb8lvsiy" path="res://GirlFriends/GirlHibox2.gd" id="3_jvdxa"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="4_jvdxa"]
-[ext_resource type="PackedScene" path="res://CardData/DeckCard.tscn" id="5_cxqox"]
+[ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://CardData/DeckCard.tscn" id="5_cxqox"]
 [ext_resource type="PackedScene" uid="uid://f0b03p5ljpjf" path="res://CardData/CardManager.tscn" id="6_l7ish"]
 [ext_resource type="Script" uid="uid://dade0acwfe8qv" path="res://lvl/XOXOBar/ProgressBar.gd" id="7_03d8g"]
 [ext_resource type="Texture2D" uid="uid://chbvvo716378m" path="res://lvl/XOXOBar/HPBarUnder.png" id="8_j6l4s"]
@@ -14,18 +15,19 @@
 [ext_resource type="Texture2D" uid="uid://dilchgtj8p6so" path="res://lvl/XOXOBar/CringeBarUnder.png" id="12_myvq2"]
 [ext_resource type="Texture2D" uid="uid://xth407w1lhqw" path="res://lvl/XOXOBar/CringeBarProgress.png" id="13_43ksu"]
 [ext_resource type="AudioStream" uid="uid://ba0j37jy6pwma" path="res://Core/MainSound/voskresnoe-vdokhnovenie-2-29609a.mp3" id="14_a2njr"]
-[ext_resource type="SpineSkeletonDataResource" uid="uid://dkhwcw68rsxjh" path="res://GirlFriends/girlfrend1-skin/girlv1.tres" id="15_mf464"]
-[ext_resource type="Script" uid="uid://d36yw2knsq3hm" path="res://lvl/Girl1Sprite.gd" id="16_xep80"]
 [ext_resource type="AudioStream" uid="uid://dmx2cn3ba0iuw" path="res://Core/MainSFX/Короткий звук женщина стонет когда кончает.mp3" id="17_21h47"]
-[ext_resource type="Script" uid="uid://cxntyqrsrtqds" path="res://lvl/victorylvl2.gd" id="18_0s7vr"]
+[ext_resource type="SpineSkeletonDataResource" uid="uid://dw7rfayl883y7" path="res://GirlFriends/girlfrend3-skin/girlv3.tres" id="17_cxqox"]
+[ext_resource type="Script" uid="uid://cxntyqrsrtqds" path="res://lvl/UILvl/VictoryLvl2Layer.gd" id="18_0s7vr"]
+[ext_resource type="Script" uid="uid://76os5kti105m" path="res://lvl/Girl2Sprite.gd" id="18_cxqox"]
 [ext_resource type="AudioStream" uid="uid://crgojtcf6ch6q" path="res://Core/MainSFX/Звук взмаха рукой (mp3cut.net) (1).mp3" id="18_f6ulh"]
 [ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="19_i7t8p"]
 [ext_resource type="AudioStream" uid="uid://dy8spyqfo8ei" path="res://Core/MainSFX/Удар в лицо 2 (mp3cut.net).mp3" id="19_jvdxa"]
 [ext_resource type="Shader" uid="uid://nw5oxtopa3dm" path="res://lvl/lvl.gdshader" id="20_o0te1"]
 [ext_resource type="AudioStream" uid="uid://cewix4n40l5co" path="res://Core/MainSFX/Звук взяли одну карту из колоды.mp3" id="21_0jrwo"]
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="22_k2y27"]
-[ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/lose_layer.gd" id="23_5p765"]
-[ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/cringe_layer.gd" id="24_pdg3r"]
+[ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/UILvl/LoseLayer.gd" id="23_5p765"]
+[ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/UILvl/CringeLayer.gd" id="24_pdg3r"]
+[ext_resource type="Script" uid="uid://dnlarl7hhycpq" path="res://lvl/UILvl/PauseLayer.gd" id="25_cxqox"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdmic"]
 bg_color = Color(0.047058824, 0.54901963, 0, 1)
@@ -85,6 +87,54 @@ shader_parameter/intensity = 1.0
 shader_parameter/softness = 0.45
 shader_parameter/inner_brightness = 0.0
 shader_parameter/vignette_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ajd2"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iopof"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.98975796, 0, 0.5368099, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6oua4"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.98975796, 0, 0.5368099, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myvq2"]
+bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6atp"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
@@ -239,6 +289,8 @@ texture = ExtResource("1_f6ulh")
 
 [node name="GirlHitbox" parent="." unique_id=2028270037 instance=ExtResource("2_grstn")]
 position = Vector2(-30, 0)
+script = ExtResource("3_jvdxa")
+max_hp = 120
 
 [node name="TurnButton" type="Button" parent="." unique_id=2135038510]
 offset_left = 1543.0
@@ -394,15 +446,15 @@ autoplay = true
 bus = &"Music"
 
 [node name="GirlSprite" type="SpineSprite" parent="." unique_id=1708670521]
-skeleton_data_res = ExtResource("15_mf464")
-preview_skin = "level1"
+skeleton_data_res = ExtResource("17_cxqox")
+preview_skin = "level3"
 preview_animation = "idle"
 preview_frame = false
 preview_time = 0.0
 texture_filter = 2
-position = Vector2(939, 1080)
-scale = Vector2(0.6, 0.6)
-script = ExtResource("16_xep80")
+position = Vector2(940, 1098)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("18_cxqox")
 
 [node name="Phase_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1684640481]
 stream = ExtResource("17_21h47")
@@ -436,9 +488,9 @@ autostart = true
 z_index = 4096
 material = SubResource("ShaderMaterial_xouyr")
 offset_left = -609.0
-offset_top = -356.0
+offset_top = -337.0
 offset_right = 2591.0
-offset_bottom = 1494.0
+offset_bottom = 1513.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
@@ -452,6 +504,99 @@ process_mode = 3
 stream = ExtResource("22_k2y27")
 volume_db = -14.263
 bus = &"SFX"
+
+[node name="PauseLayer" type="CanvasLayer" parent="." unique_id=1900748912]
+process_mode = 3
+layer = 100
+visible = false
+script = ExtResource("25_cxqox")
+
+[node name="ColorRect" type="ColorRect" parent="PauseLayer" unique_id=327072209]
+offset_right = 1916.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.6862745)
+
+[node name="Label" type="Label" parent="PauseLayer" unique_id=1863625181]
+offset_top = -64.0
+offset_right = 1920.0
+offset_bottom = 447.0
+theme_override_colors/font_color = Color(1, 0.61323047, 0.80748695, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("19_i7t8p")
+theme_override_font_sizes/font_size = 200
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PauseLayer" unique_id=191399502]
+offset_top = 224.0
+offset_right = 1920.0
+offset_bottom = 735.0
+theme_override_colors/font_color = Color(1, 0.6117647, 0.80784315, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("19_i7t8p")
+theme_override_font_sizes/font_size = 75
+text = "Are you tired already?
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="VBoxContainer" parent="PauseLayer" unique_id=27546226]
+offset_left = 547.0
+offset_top = 511.0
+offset_right = 1383.0
+offset_bottom = 1014.0
+
+[node name="Continue" type="Button" parent="PauseLayer/HBoxContainer" unique_id=1220953517]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("19_i7t8p")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ajd2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_iopof")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6oua4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6oua4")
+text = "Continue"
+
+[node name="Control" type="Control" parent="PauseLayer/HBoxContainer" unique_id=457451698]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Restart" type="Button" parent="PauseLayer/HBoxContainer" unique_id=660902438]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("19_i7t8p")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_myvq2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_6oua4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6oua4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6oua4")
+text = "Restart"
+
+[node name="Control2" type="Control" parent="PauseLayer/HBoxContainer" unique_id=64803498]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="BackToMenu" type="Button" parent="PauseLayer/HBoxContainer" unique_id=475124441]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("19_i7t8p")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ajd2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_iopof")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6oua4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6oua4")
+text = "Back to menu"
 
 [node name="VictoryLayer" type="CanvasLayer" parent="." unique_id=2137009371]
 visible = false
@@ -524,6 +669,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_t80h6")
 text = "Back to Menu"
 
 [node name="LoseLayer" type="CanvasLayer" parent="." unique_id=1889101551]
+process_mode = 3
 visible = false
 script = ExtResource("23_5p765")
 
@@ -603,6 +749,7 @@ volume_db = -14.263
 bus = &"SFX"
 
 [node name="CringeLayer" type="CanvasLayer" parent="." unique_id=1292876500]
+process_mode = 3
 visible = false
 script = ExtResource("24_pdg3r")
 
@@ -691,5 +838,8 @@ offset_bottom = 608.0
 theme_override_constants/separation = 10
 
 [connection signal="pressed" from="TurnButton" to="TurnManager" method="_on_turn_button_pressed"]
+[connection signal="pressed" from="PauseLayer/HBoxContainer/Continue" to="PauseLayer" method="_on_continue_pressed"]
+[connection signal="pressed" from="PauseLayer/HBoxContainer/Restart" to="PauseLayer" method="_on_restart_pressed"]
+[connection signal="pressed" from="PauseLayer/HBoxContainer/BackToMenu" to="PauseLayer" method="_on_back_to_menu_pressed"]
 [connection signal="pressed" from="CringeLayer/HBoxContainer/Restart1" to="CringeLayer" method="_on_restart_1_pressed"]
 [connection signal="pressed" from="CringeLayer/HBoxContainer/MainMenuButton1" to="CringeLayer" method="_on_main_menu_button_1_pressed"]

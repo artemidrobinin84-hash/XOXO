@@ -1,0 +1,16 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://bivlfq47lhh1j"
+path="res://.godot/imported/girllv3.atlas-4e8e6e005bf7d0eef621d8a959512a94.spatlas"
+
+[deps]
+
+source_file="res://GirlFriends/girlfrend3-skin/girllv3.atlas"
+dest_files=["res://.godot/imported/girllv3.atlas-4e8e6e005bf7d0eef621d8a959512a94.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"

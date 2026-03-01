@@ -6,16 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://cferfo6atp3hy" path="res://lvl/XOXOBar/XOXOBarProgress.png" id="7_boooi"]
 [ext_resource type="Script" uid="uid://dade0acwfe8qv" path="res://lvl/XOXOBar/ProgressBar.gd" id="7_d4vtd"]
 [ext_resource type="Texture2D" uid="uid://chbvvo716378m" path="res://lvl/XOXOBar/HPBarUnder.png" id="7_nmm5b"]
-[ext_resource type="Script" uid="uid://d35sfwqsfx0j0" path="res://lvl/gameplay_manager.gd" id="8_6fe25"]
 [ext_resource type="Texture2D" uid="uid://5mtq1gijdush" path="res://lvl/XOXOBar/HPBarProgress.png" id="8_fnejv"]
-[ext_resource type="Script" uid="uid://bud8pdkppdg4c" path="res://lvl/gameplay_actions.gd" id="9_wtn46"]
 [ext_resource type="AudioStream" uid="uid://ba0j37jy6pwma" path="res://Core/MainSound/voskresnoe-vdokhnovenie-2-29609a.mp3" id="10_dgetj"]
 [ext_resource type="Texture2D" uid="uid://dilchgtj8p6so" path="res://lvl/XOXOBar/CringeBarUnder.png" id="12_0vy4a"]
 [ext_resource type="Texture2D" uid="uid://xth407w1lhqw" path="res://lvl/XOXOBar/CringeBarProgress.png" id="13_gx4g3"]
 [ext_resource type="SpineSkeletonDataResource" uid="uid://dkhwcw68rsxjh" path="res://GirlFriends/girlfrend1-skin/girlv1.tres" id="13_knlhy"]
 [ext_resource type="Script" uid="uid://d36yw2knsq3hm" path="res://lvl/Girl1Sprite.gd" id="14_ya0ci"]
-[ext_resource type="Script" uid="uid://b4hegsirimwru" path="res://lvl/victorylvl1.gd" id="15_8q75q"]
-[ext_resource type="Script" uid="uid://dnlarl7hhycpq" path="res://lvl/canvas_layer.gd" id="16_0vy4a"]
+[ext_resource type="Script" uid="uid://b4hegsirimwru" path="res://lvl/UILvl/VictoryLvl1Layer.gd" id="15_8q75q"]
+[ext_resource type="Script" uid="uid://dnlarl7hhycpq" path="res://lvl/UILvl/PauseLayer.gd" id="16_0vy4a"]
 [ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="16_2revy"]
 [ext_resource type="Shader" uid="uid://nw5oxtopa3dm" path="res://lvl/lvl.gdshader" id="17_sf0du"]
 [ext_resource type="AudioStream" uid="uid://cewix4n40l5co" path="res://Core/MainSFX/Звук взяли одну карту из колоды.mp3" id="20_fnejv"]
@@ -25,10 +23,10 @@
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="23_0qm8x"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
 [ext_resource type="AudioStream" uid="uid://dy8spyqfo8ei" path="res://Core/MainSFX/Удар в лицо 2 (mp3cut.net).mp3" id="23_35ihi"]
-[ext_resource type="PackedScene" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
+[ext_resource type="PackedScene" uid="uid://lwgx8dujkp4" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
-[ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/lose_layer.gd" id="26_gx4g3"]
-[ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/cringe_layer.gd" id="27_wl4wg"]
+[ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/UILvl/LoseLayer.gd" id="26_gx4g3"]
+[ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/UILvl/CringeLayer.gd" id="27_wl4wg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35ihi"]
 bg_color = Color(0.047058824, 0.54901963, 0, 1)
@@ -295,108 +293,6 @@ text = "0/10"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Gameplay_Manager" type="Node" parent="." unique_id=987755067 node_paths=PackedStringArray("gameplay_actions", "pause_menu")]
-process_mode = 3
-script = ExtResource("8_6fe25")
-gameplay_actions = NodePath("GameplayActions")
-pause_menu = NodePath("GameplayActions/PauseLabel")
-
-[node name="GameplayActions" type="Node" parent="Gameplay_Manager" unique_id=802634728]
-process_mode = 3
-script = ExtResource("9_wtn46")
-
-[node name="PauseLabel" type="CanvasLayer" parent="Gameplay_Manager/GameplayActions" unique_id=472239151]
-layer = 100
-visible = false
-script = ExtResource("16_0vy4a")
-
-[node name="ColorRect" type="ColorRect" parent="Gameplay_Manager/GameplayActions/PauseLabel" unique_id=1244985868]
-offset_right = 1916.0
-offset_bottom = 1080.0
-color = Color(0, 0, 0, 0.6862745)
-
-[node name="Label" type="Label" parent="Gameplay_Manager/GameplayActions/PauseLabel" unique_id=248470207]
-offset_top = -64.0
-offset_right = 1920.0
-offset_bottom = 447.0
-theme_override_colors/font_color = Color(1, 0.61323047, 0.80748695, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("16_2revy")
-theme_override_font_sizes/font_size = 200
-text = "Pause"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="Gameplay_Manager/GameplayActions/PauseLabel" unique_id=1819652800]
-offset_top = 224.0
-offset_right = 1920.0
-offset_bottom = 735.0
-theme_override_colors/font_color = Color(1, 0.6117647, 0.80784315, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("16_2revy")
-theme_override_font_sizes/font_size = 75
-text = "Are you tired already?
-
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="HBoxContainer" type="VBoxContainer" parent="Gameplay_Manager/GameplayActions/PauseLabel" unique_id=1616032510]
-offset_left = 547.0
-offset_top = 511.0
-offset_right = 1383.0
-offset_bottom = 1014.0
-
-[node name="Continue" type="Button" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=966397333]
-layout_mode = 2
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
-theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
-theme_override_fonts/font = ExtResource("16_2revy")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_sf0du")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_veq3y")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_2revy")
-theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
-text = "Continue"
-
-[node name="Control" type="Control" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=1643036080]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-
-[node name="Restart" type="Button" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=1486923626]
-layout_mode = 2
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
-theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
-theme_override_fonts/font = ExtResource("16_2revy")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_8q75q")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_2revy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_2revy")
-theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
-text = "Restart"
-
-[node name="Control2" type="Control" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=1133690665]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-
-[node name="BackToMenu" type="Button" parent="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer" unique_id=1991370907]
-layout_mode = 2
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
-theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
-theme_override_fonts/font = ExtResource("16_2revy")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_sf0du")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_veq3y")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_2revy")
-theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
-text = "Back to menu"
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=606229576]
 stream = ExtResource("10_dgetj")
 volume_db = -25.0
@@ -435,6 +331,99 @@ position = Vector2(-93.333496, -1256.6672)
 
 [node name="SpeechTimer" type="Timer" parent="GirlSprite" unique_id=168791783]
 autostart = true
+
+[node name="PauseLayer" type="CanvasLayer" parent="." unique_id=472239151]
+process_mode = 3
+layer = 100
+visible = false
+script = ExtResource("16_0vy4a")
+
+[node name="ColorRect" type="ColorRect" parent="PauseLayer" unique_id=1244985868]
+offset_right = 1916.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.6862745)
+
+[node name="Label" type="Label" parent="PauseLayer" unique_id=248470207]
+offset_top = -64.0
+offset_right = 1920.0
+offset_bottom = 447.0
+theme_override_colors/font_color = Color(1, 0.61323047, 0.80748695, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 200
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PauseLayer" unique_id=1819652800]
+offset_top = 224.0
+offset_right = 1920.0
+offset_bottom = 735.0
+theme_override_colors/font_color = Color(1, 0.6117647, 0.80784315, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 75
+text = "Are you tired already?
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="VBoxContainer" parent="PauseLayer" unique_id=1616032510]
+offset_left = 547.0
+offset_top = 511.0
+offset_right = 1383.0
+offset_bottom = 1014.0
+
+[node name="Continue" type="Button" parent="PauseLayer/HBoxContainer" unique_id=966397333]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_sf0du")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_veq3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2revy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
+text = "Continue"
+
+[node name="Control" type="Control" parent="PauseLayer/HBoxContainer" unique_id=1643036080]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Restart" type="Button" parent="PauseLayer/HBoxContainer" unique_id=1486923626]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_8q75q")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_2revy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2revy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
+text = "Restart"
+
+[node name="Control2" type="Control" parent="PauseLayer/HBoxContainer" unique_id=1133690665]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="BackToMenu" type="Button" parent="PauseLayer/HBoxContainer" unique_id=1991370907]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+theme_override_colors/font_hover_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_sf0du")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_veq3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2revy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
+text = "Back to menu"
 
 [node name="Vignette" type="ColorRect" parent="." unique_id=884735467]
 z_index = 4096
@@ -528,6 +517,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_2revy")
 text = "Back to Menu"
 
 [node name="LoseLayer" type="CanvasLayer" parent="." unique_id=673242330]
+process_mode = 3
 visible = false
 script = ExtResource("26_gx4g3")
 
@@ -607,6 +597,7 @@ volume_db = -14.263
 bus = &"SFX"
 
 [node name="CringeLayer" type="CanvasLayer" parent="." unique_id=1182132186]
+process_mode = 3
 visible = false
 script = ExtResource("27_wl4wg")
 
@@ -695,8 +686,8 @@ offset_bottom = 608.0
 theme_override_constants/separation = 10
 
 [connection signal="pressed" from="TurnButton" to="TurnManager" method="_on_turn_button_pressed"]
-[connection signal="pressed" from="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer/Continue" to="Gameplay_Manager/GameplayActions/PauseLabel" method="_on_continue_pressed"]
-[connection signal="pressed" from="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer/Restart" to="Gameplay_Manager/GameplayActions/PauseLabel" method="_on_restart_pressed"]
-[connection signal="pressed" from="Gameplay_Manager/GameplayActions/PauseLabel/HBoxContainer/BackToMenu" to="Gameplay_Manager/GameplayActions/PauseLabel" method="_on_back_to_menu_pressed"]
+[connection signal="pressed" from="PauseLayer/HBoxContainer/Continue" to="PauseLayer" method="_on_continue_pressed"]
+[connection signal="pressed" from="PauseLayer/HBoxContainer/Restart" to="PauseLayer" method="_on_restart_pressed"]
+[connection signal="pressed" from="PauseLayer/HBoxContainer/BackToMenu" to="PauseLayer" method="_on_back_to_menu_pressed"]
 [connection signal="pressed" from="CringeLayer/HBoxContainer/Restart1" to="CringeLayer" method="_on_restart_1_pressed"]
 [connection signal="pressed" from="CringeLayer/HBoxContainer/MainMenuButton1" to="CringeLayer" method="_on_main_menu_button_1_pressed"]
