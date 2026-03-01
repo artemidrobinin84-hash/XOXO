@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fne3fme78x1"]
 
-[ext_resource type="Texture2D" uid="uid://lhrniu7a6cth" path="res://lvl/back2.jpg" id="1_0s7vr"]
+[ext_resource type="Texture2D" uid="uid://buec47g6mvkfp" path="res://lvl/photo_2026-02-28_20-45-12.jpg" id="1_f6ulh"]
 [ext_resource type="PackedScene" uid="uid://d3yec0rny5dax" path="res://GirlFriends/GirlHitbox.tscn" id="2_grstn"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="3_f6ulh"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="4_jvdxa"]
@@ -235,7 +235,7 @@ corner_radius_bottom_left = 40
 [node name="Back2" type="Sprite2D" parent="." unique_id=622320036]
 position = Vector2(959.9999, 540)
 scale = Vector2(1.4999996, 1.4999999)
-texture = ExtResource("1_0s7vr")
+texture = ExtResource("1_f6ulh")
 
 [node name="GirlHitbox" parent="." unique_id=2028270037 instance=ExtResource("2_grstn")]
 position = Vector2(-30, 0)
@@ -433,7 +433,6 @@ position = Vector2(-93.333496, -1256.6672)
 autostart = true
 
 [node name="Vignette" type="ColorRect" parent="." unique_id=640261088]
-visible = false
 z_index = 4096
 material = SubResource("ShaderMaterial_xouyr")
 offset_left = -609.0

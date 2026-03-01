@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bd411x7plp5qo"]
 
-[ext_resource type="Texture2D" uid="uid://lhrniu7a6cth" path="res://lvl/back2.jpg" id="1_35ihi"]
+[ext_resource type="Texture2D" uid="uid://bjulfqrgya2bx" path="res://lvl/апиыаип.png" id="1_35ihi"]
 [ext_resource type="PackedScene" uid="uid://f0b03p5ljpjf" path="res://CardData/CardManager.tscn" id="2_r30gq"]
 [ext_resource type="Texture2D" uid="uid://dtuf1ren871xq" path="res://lvl/XOXOBar/XOXOBarUnder.png" id="7_37uxi"]
 [ext_resource type="Texture2D" uid="uid://cferfo6atp3hy" path="res://lvl/XOXOBar/XOXOBarProgress.png" id="7_boooi"]
@@ -140,8 +140,8 @@ shader_parameter/vignette_color = Color(0, 0, 0, 1)
 [node name="lvl1" type="Node2D" unique_id=1334599637]
 
 [node name="Back" type="Sprite2D" parent="." unique_id=1865572888]
-position = Vector2(960, 539)
-scale = Vector2(1.5, 1.4972224)
+position = Vector2(960.00006, 540.00006)
+scale = Vector2(1, 1.0000001)
 texture = ExtResource("1_35ihi")
 
 [node name="GirlHitbox" parent="." unique_id=1458060286 instance=ExtResource("22_ck4d2")]

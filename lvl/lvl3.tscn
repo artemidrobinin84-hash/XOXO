@@ -564,7 +564,7 @@ bus = &"Music"
 
 [node name="GirlSprite" type="SpineSprite" parent="." unique_id=1568190187]
 skeleton_data_res = ExtResource("19_60krb")
-preview_skin = "level3"
+preview_skin = "level2"
 preview_animation = "idle"
 preview_frame = false
 preview_time = 0.0
