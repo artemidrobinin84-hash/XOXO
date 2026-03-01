@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://lwgx8dujkp4"]
+[gd_scene format=3 uid="uid://c5t3876wlibmb"]
 
 [ext_resource type="Texture2D" uid="uid://ctq1pntfqf2lr" path="res://CardData/ImgCard/сердечко.png" id="1_37105"]
-[ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="2_ymkee"]
+[ext_resource type="FontFile" uid="uid://caiuju44j21k5" path="res://Core/Comfortaa-VariableFont_wght.ttf" id="2_ujxqs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ymkee"]
 corner_radius_top_left = 25
@@ -98,11 +98,11 @@ offset_right = 250.0
 offset_bottom = 433.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(0.70980394, 0.05882353, 0.7490196, 0.6117647)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 0.34509805)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
 theme_override_constants/shadow_outline_size = 0
-theme_override_constants/outline_size = 3
-theme_override_fonts/normal_font = ExtResource("2_ymkee")
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = ExtResource("2_ujxqs")
 theme_override_font_sizes/normal_font_size = 43
 text = "Date
 With

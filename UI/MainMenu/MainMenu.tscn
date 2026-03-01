@@ -2,13 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://cr7ysnc65qua" path="res://UI/MainMenu/MenuDate11.png" id="1_8fkdr"]
 [ext_resource type="Script" uid="uid://dyca21nvba40o" path="res://UI/MainMenu/main_menu.gd" id="1_8x0bb"]
-[ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="2_fw0vt"]
+[ext_resource type="FontFile" uid="uid://caiuju44j21k5" path="res://Core/Comfortaa-VariableFont_wght.ttf" id="3_jhcbk"]
 [ext_resource type="Texture2D" uid="uid://cuivyqo57eiij" path="res://UI/MainMenu/Sound_Menu.png" id="4_4elqj"]
+[ext_resource type="Script" uid="uid://cbt6hrvl0hmxf" path="res://UI/MainMenu/play.gd" id="4_32jca"]
 [ext_resource type="AudioStream" uid="uid://c3qym8xn2jva7" path="res://Core/MainSound/tyoplye-vospominaniya-2-f46ec8.mp3" id="5_4elqj"]
 [ext_resource type="Texture2D" uid="uid://cypbwglmgabao" path="res://UI/MainMenu/polzunok1.png" id="5_ri767"]
+[ext_resource type="Script" uid="uid://dndwmg1d68e7o" path="res://UI/MainMenu/tutorial.gd" id="5_wdl18"]
 [ext_resource type="FontFile" uid="uid://7bb2u83oo2uq" path="res://Core/Montserrat-Black.ttf" id="6_a712v"]
+[ext_resource type="Script" uid="uid://daaiaxjsvaugx" path="res://UI/MainMenu/credit.gd" id="6_migmm"]
 [ext_resource type="Texture2D" uid="uid://dqh8xd3eoygls" path="res://UI/MainMenu/Credits_Menu.png" id="7_1dhmk"]
+[ext_resource type="Script" uid="uid://c128ipxomvojk" path="res://UI/MainMenu/sound.gd" id="7_migmm"]
+[ext_resource type="Script" uid="uid://piuw2l4pcg4n" path="res://UI/MainMenu/exit.gd" id="8_jt3i8"]
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="9_jhcbk"]
+[ext_resource type="Script" uid="uid://dxisqslsuj3m4" path="res://UI/MainMenu/master.gd" id="11_jt3i8"]
+[ext_resource type="Script" uid="uid://bw8fmghhx01la" path="res://UI/MainMenu/music.gd" id="12_hvgpy"]
+[ext_resource type="Script" uid="uid://b4vosp2fwanot" path="res://UI/MainMenu/sfx.gd" id="13_4qf4k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8x0bb"]
 bg_color = Color(0.9372549, 0.8117647, 0.8901961, 1)
@@ -73,13 +81,14 @@ offset_right = 600.0
 offset_bottom = 606.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_fonts/font = ExtResource("3_jhcbk")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_4elqj")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_4elqj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4elqj")
 text = "Play"
+script = ExtResource("4_32jca")
 
 [node name="Tutorial" type="Button" parent="Background" unique_id=1702423009]
 layout_mode = 0
@@ -89,12 +98,13 @@ offset_right = 1665.0
 offset_bottom = 589.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_fw0vt")
-theme_override_font_sizes/font_size = 100
+theme_override_fonts/font = ExtResource("3_jhcbk")
+theme_override_font_sizes/font_size = 90
 theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_4elqj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4elqj")
 text = "Tutorial"
+script = ExtResource("5_wdl18")
 
 [node name="Credit" type="Button" parent="Background" unique_id=359606614]
 layout_mode = 0
@@ -104,27 +114,29 @@ offset_right = 1318.0
 offset_bottom = 846.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_fonts/font = ExtResource("3_jhcbk")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_4elqj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4elqj")
 text = "Credit"
+script = ExtResource("6_migmm")
 
 [node name="Sound" type="Button" parent="Background" unique_id=1325743923]
 layout_mode = 0
-offset_left = 616.0
-offset_top = 692.0
-offset_right = 865.0
-offset_bottom = 827.0
+offset_left = 584.0
+offset_top = 710.0
+offset_right = 928.0
+offset_bottom = 845.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_fw0vt")
+theme_override_fonts/font = ExtResource("3_jhcbk")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_8x0bb")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_4elqj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4elqj")
 text = "Sound"
+script = ExtResource("7_migmm")
 
 [node name="Sound_Settings" type="Control" parent="Background" unique_id=2019063045]
 visible = false
@@ -148,14 +160,15 @@ offset_top = 4.0
 offset_right = 1054.0
 offset_bottom = 143.0
 mouse_default_cursor_shape = 2
+script = ExtResource("8_jt3i8")
 
 [node name="Master" type="HSlider" parent="Background/Sound_Settings/TextureRect" unique_id=947008071]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
-offset_left = 21.0
-offset_top = 8.0
+offset_left = 69.0
+offset_top = 44.0
 offset_right = 689.0
-offset_bottom = 254.0
+offset_bottom = 277.0
 mouse_default_cursor_shape = 2
 theme_override_icons/grabber = ExtResource("5_ri767")
 theme_override_icons/grabber_highlight = ExtResource("5_ri767")
@@ -165,6 +178,7 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_jhcbk")
 max_value = 1.0
 step = 0.001
 value = 1.0
+script = ExtResource("11_jt3i8")
 
 [node name="General" type="Label" parent="Background/Sound_Settings/TextureRect/Master" unique_id=677920994]
 layout_mode = 0
@@ -173,17 +187,17 @@ offset_top = 3.0
 offset_right = 720.0
 offset_bottom = 149.91666
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_a712v")
+theme_override_fonts/font = ExtResource("3_jhcbk")
 theme_override_font_sizes/font_size = 70
 text = "General"
 
 [node name="Music" type="HSlider" parent="Background/Sound_Settings/TextureRect" unique_id=1200558220]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
-offset_left = 23.0
-offset_top = 200.0
+offset_left = 74.0
+offset_top = 238.0
 offset_right = 691.0
-offset_bottom = 446.0
+offset_bottom = 456.0
 mouse_default_cursor_shape = 2
 theme_override_icons/grabber = ExtResource("5_ri767")
 theme_override_icons/grabber_highlight = ExtResource("5_ri767")
@@ -193,6 +207,7 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_jhcbk")
 max_value = 1.0
 step = 0.001
 value = 1.0
+script = ExtResource("12_hvgpy")
 
 [node name="General" type="Label" parent="Background/Sound_Settings/TextureRect/Music" unique_id=2113810662]
 layout_mode = 0
@@ -201,7 +216,7 @@ offset_top = 1.0
 offset_right = 727.0
 offset_bottom = 147.91666
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_a712v")
+theme_override_fonts/font = ExtResource("3_jhcbk")
 theme_override_font_sizes/font_size = 70
 text = "Music
 "
@@ -209,10 +224,10 @@ text = "Music
 [node name="SFX" type="HSlider" parent="Background/Sound_Settings/TextureRect" unique_id=1768254414]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
-offset_left = 24.0
-offset_top = 391.0
+offset_left = 71.0
+offset_top = 432.0
 offset_right = 692.0
-offset_bottom = 637.0
+offset_bottom = 660.0
 mouse_default_cursor_shape = 2
 theme_override_icons/grabber = ExtResource("5_ri767")
 theme_override_icons/grabber_highlight = ExtResource("5_ri767")
@@ -222,6 +237,7 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_jhcbk")
 max_value = 1.0
 step = 0.001
 value = 1.0
+script = ExtResource("13_4qf4k")
 
 [node name="General" type="Label" parent="Background/Sound_Settings/TextureRect/SFX" unique_id=999964615]
 layout_mode = 0
@@ -230,7 +246,7 @@ offset_top = 7.0
 offset_right = 729.0
 offset_bottom = 153.91666
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_a712v")
+theme_override_fonts/font = ExtResource("3_jhcbk")
 theme_override_font_sizes/font_size = 70
 text = "SFX
 "
@@ -272,10 +288,10 @@ vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="Background/CreditMenu/TextureRect1" unique_id=1105246408]
 layout_mode = 0
-offset_left = -45.0
-offset_top = 42.0
-offset_right = 799.0
-offset_bottom = 687.0
+offset_left = -112.0
+offset_top = 44.0
+offset_right = 732.0
+offset_bottom = 691.75
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_a712v")
 theme_override_font_sizes/font_size = 25
@@ -283,17 +299,15 @@ text = "Lead:
 
 Game Desiner:
 
-
 Animator:
 
 Programmer:
 
+UX:
 
 Ui Desiner:
 
-
 Artist:
-
 
 Sound:"
 horizontal_alignment = 1
@@ -301,28 +315,26 @@ vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="Background/CreditMenu/TextureRect1" unique_id=307061356]
 layout_mode = 0
-offset_left = 221.0
-offset_top = 31.0
-offset_right = 1065.0
-offset_bottom = 694.0
+offset_left = 292.0
+offset_top = 45.0
+offset_right = 1136.0
+offset_bottom = 693.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_a712v")
 theme_override_font_sizes/font_size = 25
 text = "Cesiumloser (Nikita)
 
-Cesiumloser (Nikita) 
-Name (Artyom)
+Cesiumloser (Nikita) Name (Artyom)
 
 Viciaia (Vika)
 
-Cesiumloser (Nikita)
+Cesiumloser (Nikita) Name (Artyom)
+
 Name (Artyom)
 
-Cesiumloser (Nikita)
-Name (Artyom)
+Cesiumloser (Nikita) Name (Artyom)
 
-Viciaia (Vika)
-SSSqq (Nastya)
+Viciaia (Vika) SSSqq (Nastya)
 
 Name (Artyom)"
 horizontal_alignment = 1

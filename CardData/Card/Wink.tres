@@ -8,6 +8,7 @@ script = ExtResource("1_m7lpx")
 title = "Wink"
 description = "Did it just get warmer in here, or was it just me?"
 icon = ExtResource("1_oryhm")
+cost = 2
 damage = 5
 cringe = 1
 metadata/_custom_type_script = "uid://caihvaeaot5l6"

@@ -558,7 +558,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=234555713]
 stream = ExtResource("18_c3he2")
-volume_db = -25.0
+volume_db = -15.0
 autoplay = true
 bus = &"Music"
 
@@ -580,6 +580,7 @@ bus = &"SFX"
 
 [node name="Phase_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=863289505]
 stream = ExtResource("22_i6ph6")
+volume_db = -10.455
 pitch_scale = 1.1
 
 [node name="Dammage_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=420169408]

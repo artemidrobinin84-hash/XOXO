@@ -2,15 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://bjulfqrgya2bx" path="res://lvl/апиыаип.png" id="1_35ihi"]
 [ext_resource type="PackedScene" uid="uid://f0b03p5ljpjf" path="res://CardData/CardManager.tscn" id="2_r30gq"]
-[ext_resource type="Texture2D" uid="uid://dtuf1ren871xq" path="res://lvl/XOXOBar/XOXOBarUnder.png" id="7_37uxi"]
+[ext_resource type="FontFile" uid="uid://caiuju44j21k5" path="res://Core/Comfortaa-VariableFont_wght.ttf" id="3_n0t34"]
+[ext_resource type="Script" uid="uid://de7dj4jdhr0xq" path="res://lvl/turn_button.gd" id="4_qdijn"]
 [ext_resource type="Texture2D" uid="uid://cferfo6atp3hy" path="res://lvl/XOXOBar/XOXOBarProgress.png" id="7_boooi"]
 [ext_resource type="Script" uid="uid://dade0acwfe8qv" path="res://lvl/XOXOBar/ProgressBar.gd" id="7_d4vtd"]
-[ext_resource type="Texture2D" uid="uid://chbvvo716378m" path="res://lvl/XOXOBar/HPBarUnder.png" id="7_nmm5b"]
 [ext_resource type="Script" uid="uid://d35sfwqsfx0j0" path="res://lvl/gameplay_manager.gd" id="8_6fe25"]
 [ext_resource type="Texture2D" uid="uid://5mtq1gijdush" path="res://lvl/XOXOBar/HPBarProgress.png" id="8_fnejv"]
 [ext_resource type="Script" uid="uid://bud8pdkppdg4c" path="res://lvl/gameplay_actions.gd" id="9_wtn46"]
 [ext_resource type="AudioStream" uid="uid://ba0j37jy6pwma" path="res://Core/MainSound/voskresnoe-vdokhnovenie-2-29609a.mp3" id="10_dgetj"]
-[ext_resource type="Texture2D" uid="uid://dilchgtj8p6so" path="res://lvl/XOXOBar/CringeBarUnder.png" id="12_0vy4a"]
 [ext_resource type="Texture2D" uid="uid://xth407w1lhqw" path="res://lvl/XOXOBar/CringeBarProgress.png" id="13_gx4g3"]
 [ext_resource type="SpineSkeletonDataResource" uid="uid://dkhwcw68rsxjh" path="res://GirlFriends/girlfrend1-skin/girlv1.tres" id="13_knlhy"]
 [ext_resource type="Script" uid="uid://d36yw2knsq3hm" path="res://lvl/Girl1Sprite.gd" id="14_ya0ci"]
@@ -25,29 +24,40 @@
 [ext_resource type="AudioStream" uid="uid://b4c3ehyv3wn50" path="res://Core/MainSFX/cartoon-button-click-sound.mp3" id="23_0qm8x"]
 [ext_resource type="FontFile" uid="uid://jp51yqa5chfc" path="res://Core/The Most.otf" id="23_8f7ds"]
 [ext_resource type="AudioStream" uid="uid://dy8spyqfo8ei" path="res://Core/MainSFX/Удар в лицо 2 (mp3cut.net).mp3" id="23_35ihi"]
-[ext_resource type="PackedScene" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
+[ext_resource type="PackedScene" uid="uid://c5t3876wlibmb" path="res://CardData/DeckCard.tscn" id="24_0qm8x"]
 [ext_resource type="Script" uid="uid://q2xrttnto3pa" path="res://lvl/TurnManager.gd" id="25_0vy4a"]
 [ext_resource type="Script" uid="uid://c0m2di5ibhdw" path="res://lvl/lose_layer.gd" id="26_gx4g3"]
 [ext_resource type="Script" uid="uid://cv2vde1kdnx7g" path="res://lvl/cringe_layer.gd" id="27_wl4wg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35ihi"]
-bg_color = Color(0.047058824, 0.54901963, 0, 1)
+bg_color = Color(0.16712788, 0, 0.8543756, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.02745098, 0.33333334, 0, 1)
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
-shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdijn"]
+bg_color = Color(0.16862746, 0, 0.85490197, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vy4a"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cqoco"]
-bg_color = Color(0.047058824, 0.54901963, 0, 1)
+bg_color = Color(0, 0.65882355, 0, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -57,6 +67,29 @@ corner_radius_top_left = 40
 corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5swj"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n0t34"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rln3k"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37uxi"]
 bg_color = Color(0.91764706, 0.42352942, 0.42352942, 1)
@@ -70,6 +103,18 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtgly"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl4wg"]
 bg_color = Color(0.69411767, 0, 1, 1)
 border_width_left = 4
@@ -77,6 +122,18 @@ border_width_top = 4
 border_width_right = 4
 border_width_bottom = 6
 border_color = Color(0.17254902, 0, 0.2509804, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdh2e"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 40
 corner_radius_top_right = 40
 corner_radius_bottom_right = 40
@@ -153,15 +210,18 @@ offset_top = 430.0
 offset_right = 1896.0
 offset_bottom = 511.0
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
-theme_override_colors/font_hover_color = Color(0.288518, 0.28851798, 0.28851798, 1)
-theme_override_fonts/font = ExtResource("16_2revy")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_n0t34")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_35ihi")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_35ihi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qdijn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_35ihi")
 text = "Skip to turn"
+script = ExtResource("4_qdijn")
 
 [node name="TurnManager" type="Node" parent="." unique_id=1086621257]
 script = ExtResource("25_0vy4a")
@@ -193,13 +253,13 @@ offset_right = 1816.0001
 offset_bottom = 1057.0
 
 [node name="DeckLabel" type="Label" parent="Deck" unique_id=1128199101]
-offset_left = 1553.0
-offset_top = 769.0
-offset_right = 1793.0
-offset_bottom = 964.8333
+offset_left = 1357.0
+offset_top = 768.0
+offset_right = 1597.0
+offset_bottom = 963.8333
 theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("23_8f7ds")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 90
 theme_override_styles/normal = SubResource("StyleBoxFlat_0vy4a")
 text = "x15"
 horizontal_alignment = 1
@@ -230,7 +290,6 @@ offset_bottom = 1052.0
 value = 100.0
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = ExtResource("7_nmm5b")
 texture_progress = ExtResource("8_fnejv")
 
 [node name="ProgressLabel" type="Label" parent="ProgressBar/HPProgressBar" unique_id=252887667]
@@ -240,12 +299,41 @@ offset_top = 451.0
 offset_right = 246.0
 offset_bottom = 520.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("23_8f7ds")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_cqoco")
 text = "100/100"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ProgressLabel1" type="Label" parent="ProgressBar/HPProgressBar/ProgressLabel" unique_id=1272079189]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 155.0
+offset_bottom = 73.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_8f7ds")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_p5swj")
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ProgressBar/HPProgressBar" unique_id=2012115123]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 75.0
+offset_bottom = 968.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_n0t34")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rln3k")
 
 [node name="XOXOProgressBar" type="TextureProgressBar" parent="ProgressBar" unique_id=1443384940]
 texture_filter = 1
@@ -255,13 +343,12 @@ offset_right = 1505.0
 offset_bottom = 61.0
 value = 100.0
 nine_patch_stretch = true
-texture_under = ExtResource("7_37uxi")
 texture_progress = ExtResource("7_boooi")
 
 [node name="ProgressLabel" type="Label" parent="ProgressBar/XOXOProgressBar" unique_id=432625814]
 layout_mode = 0
-offset_left = -160.0
-offset_right = -9.0
+offset_left = -166.0
+offset_right = -15.0
 offset_bottom = 52.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("23_8f7ds")
@@ -271,6 +358,34 @@ text = "100/100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ProgressLabel" type="Label" parent="ProgressBar/XOXOProgressBar/ProgressLabel" unique_id=1511096623]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 154.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_8f7ds")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_wtgly")
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ProgressBar/XOXOProgressBar" unique_id=1383985099]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -6.0
+offset_top = -5.0
+offset_right = 964.0
+offset_bottom = 58.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_n0t34")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rln3k")
+
 [node name="CringeProgressBar" type="TextureProgressBar" parent="ProgressBar" unique_id=1281846726]
 texture_filter = 1
 offset_left = 547.0
@@ -279,13 +394,12 @@ offset_right = 939.0
 offset_bottom = 117.0
 max_value = 10.0
 nine_patch_stretch = true
-texture_under = ExtResource("12_0vy4a")
 texture_progress = ExtResource("13_gx4g3")
 
 [node name="ProgressLabel" type="Label" parent="ProgressBar/CringeProgressBar" unique_id=1521890253]
 layout_mode = 0
-offset_left = -127.0
-offset_right = -9.0
+offset_left = -165.0
+offset_right = -47.0
 offset_bottom = 44.270832
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("23_8f7ds")
@@ -294,6 +408,33 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_wl4wg")
 text = "0/10"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ProgressLabel" type="Label" parent="ProgressBar/CringeProgressBar/ProgressLabel" unique_id=1687255549]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 121.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_8f7ds")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_qdh2e")
+text = "0/10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ProgressBar/CringeProgressBar" unique_id=1755160715]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 399.0
+offset_bottom = 50.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_n0t34")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rln3k")
 
 [node name="Gameplay_Manager" type="Node" parent="." unique_id=987755067 node_paths=PackedStringArray("gameplay_actions", "pause_menu")]
 process_mode = 3
@@ -399,7 +540,7 @@ text = "Back to menu"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=606229576]
 stream = ExtResource("10_dgetj")
-volume_db = -25.0
+volume_db = -15.0
 autoplay = true
 bus = &"Music"
 
@@ -422,6 +563,7 @@ bus = &"SFX"
 
 [node name="Phase_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1514752804]
 stream = ExtResource("21_cqoco")
+volume_db = -10.455
 pitch_scale = 1.1
 
 [node name="Dammage_Sound" type="AudioStreamPlayer" parent="GirlSprite" unique_id=1831954373]
@@ -439,9 +581,9 @@ autostart = true
 [node name="Vignette" type="ColorRect" parent="." unique_id=884735467]
 z_index = 4096
 material = SubResource("ShaderMaterial_veq3y")
-offset_left = -609.0
+offset_left = -621.0
 offset_top = -356.0
-offset_right = 2591.0
+offset_right = 2579.0
 offset_bottom = 1494.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)

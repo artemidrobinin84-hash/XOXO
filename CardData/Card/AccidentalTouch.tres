@@ -8,6 +8,7 @@ script = ExtResource("1_4humu")
 title = "Accidental Touch"
 description = "You did that by accident, right?"
 icon = ExtResource("1_s5a5j")
+cost = 2
 damage = 5
 cringe = 1
 metadata/_custom_type_script = "uid://caihvaeaot5l6"
