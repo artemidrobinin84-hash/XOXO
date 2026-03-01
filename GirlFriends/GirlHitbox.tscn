@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3yec0rny5dax"]
 
-[ext_resource type="Script" uid="uid://dakl0ttjj2b2i" path="res://GirlFriends/GirlHitbox.gd" id="1_u0jhh"]
+[ext_resource type="Script" uid="uid://dakl0ttjj2b2i" path="res://GirlFriends/GirlHitbox1.gd" id="1_u0jhh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wnn1p"]
 size = Vector2(1186, 466)

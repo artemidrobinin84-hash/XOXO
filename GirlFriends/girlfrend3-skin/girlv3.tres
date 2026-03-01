@@ -1,0 +1,8 @@
+[gd_resource type="SpineSkeletonDataResource" format=3 uid="uid://dw7rfayl883y7"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://bivlfq47lhh1j" path="res://GirlFriends/girlfrend3-skin/girllv3.atlas" id="1_taagg"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://brhrwbvm3k6px" path="res://GirlFriends/girlfrend3-skin/girllv3.skel" id="2_ymbyh"]
+
+[resource]
+atlas_res = ExtResource("1_taagg")
+skeleton_file_res = ExtResource("2_ymbyh")

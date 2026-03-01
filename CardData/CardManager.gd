@@ -15,7 +15,6 @@ var current_energy: int = 0
 var max_hand_size: int = 5
 
 @export_group("Energy Visuals")
-# Пути взяты из твоего FileSystem на скриншоте
 @export var star_full_texture: Texture2D = preload("res://CardData/ImgCard/CostStar.png")
 @export var star_empty_texture: Texture2D = preload("res://CardData/ImgCard/CostStarNo.png")
 
