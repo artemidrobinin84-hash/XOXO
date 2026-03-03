@@ -1,5 +1,4 @@
-extends Button
-
+extends TextureButton
 
 func _ready():
 	mouse_entered.connect(_on_mouse_entered)
